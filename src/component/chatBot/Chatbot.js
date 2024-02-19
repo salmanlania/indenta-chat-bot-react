@@ -7,7 +7,7 @@ export default function Chatbot() {
   return (
     <div>
       <Navbar />
-      {/* <Header /> */}
+      <Header />
       <LawBook />
     </div>
   )

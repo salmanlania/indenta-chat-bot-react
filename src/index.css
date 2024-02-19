@@ -5,6 +5,14 @@
 @import url('@fontsource/roboto/500.css');
 @import url('@fontsource/roboto/700.css'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+body{
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 
 /* Your other styles go here */

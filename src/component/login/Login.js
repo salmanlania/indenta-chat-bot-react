@@ -89,10 +89,10 @@ export default function Login() {
                             alignItems: 'center',
                         }}
                     >
-                        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                        {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                             <LockOutlinedIcon />
-                        </Avatar>
-                        <Typography component="h1" variant="h5">
+                        </Avatar> */}
+                        <Typography component="h1" variant="h4" sx={{fontWeight : 'bold' , marginRight : '70%'}}>
                             Sign in
                         </Typography>
                         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
