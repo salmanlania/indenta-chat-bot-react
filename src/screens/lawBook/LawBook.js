@@ -356,6 +356,140 @@ const LawBook = () => {
 
     const ctPartFiveArrayFirst = [ctPartFive.seventh.firstPara, ctPartFive.seventh.secondPara]
 
+    const ctPartSix = {
+        first: {
+            heading: '1. What expenditure will be deductible for the purposes of calculating taxable income?',
+            firstPara: 'In principle, all legitimate business expenses incurred to derive taxable income will be deductible, although the timing of the deduction may vary for different types of expenses and the accounting method applied. For capital assets, expenditure would generally be recognised by way of depreciation or amortisation deductions over the economic life of the asset or benefit.',
+        },
+        second: {
+            heading: '2. What expenditure will be non-deductible for the purposes of calculating taxable income?',
+            firstPara: 'Article 33 of the UAE Corporate Tax Law lists certain specific expenses for which no deduction will be allowed, such as bribes, fines and penalties, and no deduction is available for expenditure incurred in deriving income that is exempt from CT or losses that are not connected with or arising out of a taxpayer`s business. Additionally, certain restrictions may apply to the deduction of interest expenditure (see question ‘Will my interest expenditure be fully deductible?’ under section Deductions).',
+        },
+        third: {
+            heading: '3. Will my interest expenditure be fully deductible?',
+            firstPara: 'The Corporate Tax Law provides for certain restrictions on the deductibility of interest expenditure to discourage excessive debt financing, and to ensure that debt financing used or arising as a result of certain specific intra-group transactions will only be deductible if there is a valid commercial reason for obtaining the loan.',
+        },
+        fourth: {
+            heading: '4. Will dividends paid by UAE companies be deductible for CT purposes?',
+            firstPara: 'Dividends paid by UAE companies will not be deductible for CT purposes.',
+        },
+        fifth: {
+            heading: '5. Will service fees paid to local and Federal Governments be deductible for UAE CT?',
+            firstPara: 'Business set up, licence renewal and other Government fees and charges incurred wholly and exclusively in the ordinary course of business are deductible for CT purposes.',
+        },
+        sixth: {
+            heading: '6. Will Value Added Tax paid be deductible for UAE CT?',
+            firstPara: 'Only irrecoverable input Value Added Tax may be deductible for CT purposes. Otherwise, Value Added Tax charged and Value Added Tax incurred would not impact the calculation of taxable income.',
+        },
+    }
+
+    const ctPartSeven = {
+        first: {
+            heading: '1. What records should I keep for UAE CT purposes?',
+            firstPara: 'Taxpayers are expected to prepare and maintain financial statements for the purposes of calculating their taxable income, and should maintain all documents and records that support the information in the CT return or in any other filing made with the Authority.',
+            secondPara: 'Exempt persons are required to maintain all records to support their exempt status.',
+        },
+        second: {
+            heading: '2. How long must I keep my records for UAE CT purposes?',
+            firstPara: 'Records and documents should be kept for at least seven years following the end of the relevant Tax Period.',
+        },
+        third: {
+            heading: '3. Can I use the consolidated financial statements of the group to prepare the UAE CT return for my UAE business?',
+            firstPara: 'No, unless the group only comprises UAE resident entities that have applied to form a Tax Group. Otherwise, each UAE entity that is subject to CT will need to prepare and maintain stand-alone financial statements for UAE CT purposes.',
+        },
+        fourth: {
+            heading: '4. Will all entities that are subject to UAE CT be required to have audited financial statements?',
+            firstPara: 'No. Only the categories of taxable persons that are listed in a decision issued by the Minister will be required to prepare and maintain audited or certified financial statements.',
+        },
+        fifth: {
+            heading: '5. Will the consolidated financial statements of a Tax Group need to be audited for CT purposes?',
+            firstPara: 'No. Only the categories of taxable persons that are listed in a decision issued by the Minister will be required to prepare and maintain audited or certified financial statements.',
+        },
+        sixth: {
+            heading: '6. Will I need to submit my financial statements to the Federal Tax Authority?',
+            firstPara: 'The Federal Tax Authority may request for the financial statements to be submitted alongside the CT tax return, or for the financial statements to be provided upon request.',
+        },
+        seventh: {
+            heading: '7. What currency do I use for UAE CT purposes?',
+            firstPara: 'A taxpayer’s income, deductions and credits must be measured in the national currency of the UAE (AED), and income derived and expenses incurred in a foreign currency need to be translated into AED.',
+            secondPara: 'In principle, taxpayers are expected to translate amounts denominated in a foreign currency on a transaction-by-transaction basis. This means that the receipt of income denominated in foreign currency should be translated into AED at the time the income is derived. Similarly, each deductible expenditure denominated in a foreign currency should be translated into AED at the time the expenditure is incurred.'
+        },
+        eighth: {
+            heading: '8. What exchange rate do I use for UAE CT purposes?',
+            firstPara: 'For UAE CT purposes, all amounts must be converted to AED based on the applicable exchange rate set by the Central Bank of the UAE at the time the foreign currency transaction is to be translated into the national currency, unless the Federal Tax Authority allows the taxpayer to use an exchange rate that more accurately reflects the taxpayer’s income.',
+        },
+    }
+
+    const ctPartSevenArrayFirst = [ctPartSeven.first.firstPara, ctPartSeven.first.secondPara]
+
+    const ctPartSevenArraySeven = [ctPartSeven.seventh.firstPara, ctPartSeven.seventh.secondPara]
+
+    const ctPartEight = {
+        first: {
+            heading: '1. Will foreign companies and other juridical persons be subject to UAE CT?',
+            firstPara: 'Foreign entities that operate in the UAE through a permanent establishment or that are considered resident in the UAE for CT purposes will be subject to UAE CT. Merely earning UAE sourced income would not trigger CT payable or require the foreign entity to register and file for UAE CT.',
+        },
+        second: {
+            heading: '2. When will a non-resident person be subject to CT? ',
+            firstPara: 'A non-resident person will be subject to UAE CT if the non-resident person has a permanent establishment in the UAE or earns income sourced from the UAE (subject to 0% taxation). Income will generally be considered to be sourced from the UAE where it is derived from a UAE resident, a UAE Permanent Establishment, or the income is derived from activities performed or from assets located, capital invested and rights used in the UAE.',
+        },
+        third: {
+            heading: '3. When will a foreign company be considered a resident person?',
+            firstPara: 'A foreign juridical person may be treated as a UAE resident for CT purposes and subject to UAE CT on its income sourced from both the UAE and abroad if it is effectively managed and controlled in the UAE (see above).',
+        },
+        fourth: {
+            heading: '4. Can a foreign individual be subject to UAE CT as a resident person?',
+            firstPara: 'Aforeign individual will be subject to UAE CT as a “Resident Person” insofar as he or she is engaged in a business or business activity in the UAE. Being treated as a Resident Person for UAE CT purposes does not automatically mean the foreign individual will be considered resident in the UAE for all other taxes or for the application of a double tax agreement. For individuals, a decision by the Cabinet of Ministers will be issued in due course specifying further information on what would bring a natural person within the charge to Corporate Tax.',
+        },
+        fifth: {
+            heading: '5. When will a foreign individual be subject to UAE CT as a non-resident person?',
+            firstPara: 'A foreign individual that does not conduct a taxable business or business activity in the UAE (see question ‘Can a foreign individual be subject to UAE CT as a resident person?’ under section Foreign Persons) would generally not be subject to UAE CT. Merely earning UAE sourced income would not trigger CT payable or require the foreign individual to register and file for UAE CT.',
+        },
+        sixth: {
+            heading: '6. How do I know if I have a Permanent Establishment in the UAE?',
+            firstPara: 'Generally, a foreign person will have a Permanent Establishment in the UAE if:',
+        },
+        seventh: {
+            heading: '7. Will the investment in UAE real estate constitute a taxable permanent establishment in the UAE?',
+            firstPara: 'A foreign individual that owns property in the UAE in his or her personal capacity would generally not be subject to UAE CT and related compliance obligations. The investment in UAE real estate by a foreign juridical person may give rise to a taxable permanent establishment where the real estate represents a fixed place of business in the UAE through which the business of the foreign person is wholly or partially carried out.',
+        },
+        eighth: {
+            heading: '8. What determines whether income is sourced from the UAE?',
+            firstPara: 'Income will be considered to be sourced from the UAE, if:',
+        },
+        ninth: {
+            heading: '9. Will UAE investment income earned by a foreign investor be subject to UAE CT?',
+            firstPara: 'Income from dividends, capital gains, interest, royalties and other investment returns earned by foreign juridical persons or individuals will not be subject to UAE CT, unless such income can be attributed to a permanent establishment in the UAE of the foreign person.',
+        },
+    }
+
+    const ctPartNine = {
+        first: {
+            heading: '1. What UAE CT rates will apply to entities established in a Free Zone?',
+            firstPara: '',
+        },
+        second: {
+            heading: '2. Is the 0% Free Zone CT regime applicable automatically? ',
+            firstPara: 'A Qualifying Free Zone Person that meets the relevant conditions will be able to benefit from the 0% Free Zone CT regime automatically. However, a Qualifying Free Zone Person can elect not to apply the Free Zone CT regime, but instead be subject to the regular CT regime and rates.',
+        },
+        third: {
+            heading: '',
+            firstPara: '',
+        },
+        fourth: {
+            heading: '',
+            firstPara: '',
+        },
+        fifth: {
+            heading: '',
+            firstPara: '',
+        },
+        sixth: {
+            heading: '',
+            firstPara: '',
+        },
+    }
+
     return (
         <div style={{ background: 'F5F5F5' }}>
             <Grid>
@@ -1275,6 +1409,303 @@ const LawBook = () => {
                                         ))}
 
                                         {/* ctPartFive seventh end  */}
+
+                                        {/* ctPartSix */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSix.first.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSix.first.firstPara}
+                                            <br />
+                                            Expenditure that has a dual purpose, such as expenses incurred for both personal and
+                                            business purposes, will need to be apportioned with the relevant portion of the expenditure
+                                            treated as incurred wholly and exclusively for the purpose of the taxable person’s business.
+                                        </Typography>
+
+                                        {/* ctPartSix First end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSix.second.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSix.second.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSix Second end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSix.third.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSix.third.firstPara}
+                                            <br />
+                                            General interest deduction limitation rule:
+                                            <br />
+                                            Businesses with net interest expenditure above a threshold to be set by the Minister will be
+                                            allowed to deduct net interest expenditure up to 30% of their earnings before interest, tax,
+                                            depreciation and amortisation (EBITDA), excluding any exempt income. Any net interest
+                                            expenditure which exceeds this limit may be carried forward and utilised in the subsequent
+                                            10 tax periods.
+                                            <br />
+                                            Businesses with net interest expenditure below the threshold to be set by the Minister will
+                                            not be subject to the general interest deduction limitation rule.
+                                            <br />
+                                            The general interest deduction limitation rule will not apply to banks and other finance
+                                            institutions, insurance providers or individuals.
+                                            <br />
+                                            Specific interest deduction limitation rule:
+                                            <br />
+                                            Where a loan is obtained from a Related Party and is used to finance income that is exempt
+                                            from CT, the interest on the Related Party loan will not be deductible unless the taxpayer
+                                            can demonstrate that the main purpose of obtaining the loan and carrying out the
+                                            transaction is not to gain a CT advantage.
+                                        </Typography>
+
+                                        {/* ctPartSix Third end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSix.fourth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSix.fourth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSix Fourth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSix.fifth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSix.fifth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSix Fifth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSix.sixth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSix.sixth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSix Sixth end  */}
+
+                                        {/* ctPartSeven */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSeven.first.heading}
+                                        </Typography>
+
+                                        {ctPartSevenArrayFirst.map((i) => (
+                                            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                                {i}
+                                            </Typography>
+                                        ))}
+
+                                        {/* ctPartSeven First end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSeven.second.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSeven.second.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSeven second end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSeven.third.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSeven.third.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSeven third end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSeven.fourth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSeven.fourth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSeven fourth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSeven.fifth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSeven.fifth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSeven fifth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSeven.sixth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSeven.sixth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSeven sixth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSeven.seventh.heading}
+                                        </Typography>
+
+                                        {ctPartSevenArraySeven.map((i) => (
+                                            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                                {i}
+                                            </Typography>
+                                        ))}
+
+                                        {/* ctPartSeven seventh end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartSeven.eighth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartSeven.eighth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartSeven eighth end  */}
+
+                                        {/* ctPartEight */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.first.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.first.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartEight First end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.second.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.second.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartEight second end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.third.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.third.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartEight third end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.fourth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.fourth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartEight fourth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.fifth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.fifth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartEight fifth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.sixth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.sixth.firstPara}
+                                            <br />
+                                            ● It has a fixed or permanent place in the UAE through which the business of the foreign
+                                            person is carried on; or
+                                            <br />
+                                            ● There is a person who has and habitually exercises an authority to conduct business in
+                                            the UAE on behalf of the foreign person.
+                                            <br />
+                                            A fixed place of business would not be considered a Permanent Establishment if it is used
+                                            solely to store, display or deliver goods or merchandise belonging to the foreign person or
+                                            to conduct any activities that are of a preparatory or auxiliary nature.
+                                            <br />
+                                            A Permanent Establishment would not arise if the person who has and habitually exercises
+                                            an authority to conduct business in the UAE on behalf of the foreign person acts as an
+                                            independent agent.
+                                            <br />
+                                            Where relevant, the application of an international agreement should be taken into
+                                            consideration when determining whether a permanent establishment exists.
+                                        </Typography>
+
+                                        {/* ctPartEight sixth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.seventh.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.seventh.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartEight seventh end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.eighth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.eighth.firstPara}
+                                            <br />
+                                            ● the income is derived from a UAE resident;
+                                            <br />
+                                            ● the income derived is attributed to a Permanent Establishment in the UAE of a non-UAE
+                                            resident; or
+                                            <br />
+                                            ● the income is derived from activities performed, assets located, capital invested, rights
+                                            used or services performed or benefited from in the UAE.
+                                            <br />
+                                            The Corporate Tax Law includes a non-exhaustive list of income that is considered as being
+                                            sourced in the UAE.
+                                            <br />
+                                            A Cabinet Decision may be issued in due course specifying the types of UAE sourced income
+                                            subject to withholding tax. The UAE withholding tax rate is set at 0%.
+                                        </Typography>
+
+                                        {/* ctPartEight eighth end  */}
+
+                                        <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                                            {ctPartEight.ninth.heading}
+                                        </Typography>
+
+                                        <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                                            {ctPartEight.ninth.firstPara}
+                                        </Typography>
+
+                                        {/* ctPartEight ninth end  */}
+
                                         <span id='comeToBottom'></span>
                                     </Box>
                                 </React.Fragment>
@@ -1297,7 +1728,30 @@ const LawBook = () => {
 
                             {/* Content for Title Table tab */}
                             <TabPanel value={nestedTabValue} index={0}>
-                                <div style={{ maxHeight: '20rem', overflow: 'auto', maxWidth: '25rem', cursor: 'pointer' }}>
+                                <div style={
+                                    {
+                                        maxHeight: '20rem',
+                                        maxWidth: '25rem',
+                                        cursor: 'pointer',
+                                        overflowY: 'scroll',
+                                        overflowX: 'hidden',
+                                        '&::-webkit-scrollbar': {
+                                            width: '12px',
+                                        },
+                                        '&::-webkit-scrollbar-thumb': {
+                                            background: '#888',
+                                            borderRadius: '6px',
+                                        },
+                                        '&::-webkit-scrollbar-thumb:hover': {
+                                            background: '#555',
+                                        },
+                                        '&::-webkit-scrollbar-track': {
+                                            background: 'transparent',
+                                            borderRadius: '6px',
+                                        },
+                                    }
+                                }
+                                >
                                     <TableContainer component={Paper} >
                                         <Table>
                                             <TableHead>
@@ -1427,5 +1881,3 @@ const TabPanel = (props) => {
 };
 
 export default LawBook;
-
-

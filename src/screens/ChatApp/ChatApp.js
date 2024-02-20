@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Drawer, List, ListItem, TextField, Button, Avatar } from '@mui/material';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SmartToyIcon from '@mui/icons-material/SmartToy';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import SmartToyIcon from '@mui/icons-material/SmartToy';
+import bot from './images/bot.png'
+import user from './images/user.png'
 import ChatBubbleRoundedIcon from '@mui/icons-material/ChatBubbleRounded';
 
 // ... (your import statements)
@@ -32,6 +34,7 @@ const ChatApp = () => {
     if (userMessage !== '') {
       // Display user message in the chat
       appendMessage('You', userMessage);
+      setInputMessage('');
 
       try {
         // Send user message to the server
@@ -56,7 +59,7 @@ const ChatApp = () => {
       }
 
       // Clear the input field
-      setInputMessage('');
+
     }
   };
 
@@ -77,11 +80,12 @@ const ChatApp = () => {
               <ListItem key={index} style={{ textAlign: message.sender === 'You' ? 'right' : 'left', gap: '10px' }}>
                 {message.sender === 'ChatBot' ? (
                   <Avatar>
-                    <SmartToyIcon />
+                    <img src={bot} alt='bot' />
                   </Avatar>
                 ) : (
                   <Avatar >
-                    <AccountCircleIcon />
+                    <img src={user} alt='user' />
+                    {/* <AccountCircleIcon /> */}
                   </Avatar>
                 )}
                 <div
