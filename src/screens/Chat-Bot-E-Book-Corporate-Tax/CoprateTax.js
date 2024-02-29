@@ -157,7 +157,7 @@ export default function CoprateTax() {
     return (
         <div>
             <Typography variant="h6" sx={{ marginBottom: '1rem', fontWeight: 'bold' }} id="firstHeading">
-                {corporateTax.first.heading} <a href='#comeToBottom'>Go To Bottom</a>
+                {corporateTax.first.heading} <a href='#comeToBottom' id='comeToTop'>Go To Bottom</a>
             </Typography>
             {corporateTaxFirstArray.map((i) => (
                 <Typography paragraph sx={{ fontWeight: '300', color: 'black', fontSize: '14px' }} key={i}>

@@ -34,7 +34,9 @@ export default function CtPartSeventeen() {
         },
         fifth: {
             heading: '5. How are non-residents subject to UAE CT?',
-            firstPara: `Non-resident persons will only be subject to UAE CT on: <br /> ● income from their Permanent Establishment in the UAE; or  <br /> ● income sourced in the UAE (subject to a 0% withholding tax).`,
+            firstPara: 'Non-resident persons will only be subject to UAE CT on:',
+            secondPara: '● income from their Permanent Establishment in the UAE; or',
+            thirdPara: ' ● income sourced in the UAE (subject to a 0% withholding tax).'
         },
         sixth: {
             heading: '6. How are UAE tax residents subject to UAE CT?',
@@ -60,14 +62,21 @@ export default function CtPartSeventeen() {
         },
         ninth: {
             heading: '9. What are the UAE CT rates?',
-            firstPara: `Taxpayer <br /> Applicable CT rate <br /> Individuals and juridical persons <br /> 0% for taxable income up to and including AED 375,000 (this amount is to be confirmed in a Cabinet Decision) <br /> 9% for taxable income exceeding AED 375,000 Qualifying Free Zone Persons (see further information below) <br /> 0% on qualifying income <br /> 9% on taxable income that does not meet the qualifying income definition`,
+            firstPara: '- Taxpayer',
+            secondPara: '- Applicable CT rate',
+            thirdPara: '- Individuals and juridical persons',
+            fourthPara: '- 0% for taxable income up to and including AED 375,000 (this amount is to be confirmed in a Cabinet Decision)',
+            fifthPara: '- 9% for taxable income exceeding AED 375,000 Qualifying Free Zone Persons (see further information below)',
+            sixthPara: '- 0% on qualifying income',
+            seventhPara: '- 9% on taxable income that does not meet the qualifying income definition',
         },
         tenth: {
             heading: '10. If a business has earned taxable income of AED 1 million, what will be the UAE CT amount payable?',
-            firstPara: `The CT liability will be calculated as follows: <br /> ● Taxable income of AED 375,000 (amount to be confirmed in a Cabinet Decision) subject to CT at 0%: AED 375,000 x 0% = AED 0 <br /> ● Taxable income exceeding AED 375,000 (amount to be confirmed in a Cabinet Decision)
-            subject to CT at 9%: (AED 1,000,000 - AED 375,000) = AED 625,000 x 9% = AED 56,250`,
-            secondPara: 'The UAE CT liability for the Tax Period will be AED 0 + AED 56,250 = AED 56,250',
-            thirdPara: 'The final amount of UAE CT payable can be reduced by available tax credits (see section ‘Tax Credits’ section).',
+            firstPara: 'The CT liability will be calculated as follows:',
+            secondPara: '● Taxable income of AED 375,000 (amount to be confirmed in a Cabinet Decision) subject to CT at 0%: AED 375,000 x 0% = AED 0',
+            thirdPara: '● Taxable income exceeding AED 375,000 (amount to be confirmed in a Cabinet Decision) subject to CT at 9%: (AED 1,000,000 - AED 375,000) = AED 625,000 x 9% = AED 56,250',
+            fourthPara: 'The UAE CT liability for the Tax Period will be AED 0 + AED 56,250 = AED 56,250',
+            fifthPara: 'The final amount of UAE CT payable can be reduced by available tax credits (see section ‘Tax Credits’ section).',
         },
         eleventh: {
             heading: '11. Will small businesses be given any UAE CT relief?',
@@ -83,117 +92,169 @@ export default function CtPartSeventeen() {
         },
     }
 
-    const ctPartSeventeenArrayFirst = [ctPartSeventeen.first.firstPara , ctPartSeventeen.first.secondPara , ctPartSeventeen.first.thirdPara , ctPartSeventeen.first.fourthPara]
-    
-    const ctPartSeventeenArraySecond = [ctPartSeventeen.second.firstPara , ctPartSeventeen.second.secondPara , ctPartSeventeen.second.thirdPara , ctPartSeventeen.second.fourthPara , ctPartSeventeen.second.fifthPara , ctPartSeventeen.second.sixthPara , ctPartSeventeen.second.seventhPara , ctPartSeventeen.second.eightPara]
-    
-    const ctPartSeventeenArrayThird = [ctPartSeventeen.third.firstPara , ctPartSeventeen.third.secondPara , ctPartSeventeen.third.thirdPara , ctPartSeventeen.third.fourthPara]
+    const ctPartSeventeenArrayFirst = [ctPartSeventeen.first.firstPara, ctPartSeventeen.first.secondPara, ctPartSeventeen.first.thirdPara, ctPartSeventeen.first.fourthPara]
+
+    const ctPartSeventeenArraySecond = [ctPartSeventeen.second.firstPara, ctPartSeventeen.second.secondPara, ctPartSeventeen.second.thirdPara, ctPartSeventeen.second.fourthPara, ctPartSeventeen.second.fifthPara, ctPartSeventeen.second.sixthPara, ctPartSeventeen.second.seventhPara, ctPartSeventeen.second.eightPara]
+
+    const ctPartSeventeenArrayThird = [ctPartSeventeen.third.firstPara, ctPartSeventeen.third.secondPara, ctPartSeventeen.third.thirdPara, ctPartSeventeen.third.fourthPara]
+
+    const ctPartSeventeenArrayFifth = [ctPartSeventeen.fifth.firstPara, ctPartSeventeen.fifth.secondPara, ctPartSeventeen.fifth.thirdPara]
+
+    const ctPartSeventeenArraySixth = [ctPartSeventeen.sixth.firstPara, ctPartSeventeen.sixth.secondPara, ctPartSeventeen.sixth.thirdPara]
+
+    const ctPartSeventeenArraySeventh = [ctPartSeventeen.seventh.firstPara, ctPartSeventeen.seventh.secondPara, ctPartSeventeen.seventh.thirdPara, ctPartSeventeen.seventh.fourthPara, ctPartSeventeen.seventh.fifthPara, ctPartSeventeen.seventh.sixthPara, ctPartSeventeen.seventh.seventhPara, ctPartSeventeen.seventh.eightPara, ctPartSeventeen.seventh.seventhPara, ctPartSeventeen.seventh.eightPara]
+
+    const ctPartSeventeenArrayNinth = [ctPartSeventeen.ninth.firstPara, ctPartSeventeen.ninth.secondPara, ctPartSeventeen.ninth.thirdPara, ctPartSeventeen.ninth.fourthPara, ctPartSeventeen.ninth.fifthPara, ctPartSeventeen.ninth.sixthPara, ctPartSeventeen.ninth.seventhPara]
+
+    const ctPartSeventeenArrayTenth = [ctPartSeventeen.tenth.firstPara, ctPartSeventeen.tenth.secondPara, ctPartSeventeen.tenth.thirdPara , ctPartSeventeen.tenth.fourthPara , ctPartSeventeen.tenth.fifthPara]
 
     return (
         <div>
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.first.heading}
+                {ctPartSeventeen.first.heading}
             </Typography>
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.first.firstPara}
-            </Typography>
+            {ctPartSeventeenArrayFirst.map((i) => (
+                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                    {i}
+                </Typography>
+            ))}
 
-            {/* ctPartFifteen first end  */}
+            {/* ctPartSeventeen first end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.second.heading}
+                {ctPartSeventeen.second.heading}
             </Typography>
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.second.firstPara}
-            </Typography>
+            {ctPartSeventeenArraySecond.map((i) => (
+                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                    {i}
+                </Typography>
+            ))}
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.second.firstPara}
-            </Typography>
-
-            {/* ctPartFifteen second end  */}
+            {/* ctPartSeventeen second end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.third.heading}
+                {ctPartSeventeen.third.heading}
             </Typography>
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.third.firstPara}
-            </Typography>
+            {ctPartSeventeenArrayThird.map((i) => (
+                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                    {i}
+                </Typography>
+            ))}
 
-            {/* ctPartFifteen third end  */}
+            {/* ctPartSeventeen third end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.fourth.heading}
+                {ctPartSeventeen.fourth.heading}
             </Typography>
 
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.fourth.firstPara}
+                {ctPartSeventeen.fourth.firstPara}
             </Typography>
 
-            {/* ctPartFifteen fourth end  */}
+            {/* ctPartSeventeen fourth end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.fifth.heading}
+                {ctPartSeventeen.fifth.heading}
             </Typography>
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.fifth.firstPara}
-            </Typography>
+            {ctPartSeventeenArrayFifth.map((i) => (
+                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                    {i}
+                </Typography>
+            ))}
 
-            {/* ctPartFifteen fifth end  */}
+            {/* ctPartSeventeen fifth end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.sixth.heading}
+                {ctPartSeventeen.sixth.heading}
             </Typography>
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.sixth.firstPara}
-            </Typography>
+            {ctPartSeventeenArraySixth.map((i) => (
+                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                    {i}
+                </Typography>
+            ))}
 
-            {/* ctPartFifteen sixth end  */}
+            {/* ctPartSeventeen sixth end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.seventh.heading}
+                {ctPartSeventeen.seventh.heading}
             </Typography>
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.seventh.firstPara}
-            </Typography>
+            {ctPartSeventeenArraySeventh.map((i) => (
+                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                    {i}
+                </Typography>
+            ))}
 
-            {/* ctPartFifteen seventh end  */}
+            {/* ctPartSeventeen seventh end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.eight.heading}
+                {ctPartSeventeen.eight.heading}
             </Typography>
 
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.eight.firstPara}
+                {ctPartSeventeen.eight.firstPara}
             </Typography>
 
-            {/* ctPartFifteen eight end  */}
+            {/* ctPartSeventeen eight end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.ninth.heading}
+                {ctPartSeventeen.ninth.heading}
             </Typography>
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.fourth.firstPara}
-            </Typography>
+            {ctPartSeventeenArrayNinth.map((i) => (
+                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                    {i}
+                </Typography>
+            ))}
 
-            {/* ctPartFifteen ninth end  */}
+            {/* ctPartSeventeen ninth end  */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
-                {ctPartFifteen.tenth.heading}
+                {ctPartSeventeen.tenth.heading}
+            </Typography>
+
+            {ctPartSeventeenArrayTenth.map((i) => (
+                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                    {i}
+                </Typography>
+            ))}
+
+            {/* ctPartSeventeen tenth end  */}
+
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                {ctPartSeventeen.eleventh.heading}
             </Typography>
 
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                {ctPartFifteen.tenth.firstPara}
+                {ctPartSeventeen.eleventh.firstPara}
             </Typography>
 
-            {/* ctPartFifteen tenth end  */}
+            {/* ctPartSeventeen eleventh end  */}
+
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                {ctPartSeventeen.twelveth.heading}
+            </Typography>
+
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                {ctPartSeventeen.twelveth.firstPara}
+            </Typography>
+
+            {/* ctPartSeventeen twelveth end  */}
+
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+                {ctPartSeventeen.thirteen.heading}
+            </Typography>
+
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                {ctPartSeventeen.thirteen.firstPara}
+            </Typography>
+
+            {/* ctPartSeventeen thirteen end  */}
 
         </div>
     )

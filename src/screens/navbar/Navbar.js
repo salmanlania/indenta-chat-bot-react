@@ -25,7 +25,7 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar position="static" color="primary" sx={{background : '#9CB1C1', fontFamily: 'Protest Riot'}}>
+        <AppBar position="static" color="primary" sx={{background : '#9CB1C1', fontFamily: '"Anta", sans-serif !important'}}>
             <Toolbar>
                 {isMobile ? (
                     <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleToggleMobileMenu}>
