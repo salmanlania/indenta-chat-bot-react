@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Typography, Table, TableContainer, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
+import {  Typography } from '@mui/material';
 
 export default function CtPartSix() {
 

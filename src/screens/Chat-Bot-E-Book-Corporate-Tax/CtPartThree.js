@@ -69,7 +69,7 @@ export default function CtPartThree() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeFirst">
                 {ctPartThree.first.heading}
             </Typography>
 
@@ -79,7 +79,7 @@ export default function CtPartThree() {
 
             {/* ct part three one end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeSecond">
                 {ctPartThree.second.heading}
             </Typography>
 
@@ -89,7 +89,7 @@ export default function CtPartThree() {
 
             {/* ct part three two end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeThird">
                 {ctPartThree.third.heading}
             </Typography>
 
@@ -99,7 +99,7 @@ export default function CtPartThree() {
 
             {/* ct part three three end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeFourth">
                 {ctPartThree.fourth.heading}
             </Typography>
 
@@ -109,7 +109,7 @@ export default function CtPartThree() {
 
             {/* ct part three four end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeFifth">
                 {ctPartThree.fifth.heading}
             </Typography>
 
@@ -119,7 +119,7 @@ export default function CtPartThree() {
 
             {/* ct part three five end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeSixth">
                 {ctPartThree.sixth.heading}
             </Typography>
 
@@ -129,7 +129,7 @@ export default function CtPartThree() {
 
             {/* ct part three six end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeSeventh">
                 {ctPartThree.seventh.heading}
             </Typography>
 
@@ -139,7 +139,7 @@ export default function CtPartThree() {
 
             {/* ct part three seven end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeEighth">
                 {ctPartThree.eighth.heading}
             </Typography>
 
@@ -149,7 +149,7 @@ export default function CtPartThree() {
 
             {/* ct part three eight end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeNinth">
                 {ctPartThree.ninth.heading}
             </Typography>
 
@@ -159,7 +159,7 @@ export default function CtPartThree() {
 
             {/* ct part three nine end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeTenth">
                 {ctPartThree.tenth.heading}
             </Typography>
 
@@ -169,7 +169,7 @@ export default function CtPartThree() {
 
             {/* ct part three ten end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeEleventh">
                 {ctPartThree.eleventh.heading}
             </Typography>
 
@@ -179,7 +179,7 @@ export default function CtPartThree() {
 
             {/* ct part three eleven end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeTwelveth">
                 {ctPartThree.twelveth.heading}
             </Typography>
 
@@ -189,7 +189,7 @@ export default function CtPartThree() {
 
             {/* ct part three twelve end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeThirteenth">
                 {ctPartThree.thirteen.heading}
             </Typography>
 
@@ -199,7 +199,7 @@ export default function CtPartThree() {
 
             {/* ct part three thirteen end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeFourteenth">
                 {ctPartThree.fourteen.heading}
             </Typography>
 
@@ -209,7 +209,7 @@ export default function CtPartThree() {
 
             {/* ct part three fourteen end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeFifteenth">
                 {ctPartThree.fifteen.heading}
             </Typography>
 

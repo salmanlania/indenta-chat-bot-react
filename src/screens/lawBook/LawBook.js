@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Paper, Typography, Box, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Grid, Container } from '@mui/material';
+import { Tabs, Tab, Paper, Typography, Box, Popover, Table, TableContainer, TableHead, TableBody, TableRow, MenuItem, TableCell, Grid, Container } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import ChatApp from '../ChatApp/ChatApp';
 import './LawBook.css'
@@ -28,9 +28,32 @@ import CtPartTwentyfirst from '../Chat-Bot-E-Book-Corporate-Tax/CtPartTwentyfirs
 import CtPartTwentyTwo from '../Chat-Bot-E-Book-Corporate-Tax/CtPartTwentyTwo';
 import CtPartTwentyThree from '../Chat-Bot-E-Book-Corporate-Tax/CtPartTwentyThree';
 
+// SECTION IMPORTS
+
+import SectionOne from '../sectionsCorporateTax/SectionOne'
+import SectionTwo from '../sectionsCorporateTax/SectionTwo'
+import SectionThree from '../sectionsCorporateTax/SectionThree'
+import SectionFour from '../sectionsCorporateTax/SectionFour'
+import SectionFive from '../sectionsCorporateTax/SectionFive'
+import SectionSix from '../sectionsCorporateTax/SectionSix'
+import SectionSeven from '../sectionsCorporateTax/SectionSeven'
+import SectionEight from '../sectionsCorporateTax/SectionEight'
+import SectionNine from '../sectionsCorporateTax/SectionNine'
+import SectionTen from '../sectionsCorporateTax/SectionTen'
+import SectionEleven from '../sectionsCorporateTax/SectionEleven'
+import SectionTwelve from '../sectionsCorporateTax/SectionTwelve'
+import SectionThirteen from '../sectionsCorporateTax/SectionThirteen'
+import SectionFourteen from '../sectionsCorporateTax/SectionFourteen'
+import SectionFifteen from '../sectionsCorporateTax/SectionFifteen'
+import SectionSixteen from '../sectionsCorporateTax/SectionSixteen'
+import SectionSeventeen from '../sectionsCorporateTax/SectionSeventeen'
+import SectionEighteen from '../sectionsCorporateTax/SectionEighteen'
+
 const LawBook = () => {
     const [mainTabValue, setMainTabValue] = useState(0);
     const [nestedTabValue, setNestedTabValue] = useState(0);
+    const [anchorEl, setAnchorEl] = useState(null);
+    const [selectedSection, setSelectedSection] = useState(null);
 
     const handleMainTabChange = (event, newValue) => {
         setMainTabValue(newValue);
@@ -39,6 +62,17 @@ const LawBook = () => {
     const handleNestedTabChange = (event, newValue) => {
         setNestedTabValue(newValue);
     };
+
+    const handlePopoverOpen = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handlePopoverClose = (section) => {
+        setSelectedSection(section);
+        setAnchorEl(null);
+    };
+
+    const open = Boolean(anchorEl);
 
     return (
         <div>
@@ -54,8 +88,6 @@ const LawBook = () => {
                     <Tab label="Corporate tax" />
                     <Tab label="Value-added tax" />
                 </Tabs>
-
-                {/* Content for Tab 1 */}
                 <TabPanel value={mainTabValue} index={0}>
                     <Grid container spacing={4} >
                         <Grid item xs={15} md={7} sx={{ padding: '0', marginRight: '2rem' }}>
@@ -75,7 +107,7 @@ const LawBook = () => {
                                             maxWidth: '400% !important',
                                             marginLeft: '2rem',
                                             '@media (max-width:600px)': {
-                                                width: '100%', // Adjust width for smaller screens
+                                                width: '100%',
                                             },
                                             '&::-webkit-scrollbar': {
                                                 width: '12px',
@@ -129,19 +161,64 @@ const LawBook = () => {
                                 indicatorColor="primary"
                                 textColor="primary"
                                 centered
-                                sx={{ maxWidth: '30rem' }}
+                                sx={{
+                                    maxWidth: '30rem',
+                                    '@media (max-width: 600px)': {
+                                        maxWidth: '100%',
+                                    },
+                                }}
                             >
                                 <Tab label="Index" sx={{ fontWeight: 'bold', color: 'black' }} />
-                                {/* <Tab label="Secton" sx={{ fontWeight: 'bold', color: 'black' }} /> */}
+                                <Tab
+                                    label="Section ˅"
+                                    sx={{ fontWeight: 'bold', color: 'black' }}
+                                    onClick={handlePopoverOpen}
+                                />
                             </Tabs>
+
+                            <Popover
+                                open={open}
+                                anchorEl={anchorEl}
+                                onClose={handlePopoverClose}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'center',
+                                }}
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'center',
+                                }}
+                            >
+                                <Box p={2} sx={{ maxHeight: '200px', overflowY: 'auto' }}>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 1')}>Section 1</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 2')}>Section 2</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 3')}>Section 3</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 4')}>Section 4</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 5')}>Section 5</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 6')}>Section 6</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 7')}>Section 7</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 8')}>Section 8</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 9')}>Section 9</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 10')}>Section 10</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 11')}>Section 11</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 12')}>Section 12</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 13')}>Section 13</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 14')}>Section 14</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 15')}>Section 15</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 16')}>Section 16</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 17')}>Section 17</MenuItem>
+                                    <MenuItem onClick={() => handlePopoverClose('Section 18')}>Section 18</MenuItem>
+                                </Box>
+                            </Popover>
+
                             <TabPanel value={nestedTabValue} index={0}>
                                 <div style={
                                     {
-                                        maxHeight: '20rem',
+                                        maxHeight: '40vh',
                                         maxWidth: '150% !important',
                                         cursor: 'pointer',
                                         overflowY: 'scroll',
-                                        paddingRight: '3    px',
+                                        paddingRight: '3px',
                                         overflowX: 'hidden',
                                         '&::-webkit-scrollbar': {
                                             width: '12px',
@@ -166,7 +243,6 @@ const LawBook = () => {
                                                 <TableRow sx={{ background: '#CDDCE8' }}>
                                                     <TableCell style={{ width: '5%', textAlign: 'center', fontWeight: 'bold', fontSize: '18px' }}>S.NO</TableCell>
                                                     <TableCell style={{ width: '40%', fontWeight: 'bold', fontSize: '18px', textAlign: 'center' }}>TITLE</TableCell>
-                                                    {/* <TableCell style={{ width: '15%', textAlign: 'center' }}>Pg #</TableCell> */}
                                                 </TableRow>
                                             </TableHead>
                                             <TableBody>
@@ -374,23 +450,155 @@ const LawBook = () => {
                                                         <a href='#ctSixteenHeading' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What should I be doing to prepare for UAE CT?</a>
                                                     </TableCell>
                                                 </TableRow>
+
+                                                {/* ctPartThree */}
+
+                                                <TableRow>
+                                                    <TableCell>35</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>I am already registered for VAT purposes. Do I have to register for UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>36</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What is a self-assessment regime?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>37</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Who will be required to register for UAE CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>38</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>When do I register for UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>39</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Is there a registration threshold for UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>40</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>How do I register for UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>41</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeSeventh' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>How often will UAE businesses need to file a UAE CT return?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>42</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeEighth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>I do not have any income / or my company is dormant, do I have to complete a UAE CT return?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>43</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeNinth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>I did not make a profit for the Tax Period, do I have to complete a UAE CT return?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>44</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeTenth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Can I file one UAE CT return for all the companies I own?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>45</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeEleventh' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will the CT return need to be filed electronically?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>46</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeTwelveth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>When do I need to pay my UAE CT liability?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>47</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeThirteenth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>How do I pay my UAE CT liability?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>48</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeFourteenth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will there be a requirement to pay UAE CT in advance?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>49</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThreeFifteenth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Are there any consequences for non-compliance under the UAE CT regime?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
                                             </TableBody>
                                         </Table>
                                     </TableContainer>
                                 </div>
                             </TabPanel>
+                            {selectedSection && (
+                                <TabPanel value={nestedTabValue} index={1}>
+                                    <div style={{ maxHeight: '100%', overflow: 'auto' , maxWidth: '100%', width: '100%' }}>
+                                        <React.Fragment>
+                                            <CssBaseline />
+                                            <Container maxWidth="md" sx={{
+                                                bgcolor: '#fff',
+                                                height: 'auto',
+                                                overflow : 'auto',
+                                                border: '1px black solid',
+                                                padding: '1rem',
+                                                '@media (max-width: 600px)': {
+                                                    maxWidth: '100%',
+                                                    padding: '0.5rem',
+                                                },
+                                            }}>
+                                                <div style={{ maxWidth: '100%', overflow: 'hidden' , maxHeight : '40vh' , overflow : 'scroll' , overflowX : 'hidden'}}>
 
-                            {/* <TabPanel value={nestedTabValue} index={1} >
-                                <div style={{ maxHeight: '20rem', overflow: 'auto', maxWidth: '25rem', width: '40rem', }}>
-                                    <React.Fragment>
-                                        <CssBaseline />
-                                        <Container maxWidth="sm">
-                                            <Box sx={{ bgcolor: '#fff', height: '40vh', border: '1px black solid' }} />
-                                        </Container>
-                                    </React.Fragment>
-                                </div>
-                            </TabPanel> */}
-                            <ChatApp />
+                                                    {selectedSection === 'Section 1' && <SectionOne />}
+                                                    {selectedSection === 'Section 2' && <SectionTwo />}
+                                                    {selectedSection === 'Section 3' && <SectionThree />}
+                                                    {selectedSection === 'Section 4' && <SectionFour />}
+                                                    {selectedSection === 'Section 5' && <SectionFive />}
+                                                    {selectedSection === 'Section 6' && <SectionSix />}
+                                                    {selectedSection === 'Section 7' && <SectionSeven />}
+                                                    {selectedSection === 'Section 8' && <SectionEight />}
+                                                    {selectedSection === 'Section 9' && <SectionNine />}
+                                                    {selectedSection === 'Section 10' && <SectionTen />}
+                                                    {selectedSection === 'Section 11' && <SectionEleven />}
+                                                    {selectedSection === 'Section 12' && <SectionTwelve />}
+                                                    {selectedSection === 'Section 13' && <SectionThirteen />}
+                                                    {selectedSection === 'Section 14' && <SectionFourteen />}
+                                                    {selectedSection === 'Section 15' && <SectionFifteen />}
+                                                    {selectedSection === 'Section 16' && <SectionSixteen />}
+                                                    {selectedSection === 'Section 17' && <SectionSeventeen />}
+                                                    {selectedSection === 'Section 18' && <SectionEighteen />}
+                                                </div>
+                                            </Container>
+                                        </React.Fragment>
+                                    </div>
+                                </TabPanel>
+                            )}
+                            {!selectedSection && (
+                                <TabPanel value={nestedTabValue} index={1}>
+                                    <Container maxWidth="md" sx={{ bgcolor: '#fff', border: '1px black solid', maxWidth: '100%', width: '100%', maxHeight: '40vh', padding: '1rem' }}>
+                                        <Box sx={{ width: '100%', maxHeight: '25rem', height: '40vh' }} />
+                                    </Container>
+                                </TabPanel>
+                            )}
+
                         </Grid>
                     </Grid>
                 </TabPanel>

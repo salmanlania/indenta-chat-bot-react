@@ -61,7 +61,6 @@ const ChatApp = () => {
 
     const handleCloseChat = () => {
         handleDrawerClose();
-        // Optionally, you can also clear the chat when closing
         setMessages([]);
     };
 
@@ -71,7 +70,7 @@ const ChatApp = () => {
 
     return (
         <div style={{ borderRadius: '50%', padding: '5px' }}>
-            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '50px' }}>
+            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '50px' ,}}>
                 <SmartToyOutlinedIcon sx={{ fontSize: '2rem', borderRadius: '50%', cursor: 'pointer' }} />
             </Button>
             <Drawer anchor="right" open={isOpen} onClose={handleDrawerClose} style={{ width: '350px !important' }}>
@@ -82,14 +81,14 @@ const ChatApp = () => {
                         sx={{
                             background: 'red',
                             '&:hover': {
-                                background: 'darkred', // Change the background color on hover
+                                background: 'darkred', 
                             },
                         }}
                         onClick={handleCloseChat}
                     >
                         <CloseIcon style={{ color: 'white' }} />
                     </Button>
-                    <Typography variant='h5' style={{ color: 'red', fontWeight: '1000' , fontSize : '2rem' }}>ChatBot</Typography>
+                    <Typography variant='h5' style={{ color: 'red', fontWeight: '1000' , fontSize : '2rem' }}>UAE TAX ChatBot</Typography>
 
                     {/* <Button variant="outlined" color="secondary" onClick={handleClearChat}>
                         Clear Chat
@@ -99,15 +98,6 @@ const ChatApp = () => {
                     <List>
                         {messages.map((message, index) => (
                             <ListItem key={index} style={{ justifyContent: message.sender === 'ChatBot' ? 'flex-start' : 'flex-end', gap: '10px' }} >
-                                {message.sender === 'ChatBot' ? (
-                                    <Avatar>
-                                        <img src={bot} alt='bot' />
-                                    </Avatar>
-                                ) : (
-                                    <Avatar>
-                                        <img src={user} alt='user' />
-                                    </Avatar>
-                                )}
                                 <div
                                     style={{
                                         background: message.sender === 'You' ? '#2196F3' : '#f1f0f0',
