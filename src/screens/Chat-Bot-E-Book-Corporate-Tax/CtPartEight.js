@@ -5,39 +5,39 @@ export default function CtPartEight() {
 
     const ctPartEight = {
         first: {
-            heading: '1. Will foreign companies and other juridical persons be subject to UAE CT?',
+            heading: 'Will foreign companies and other juridical persons be subject to UAE CT?',
             firstPara: 'Foreign entities that operate in the UAE through a permanent establishment or that are considered resident in the UAE for CT purposes will be subject to UAE CT. Merely earning UAE sourced income would not trigger CT payable or require the foreign entity to register and file for UAE CT.',
         },
         second: {
-            heading: '2. When will a non-resident person be subject to CT? ',
+            heading: 'When will a non-resident person be subject to CT? ',
             firstPara: 'A non-resident person will be subject to UAE CT if the non-resident person has a permanent establishment in the UAE or earns income sourced from the UAE (subject to 0% taxation). Income will generally be considered to be sourced from the UAE where it is derived from a UAE resident, a UAE Permanent Establishment, or the income is derived from activities performed or from assets located, capital invested and rights used in the UAE.',
         },
         third: {
-            heading: '3. When will a foreign company be considered a resident person?',
+            heading: 'When will a foreign company be considered a resident person?',
             firstPara: 'A foreign juridical person may be treated as a UAE resident for CT purposes and subject to UAE CT on its income sourced from both the UAE and abroad if it is effectively managed and controlled in the UAE (see above).',
         },
         fourth: {
-            heading: '4. Can a foreign individual be subject to UAE CT as a resident person?',
+            heading: 'Can a foreign individual be subject to UAE CT as a resident person?',
             firstPara: 'Aforeign individual will be subject to UAE CT as a “Resident Person” insofar as he or she is engaged in a business or business activity in the UAE. Being treated as a Resident Person for UAE CT purposes does not automatically mean the foreign individual will be considered resident in the UAE for all other taxes or for the application of a double tax agreement. For individuals, a decision by the Cabinet of Ministers will be issued in due course specifying further information on what would bring a natural person within the charge to Corporate Tax.',
         },
         fifth: {
-            heading: '5. When will a foreign individual be subject to UAE CT as a non-resident person?',
+            heading: 'When will a foreign individual be subject to UAE CT as a non-resident person?',
             firstPara: 'A foreign individual that does not conduct a taxable business or business activity in the UAE (see question ‘Can a foreign individual be subject to UAE CT as a resident person?’ under section Foreign Persons) would generally not be subject to UAE CT. Merely earning UAE sourced income would not trigger CT payable or require the foreign individual to register and file for UAE CT.',
         },
         sixth: {
-            heading: '6. How do I know if I have a Permanent Establishment in the UAE?',
+            heading: 'How do I know if I have a Permanent Establishment in the UAE?',
             firstPara: 'Generally, a foreign person will have a Permanent Establishment in the UAE if:',
         },
         seventh: {
-            heading: '7. Will the investment in UAE real estate constitute a taxable permanent establishment in the UAE?',
+            heading: 'Will the investment in UAE real estate constitute a taxable permanent establishment in the UAE?',
             firstPara: 'A foreign individual that owns property in the UAE in his or her personal capacity would generally not be subject to UAE CT and related compliance obligations. The investment in UAE real estate by a foreign juridical person may give rise to a taxable permanent establishment where the real estate represents a fixed place of business in the UAE through which the business of the foreign person is wholly or partially carried out.',
         },
         eighth: {
-            heading: '8. What determines whether income is sourced from the UAE?',
+            heading: 'What determines whether income is sourced from the UAE?',
             firstPara: 'Income will be considered to be sourced from the UAE, if:',
         },
         ninth: {
-            heading: '9. Will UAE investment income earned by a foreign investor be subject to UAE CT?',
+            heading: 'Will UAE investment income earned by a foreign investor be subject to UAE CT?',
             firstPara: 'Income from dividends, capital gains, interest, royalties and other investment returns earned by foreign juridical persons or individuals will not be subject to UAE CT, unless such income can be attributed to a permanent establishment in the UAE of the foreign person.',
         },
     }

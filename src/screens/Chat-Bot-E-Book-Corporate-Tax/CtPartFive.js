@@ -5,31 +5,31 @@ export default function CtPartFive() {
 
     const ctPartFive = {
         first: {
-            heading: '1. Will the income of UAE branches of a UAE business be subject to UAE CT?',
+            heading: 'Will the income of UAE branches of a UAE business be subject to UAE CT?',
             firstPara: 'Yes. The income of UAE branches will be included in the taxable income and UAE CT return of their UAE “parent” or “head office”.',
         },
         second: {
-            heading: '2. Will UAE branches of foreign businesses be subject to UAE CT?',
+            heading: 'Will UAE branches of foreign businesses be subject to UAE CT?',
             firstPara: 'Where no election is made or the income of the foreign branch or permanent establishment is not eligible for an exemption from CT, the UAE CT payable on the income of the foreign branch or permanent establishment can be reduced by the corporate tax (or similar) paid on the relevant income in the foreign jurisdiction.',
         },
         third: {
-            heading: '3. Are UAE branches separate juridical persons?',
+            heading: 'Are UAE branches separate juridical persons?',
             firstPara: 'No. UAE branches of a domestic or a foreign juridical person are an extension of their “parent” or “head office” and, therefore, are not considered separate juridical persons',
         },
         fourth: {
-            heading: '4. Are UAE branches of a UAE juridical person required to separately register or file for UAE CT?',
+            heading: 'Are UAE branches of a UAE juridical person required to separately register or file for UAE CT?',
             firstPara: 'UAE branches of a UAE juridical person are not required to separately register or file for UAE CT',
         },
         fifth: {
-            heading: '5. Will the income of foreign branches of a UAE business be subject to UAE CT? ',
+            heading: 'Will the income of foreign branches of a UAE business be subject to UAE CT? ',
             firstPara: 'The income of foreign branches or foreign permanent establishments of a UAE business will be included in the taxable income and UAE CT return of their UAE “head office”, unless the UAE business elects to claim an exemption for its foreign branch profits. This exemption is available for foreign branch profits that have already been subject to tax in the foreign jurisdiction.',
         },
         sixth: {
-            heading: '6. Will a UAE branch constitute a taxable Permanent Establishment for the foreign business? ',
+            heading: 'Will a UAE branch constitute a taxable Permanent Establishment for the foreign business? ',
             firstPara: 'A UAE branch of a foreign business would generally be subject to UAE CT, unless the activities of the branch do not give rise to a permanent establishment in the UAE for CT purposes (see section ‘Foreign persons’).',
         },
         seventh: {
-            heading: '7. What are preparatory or auxiliary activities?',
+            heading: 'What are preparatory or auxiliary activities?',
             firstPara: 'Preparatory or auxiliary activities are those performed in preparation or in support of more substantive business activities of the foreign entity. Examples of preparatory and auxiliary activities include storage, display or delivery of goods or merchandise belonging to the foreign entity, limited marketing and promotional activities, performing market research and attending seminars or conventions.',
             secondPara: 'Where relevant, the application of an international agreement for the avoidance of double taxation should be taken into consideration when determining whether a permanent establishment exists or whether the activities performed are preparatory or auxiliary in nature.',
         },

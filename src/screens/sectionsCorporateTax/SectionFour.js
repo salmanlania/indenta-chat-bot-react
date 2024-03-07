@@ -4,7 +4,6 @@ import { Paper, Typography, Table, TableContainer, TableHead, TableBody, TableRo
 export default function SectionFour() {
     const corporateTax = {
         fourth: {
-            heading: '4.Who is exempt from Corporate Tax?',
             firstPara: 'Certain types of businesses or organizations are exempt from Corporate Tax given their importance and contribution to the social fabric and economy of the UAE. These are known as Exempt Persons and include:',
             secondPara: 'In addition to not being subject to Corporate Tax, Government Entities, Government Controlled Entities that are specified in a Cabinet Decision, Extractive Businesses and NonExtractive Natural Resource Businesses may also be exempted from any registration, filing and other compliance obligations imposed by the Corporate Tax Law, unless they engage in an activity which is within the charge of Corporate Tax.'
         },
@@ -12,9 +11,6 @@ export default function SectionFour() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', fontWeight: 'bold' }} id="fourthHeading">
-                {corporateTax.fourth.heading}
-            </Typography>
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
                 {corporateTax.fourth.firstPara}
             </Typography>

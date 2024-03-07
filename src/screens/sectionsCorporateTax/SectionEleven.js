@@ -1,10 +1,9 @@
 import React from 'react'
-import { Paper, Typography, Table, TableContainer, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
+import { Typography, Table , TableHead, TableBody, TableRow, TableCell } from '@mui/material';
 
 export default function SectionEleven() {
     const corporateTax = {
         eleventh: {
-            heading: '11.What expenses are deductible? ',
             firstPara: 'In principle, all legitimate business expenses incurred wholly and exclusively for the purposes of deriving Taxable Income will be deductible, although the timing of the deduction may vary for different types of expenses and the accounting method applied. For capital assets, expenditure would generally be recognized by way of depreciation or amortization deductions over the economic life of the asset or benefit.',
             secondPara: 'Expenditure that has a dual purpose, such as expenses incurred for both personal and business purposes, will need to be apportioned with the relevant portion of the expenditure treated as deductible if incurred wholly and exclusively for the purpose of the taxable person’s business.',
             thirdPara: 'Certain expenses which are deductible under general accounting rules may not be fully deductible for Corporate Tax purposes. These will need to be added back to the Accounting Income for the purposes of determining the Taxable Income. Examples of expenditure that is or may not be deductible (partially or in full) include:'
@@ -15,10 +14,6 @@ export default function SectionEleven() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', fontWeight: 'bold' }} id="eleventhHeading">
-                {corporateTax.eleventh.heading}
-            </Typography>
-
             {corporateTaxEleventhArray.map((i) => (
                 <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
                     {i}

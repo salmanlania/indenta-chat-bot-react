@@ -69,8 +69,8 @@ const ChatApp = () => {
     };
 
     return (
-        <div style={{ borderRadius: '50%', padding: '5px' }}>
-            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '50px' ,}}>
+        <div style={{ borderRadius: '50%', padding: '5px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginRight: '6em', '@media (min-width: 600px)': { flexDirection: 'row' } }}>
+            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '50px', }}>
                 <SmartToyOutlinedIcon sx={{ fontSize: '2rem', borderRadius: '50%', cursor: 'pointer' }} />
             </Button>
             <Drawer anchor="right" open={isOpen} onClose={handleDrawerClose} style={{ width: '350px !important' }}>
@@ -81,14 +81,14 @@ const ChatApp = () => {
                         sx={{
                             background: 'red',
                             '&:hover': {
-                                background: 'darkred', 
+                                background: 'darkred',
                             },
                         }}
                         onClick={handleCloseChat}
                     >
                         <CloseIcon style={{ color: 'white' }} />
                     </Button>
-                    <Typography variant='h5' style={{ color: 'red', fontWeight: '1000' , fontSize : '2rem' }}>UAE TAX ChatBot</Typography>
+                    <Typography variant='h5' style={{ color: 'red', fontWeight: '1000', fontSize: '2rem' }}>UAE TAX ChatBot</Typography>
 
                     {/* <Button variant="outlined" color="secondary" onClick={handleClearChat}>
                         Clear Chat

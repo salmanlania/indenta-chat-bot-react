@@ -5,20 +5,20 @@ export default function CtPartNinteen() {
 
     const ctPartNinteen = {
         first: {
-            heading: '1. What is withholding tax?',
+            heading: 'What is withholding tax?',
             firstPara: 'Withholding tax is a form of Corporate Tax collected at source by the payer on behalf of the recipient of the income. Withholding taxes exist in many tax systems and typically apply to the cross-border payment of dividends, interest, royalties and other types of income.',
         },
         second: {
-            heading: '2. Does the UAE CT regime have withholding tax?',
+            heading: 'Does the UAE CT regime have withholding tax?',
             firstPara: 'A 0% withholding tax may apply to certain types of UAE sourced income paid to nonresidents. Because of the 0% rate, in practice, no withholding tax would be due and there will be no withholding tax related registration and filing obligations for UAE businesses or foreign recipients of UAE sourced income.',
             secondPara: 'Withholding tax does not apply to transactions between UAE resident persons.',
         },
         third: {
-            heading: '3. Is a credit available for foreign tax paid on income that is also subject to UAE CT?',
+            heading: 'Is a credit available for foreign tax paid on income that is also subject to UAE CT?',
             firstPara: 'Yes. Foreign tax paid on income that is also subject to UAE CT can be deducted as a foreign tax credit from the UAE CT payable. The maximum foreign tax credit is the lower of the foreign tax paid and the UAE CT payable on the relevant income. Any excess foreign tax credit cannot be carried forward or back to a different Tax Period.',
         },
         fourth: {
-            heading: '4. What foreign taxes can be credited against UAE CT?',
+            heading: 'What foreign taxes can be credited against UAE CT?',
             firstPara: 'Withholding tax and other forms of foreign taxes on income or profits can be offset against the UAE CT liability, subject to any conditions as may be set out in an applicable agreement or treaty made between the UAE and the foreign country or territory.',
         },
     }

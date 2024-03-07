@@ -5,27 +5,27 @@ export default function CtPartSix() {
 
     const ctPartSix = {
         first: {
-            heading: '1. What expenditure will be deductible for the purposes of calculating taxable income?',
+            heading: 'What expenditure will be deductible for the purposes of calculating taxable income?',
             firstPara: 'In principle, all legitimate business expenses incurred to derive taxable income will be deductible, although the timing of the deduction may vary for different types of expenses and the accounting method applied. For capital assets, expenditure would generally be recognised by way of depreciation or amortisation deductions over the economic life of the asset or benefit.',
         },
         second: {
-            heading: '2. What expenditure will be non-deductible for the purposes of calculating taxable income?',
+            heading: 'What expenditure will be non-deductible for the purposes of calculating taxable income?',
             firstPara: 'Article 33 of the UAE Corporate Tax Law lists certain specific expenses for which no deduction will be allowed, such as bribes, fines and penalties, and no deduction is available for expenditure incurred in deriving income that is exempt from CT or losses that are not connected with or arising out of a taxpayer`s business. Additionally, certain restrictions may apply to the deduction of interest expenditure (see question ‘Will my interest expenditure be fully deductible?’ under section Deductions).',
         },
         third: {
-            heading: '3. Will my interest expenditure be fully deductible?',
+            heading: 'Will my interest expenditure be fully deductible?',
             firstPara: 'The Corporate Tax Law provides for certain restrictions on the deductibility of interest expenditure to discourage excessive debt financing, and to ensure that debt financing used or arising as a result of certain specific intra-group transactions will only be deductible if there is a valid commercial reason for obtaining the loan.',
         },
         fourth: {
-            heading: '4. Will dividends paid by UAE companies be deductible for CT purposes?',
+            heading: 'Will dividends paid by UAE companies be deductible for CT purposes?',
             firstPara: 'Dividends paid by UAE companies will not be deductible for CT purposes.',
         },
         fifth: {
-            heading: '5. Will service fees paid to local and Federal Governments be deductible for UAE CT?',
+            heading: 'Will service fees paid to local and Federal Governments be deductible for UAE CT?',
             firstPara: 'Business set up, licence renewal and other Government fees and charges incurred wholly and exclusively in the ordinary course of business are deductible for CT purposes.',
         },
         sixth: {
-            heading: '6. Will Value Added Tax paid be deductible for UAE CT?',
+            heading: 'Will Value Added Tax paid be deductible for UAE CT?',
             firstPara: 'Only irrecoverable input Value Added Tax may be deductible for CT purposes. Otherwise, Value Added Tax charged and Value Added Tax incurred would not impact the calculation of taxable income.',
         },
     }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Typography, Table, TableContainer, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
+import { Box, Paper, Typography, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Tooltip } from '@mui/material';
 
 export default function CoprateTax() {
     const corporateTax = {
@@ -148,7 +148,7 @@ export default function CoprateTax() {
 
     const corporateTaxFourteennArray = [corporateTax.fourteen.firstPara, corporateTax.fourteen.secondPara, corporateTax.fourteen.thirdPara, corporateTax.fourteen.fourthPara, corporateTax.fourteen.fifthPara, corporateTax.fourteen.sixthPara, corporateTax.fourteen.seventhPara]
 
-    const corporateTaxFifteennArray = [corporateTax.fourteen.firstPara, corporateTax.fourteen.secondPara, corporateTax.fourteen.thirdPara, corporateTax.fourteen.fourthPara, corporateTax.fifteen.fifthPara, corporateTax.fifteen.sixthPara, corporateTax.fifteen.seventhPara]
+    const corporateTaxFifteennArray = [corporateTax.fifteen.firstPara, corporateTax.fifteen.secondPara, corporateTax.fifteen.thirdPara, corporateTax.fifteen.fourthPara, corporateTax.fifteen.fifthPara, corporateTax.fifteen.sixthPara, corporateTax.fifteen.seventhPara]
 
     const corporateTaxSeventeenArray = [corporateTax.seventeen.firstPara, corporateTax.seventeen.secondPara, corporateTax.seventeen.thirdPara]
 
@@ -157,7 +157,10 @@ export default function CoprateTax() {
     return (
         <div>
             <Typography variant="h6" sx={{ marginBottom: '1rem', fontWeight: 'bold' }} id="firstHeading">
-                {corporateTax.first.heading} <a href='#comeToBottom' id='comeToTop'>Go To Bottom</a>
+                {corporateTax.first.heading}
+                &nbsp;
+                &nbsp;
+                <a href='#comeToBottom' id='comeToTop'>Go To Bottom</a>
             </Typography>
             {corporateTaxFirstArray.map((i) => (
                 <Typography paragraph sx={{ fontWeight: '300', color: 'black', fontSize: '14px' }} key={i}>
@@ -184,15 +187,27 @@ export default function CoprateTax() {
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
                 {corporateTax.third.firstPara}
             </Typography>
-            {corporateTaxThirdArrayList.map((i) => (
-                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                    {i}
-                </Typography>
+            {corporateTaxThirdArrayList.map((i, index) => (
+                <Tooltip title={index === 2 ?
+                    <>
+                        {corporateTaxEighthArray}
+                    </>
+                    : ""} arrow sx={{ background: 'black', color: 'white', overflow: 'auto' }}>
+                    <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
+                        {i}
+                    </Typography>
+                </Tooltip>
             ))}
-            {corporateTaxThirdArray.map((i) => (
-                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} key={i}>
-                    {i}
-                </Typography>
+            {corporateTaxThirdArray.map((i, index) => (
+                <Tooltip title={index === 0 ? (
+                    <>
+                        {corporateTaxFourteennArray}
+                    </>
+                ) : ""} arrow sx={{ background: 'black', color: 'white', overflow: 'auto' }}>
+                    <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
+                        {i}
+                    </Typography>
+                </Tooltip>
             ))}
 
             {/* third para end */}
@@ -492,7 +507,22 @@ export default function CoprateTax() {
                     {i}
                 </Typography>
             ))}
-            <span style={{ border: '1px solid black' }}>EMPTY BOX</span>
+
+            <Paper elevation={3} sx={{ padding: '1rem', border: '1px solid black', marginBottom: '1rem' }}>
+                <Box
+                    sx={{
+                        height: '180px',
+                        width: '60%',
+                        boxSizing: 'border-box',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        fontSize: '1rem',
+                        background: 'transparent',
+                    }}
+                >
+                </Box>
+            </Paper>
 
             {/* seventeen para end */}
 

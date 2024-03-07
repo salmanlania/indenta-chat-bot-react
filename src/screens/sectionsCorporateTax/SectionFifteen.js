@@ -1,10 +1,9 @@
 import React from 'react'
-import { Paper, Typography, Table, TableContainer, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
+import { Typography } from '@mui/material';
 
 export default function SectionFifteen() {
     const corporateTax = {
         fifteen: {
-            heading: '15.What are Tax Groups, and when can they be formed?',
             firstPara: 'Two or more Taxable Persons who meet certain conditions (see below) can apply to form a “Tax Group” and be treated as a single Taxable Person for Corporate Tax purposes.',
             secondPara: 'To form a Tax Group, both the parent company and its subsidiaries must be resident juridical persons, have the same Financial Year and prepare their financial statements using the same accounting standards.',
             thirdPara: 'Additionally, to form a Tax Group, the parent company must: ',

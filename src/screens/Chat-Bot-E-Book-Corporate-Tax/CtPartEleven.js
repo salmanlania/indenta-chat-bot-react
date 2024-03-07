@@ -5,30 +5,30 @@ export default function CtPartEleven() {
 
     const ctPartEleven = {
         first: {
-            heading: '1. What income is exempt from UAE CT?',
+            heading: 'What income is exempt from UAE CT?',
             firstPara: 'The following income is exempt from UAE CT:',
         },
         second: {
-            heading: '2. Are all dividends and other profit distributions earned from UAE juridical persons exempt from UAE CT?',
+            heading: 'Are all dividends and other profit distributions earned from UAE juridical persons exempt from UAE CT?',
             firstPara: 'Domestic dividends and other profit distributions earned from UAE juridical persons are exempt from UAE CT, irrespective of the level of ownership in the UAE juridical person paying the dividend or profit share. This exemption also applies to dividends received from a UAE juridical person  that benefits from a CT exemption or whose profits are subject to the 0% Free Zone CT rate.',
         },
         third: {
-            heading: '3. Are all dividends and other profit distributions from foreign juridical persons exempt from UAE CT?',
+            heading: 'Are all dividends and other profit distributions from foreign juridical persons exempt from UAE CT?',
             firstPara: 'Subject to the participation exemption requirements, dividends and other profit distributions earned from a Participating Interest in a foreign juridical person are exempt from UAE CT. A Participating Interest is a 5% or greater ownership interest in the capital or equity of the foreign juridical person that meets the conditions of the participation exemption regime.',
         },
         fourth: {
-            heading: '4. Are capital gains exempt from UAE CT?',
+            heading: 'Are capital gains exempt from UAE CT?',
             firstPara: 'Under the participation exemption regime, capital gains earned from a Participating Interest are exempt from UAE CT. Also, there is relief from CT for capital gains that may arise on intra-group transfers and reorganisation and restructuring transactions.',
             secondPara: 'Other capital gains would be treated as ordinary income and subject to CT.',
         },
         fifth: {
-            heading: '5. What is the participation exemption regime?',
+            heading: 'What is the participation exemption regime?',
             firstPara: 'The background to the participation exemption regime is to prevent double taxation within a group where an underlying group company (that pays the dividend or whose shares are being sold) has already been taxed on its profits.',
             secondPara: 'The Corporate Tax Law fully exempts dividends derived from UAE entities, as well as dividends from foreign subsidiaries that qualify as a “Participation”. A Participation is a juridical person in which the UAE shareholder company owns a 5% or greater ownership interest (a “Participating Interest”) for at least 12 months, and that meets the conditions of the participation exemption regime.',
             thirdPara: 'Similarly, capital gains on the sale of shares in domestic and foreign entities would also be exempt from CT. This exemption is subject to the same minimum ownership threshold, duration and other conditions mentioned above.',
         },
         sixth: {
-            heading: '6. Can I benefit from a UAE CT exemption if I own less than a 5% shareholding in a company?',
+            heading: 'Can I benefit from a UAE CT exemption if I own less than a 5% shareholding in a company?',
             firstPara: 'There can be instances where a UAE business makes a strategic investment in another company that does not result in a 5% or greater ownership interest, or where the percentage ownership in the Participation falls below the 5% ownership threshold because of events outside of the control of the UAE shareholder company. To address such instances and reduce the administrative burden associated with monitoring the continued compliance with the minimum ownership requirement under the participation exemption regime, the Minister may prescribe a certain minimum acquisition cost / value above which the ownership interest in another juridical person is deemed to be a qualifying “Participation”, and the income from this investment can benefit from the participation exemption.',
         },
     }

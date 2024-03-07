@@ -5,21 +5,21 @@ export default function CtPartTwentyTwo() {
 
     const ctPartTwentyTwo = {
         first: {
-            heading: '1. Will transfer pricing rules apply to both domestic and cross border transactions?',
+            heading: 'Will transfer pricing rules apply to both domestic and cross border transactions?',
             firstPara: 'Yes. Transfer pricing rules apply to UAE businesses that have transactions with Related Parties and Connected Persons, irrespective of whether the Related Parties or Connected Persons are located in the UAE mainland, a Free Zone or in a foreign jurisdiction.',
         },
         second: {
-            heading: '2. What are transfer pricing rules?',
+            heading: 'What are transfer pricing rules?',
             firstPara: 'Transfer pricing rules seek to ensure that transactions between Related Parties are carried out on arm’s length terms, as if the transaction was carried out between independent parties. To prevent the manipulation of taxable income, various articles in the Corporate Tax Law require that the consideration of transactions with Related Parties and Connected Persons needs to be determined by reference to their “Market Value”.',
         },
         third: {
-            heading: '3. Who are Related Parties?', 
+            heading: 'Who are Related Parties?', 
             firstPara: 'Generally, Related Parties of an individual refer to the individual`s relatives as well as companies in which the individual, alone or together with their Related Parties, has a controlling ownership interest (typically 50% or more of shares of the company).',
             secondPara: 'Similarly, Related Parties of a company refers to any other companies in which the company, alone or together with their Related Parties, has a controlling ownership interest (typically 50% or more of shares of the company), or that are under greater than 50% common ownership.',
             thirdPara: 'Further detail on the definition of Related Parties can be found in Article 35 of the Corporate Tax Law.',
         },
         fourth: {
-            heading: '4. Who are Connected Persons?',
+            heading: 'Who are Connected Persons?',
             firstPara: 'Connected Persons are different from Related Parties.',
             secondPara: 'A person will be considered “connected” to a business that is within the scope of UAE CT if they are:',
             thirdPara: '1. The owner of the business;',
@@ -27,7 +27,7 @@ export default function CtPartTwentyTwo() {
             fifthPara: '3. A Related Party of either of the above.',
         },
         fifth: {
-            heading: '5. What transfer pricing methodologies can be used to determine the arm`s length value?',
+            heading: 'What transfer pricing methodologies can be used to determine the arm`s length value?',
             firstPara: 'Generally, taxpayers are required to apply one or more of the following methodologies to determine the arm’s length values for transfer pricing purposes:',
             secondPara: '1. The comparable uncontrolled price method.',
             thirdPara: '2. The resale price method.',
@@ -36,16 +36,16 @@ export default function CtPartTwentyTwo() {
             sixthPara: '5. The transactional profit split method.',
         },
         sixth: {
-            heading: '6. What documentation should be maintained in respect of transfer pricing?',
+            heading: 'What documentation should be maintained in respect of transfer pricing?',
             firstPara: 'Businesses will be required to maintain information regarding their transactions with Related Parties and Connected Persons, and certain businesses will be required to submit this information along with their tax return. Businesses that claim small business relief will not have to comply with the transfer pricing documentation rules.',
             secondPara: 'Certain businesses may be requested to maintain a master file and a local file.',
         },
         seventh: {
-            heading: '7. Do taxpayers need to consider whether intra-group loan arrangements are at arm`s length?',
+            heading: 'Do taxpayers need to consider whether intra-group loan arrangements are at arm`s length?',
             firstPara: 'Yes. Transfer pricing rules will apply to all transactions with Related Parties and Connected Persons. Therefore, any loan obtained from (or granted to) a Related Party or Connected Person needs to be at arm’s length (e.g. interest rate, duration, etc.).',
         },
         eighth: {
-            heading: '8. Would transactions in a Tax Group need to comply with transfer pricing rules?',
+            heading: 'Would transactions in a Tax Group need to comply with transfer pricing rules?',
             firstPara: 'Transactions between members of a Tax Group are eliminated in the consolidation of the Group’s financial results statements and hence do not need to comply with the transfer pricing rules, unless a member of the Tax Group needs to compute its stand-alone Taxable Income for the purposes of utilising Tax Losses incurred before joining the Tax Group or when leaving a Tax Group.',
         },
     }

@@ -5,15 +5,15 @@ export default function CtPartTen() {
 
     const ctPartTen = {
         first: {
-            heading: '1. Will there be any relief available for transfers between group companies?',
+            heading: 'Will there be any relief available for transfers between group companies?',
             firstPara: 'Yes. Companies that are part of a ‘Qualifying Group’ can transfer assets and liabilities between themselves at their net book value. This means that the transfer can be carried out tax neutrally (i.e. not give rise to a gain or loss for CT purposes).',
         },
         second: {
-            heading: '2. What is a Qualifying Group?',
+            heading: 'What is a Qualifying Group?',
             firstPara: 'A Qualifying Group exists where all of the following conditions are met:',
         },
         third: {
-            heading: '3. Will there be any relief to facilitate mergers, spin-offs and other restructuring transactions?',
+            heading: 'Will there be any relief to facilitate mergers, spin-offs and other restructuring transactions?',
             firstPara: 'Yes. The UAE CT regime allows for legal mergers, business mergers, spin-offs and other transfers and restructuring transactions that meet the conditions specified to be carried out without triggering a gain or loss for CT purposes.',
         },
     }

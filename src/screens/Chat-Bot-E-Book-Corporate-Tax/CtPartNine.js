@@ -5,27 +5,27 @@ export default function CtPartNine() {
 
     const ctPartNine = {
         first: {
-            heading: '1. What UAE CT rates will apply to entities established in a Free Zone?',
+            heading: 'What UAE CT rates will apply to entities established in a Free Zone?',
             firstPara: 'Entities established in a Free Zone that meet the conditions to benefit from the Free Zone CT regime (“Qualifying Free Zone Persons”) will be subject to UAE CT at the following rates: ',
         },
         second: {
-            heading: '2. Is the 0% Free Zone CT regime applicable automatically? ',
+            heading: 'Is the 0% Free Zone CT regime applicable automatically? ',
             firstPara: 'A Qualifying Free Zone Person that meets the relevant conditions will be able to benefit from the 0% Free Zone CT regime automatically. However, a Qualifying Free Zone Person can elect not to apply the Free Zone CT regime, but instead be subject to the regular CT regime and rates.',
         },
         third: {
-            heading: '3. What is a Qualifying Free Zone Person?',
+            heading: 'What is a Qualifying Free Zone Person?',
             firstPara: 'To be treated as a “Qualifying Free Zone Person”, the Free Zone entity must:',
         },
         fourth: {
-            heading: '4. Will a Free Zone entity be required to register and file a UAE CT return?',
+            heading: 'Will a Free Zone entity be required to register and file a UAE CT return?',
             firstPara: 'Yes. All Free Zone entities will be required to register and file a CT return, irrespective of whether they are a Qualifying Free Zone Person or not.',
         },
         fifth: {
-            heading: '5. Will a different UAE CT treatment apply to entities established in a financial Free Zone?',
+            heading: 'Will a different UAE CT treatment apply to entities established in a financial Free Zone?',
             firstPara: 'No. The UAE CT treatment will be the same for all Free Zone entities.',
         },
         sixth: {
-            heading: '6. Will Free Zone entities be subject to the global minimum tax (OECD, BEPS Pillar 2) rules?',
+            heading: 'Will Free Zone entities be subject to the global minimum tax (OECD, BEPS Pillar 2) rules?',
             firstPara: 'ualifying Free Zone entities that are part of a large multinational group are anticipated to be subject to a different CT rate once the Pillar Two rules are embedded into the UAE CT regime.',
         },
     }

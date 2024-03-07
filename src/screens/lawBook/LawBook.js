@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Paper, Typography, Box, Popover, Table, TableContainer, TableHead, TableBody, TableRow, MenuItem, TableCell, Grid, Container } from '@mui/material';
+import { Tabs, Tab, Paper, Typography, Box, Popover, Table, TableContainer, TableHead, TableBody, TableRow, MenuItem, TableCell, Grid, Container, Button, Dialog, DialogContent, DialogTitle, IconButton, } from '@mui/material';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
 import CssBaseline from '@mui/material/CssBaseline';
-import ChatApp from '../ChatApp/ChatApp';
 import './LawBook.css'
 
 import CoprateTax from '../Chat-Bot-E-Book-Corporate-Tax/CoprateTax';
@@ -54,6 +55,16 @@ const LawBook = () => {
     const [nestedTabValue, setNestedTabValue] = useState(0);
     const [anchorEl, setAnchorEl] = useState(null);
     const [selectedSection, setSelectedSection] = useState(null);
+    const [openPopup, setOpenPopup] = useState(false);
+
+    const handleOpenPopup = (section) => {
+        setOpenPopup(true);
+        setSelectedSection(section);
+    };
+
+    const handleClosePopup = () => {
+        setOpenPopup(false);
+    };
 
     const handleMainTabChange = (event, newValue) => {
         setMainTabValue(newValue);
@@ -98,7 +109,7 @@ const LawBook = () => {
                                         maxWidth="lg"
                                         className='customGrid'
                                         sx={{
-                                            maxHeight: '60vh',
+                                            maxHeight: '56vh',
                                             overflowY: 'scroll',
                                             overflowX: 'hidden',
                                             bgcolor: '#CDDCE8',
@@ -154,7 +165,7 @@ const LawBook = () => {
                                 </React.Fragment>
                             </Typography>
                         </Grid>
-                        <Grid className='customGrid' item xs={12} md={4} sx={{ border: '3px black solid', height: '60vh', marginTop: '2rem', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', background: '#CDDCE8', }}>
+                        <Grid className='customGrid' item xs={12} md={4} sx={{ border: '3px black solid', height: '56vh', marginTop: '2rem', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', background: '#CDDCE8', }}>
                             <Tabs
                                 value={nestedTabValue}
                                 onChange={handleNestedTabChange}
@@ -162,7 +173,6 @@ const LawBook = () => {
                                 textColor="primary"
                                 centered
                                 sx={{
-                                    maxWidth: '30rem',
                                     '@media (max-width: 600px)': {
                                         maxWidth: '100%',
                                     },
@@ -222,16 +232,17 @@ const LawBook = () => {
                                         overflowX: 'hidden',
                                         '&::-webkit-scrollbar': {
                                             width: '12px',
+                                            background : '#CDDCE8',
                                         },
                                         '&::-webkit-scrollbar-thumb': {
-                                            background: '#888',
+                                            background: '#CDDCE8',
                                             borderRadius: '6px',
                                         },
                                         '&::-webkit-scrollbar-thumb:hover': {
-                                            background: '#555',
+                                            background: '#CDDCE8',
                                         },
                                         '&::-webkit-scrollbar-track': {
-                                            background: 'transparent',
+                                            background: '#CDDCE8',
                                             borderRadius: '6px',
                                         },
                                     }
@@ -549,24 +560,18 @@ const LawBook = () => {
                                     </TableContainer>
                                 </div>
                             </TabPanel>
+
                             {selectedSection && (
                                 <TabPanel value={nestedTabValue} index={1}>
-                                    <div style={{ maxHeight: '100%', overflow: 'auto' , maxWidth: '100%', width: '100%' }}>
-                                        <React.Fragment>
-                                            <CssBaseline />
-                                            <Container maxWidth="md" sx={{
-                                                bgcolor: '#fff',
-                                                height: 'auto',
-                                                overflow : 'auto',
-                                                border: '1px black solid',
-                                                padding: '1rem',
-                                                '@media (max-width: 600px)': {
-                                                    maxWidth: '100%',
-                                                    padding: '0.5rem',
-                                                },
-                                            }}>
-                                                <div style={{ maxWidth: '100%', overflow: 'hidden' , maxHeight : '40vh' , overflow : 'scroll' , overflowX : 'hidden'}}>
-
+                                    <div style={{ maxHeight: '100%', overflow: 'auto', maxWidth: '100%', width: '100%', paddingLeft: '0' }}>
+                                        <CssBaseline />
+                                        <Container maxWidth="md" sx={{ bgcolor: '#fff', height: 'auto', overflow: 'auto', border: '1px black solid', padding: '0.5rem', '@media (max-width: 600px)': { maxWidth: '100%', padding: '0.5rem', }, }}>
+                                            <div style={{ maxWidth: '100%', overflow: 'hidden', height: '38vh', overflowY: 'auto', overflowX: 'hidden' }}>
+                                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                                    <Typography variant='h6' sx={{ textDecoration: 'underline' }}>{selectedSection}</Typography>
+                                                    <Button onClick={() => handleOpenPopup(selectedSection)} sx={{ float: 'right', display: 'block' }}><FullscreenIcon sx={{ fontSize: '1.7rem' }} /></Button>
+                                                </div>
+                                                <div>
                                                     {selectedSection === 'Section 1' && <SectionOne />}
                                                     {selectedSection === 'Section 2' && <SectionTwo />}
                                                     {selectedSection === 'Section 3' && <SectionThree />}
@@ -586,8 +591,47 @@ const LawBook = () => {
                                                     {selectedSection === 'Section 17' && <SectionSeventeen />}
                                                     {selectedSection === 'Section 18' && <SectionEighteen />}
                                                 </div>
-                                            </Container>
-                                        </React.Fragment>
+
+                                                {/* Popup dialog */}
+                                                <Dialog open={openPopup} onClose={handleClosePopup} maxWidth="md" fullWidth >
+                                                    <DialogTitle>
+                                                        {selectedSection}
+                                                        <IconButton
+                                                            edge="end"
+                                                            color="inherit"
+                                                            onClick={handleClosePopup}
+                                                            aria-label="close"
+                                                            sx={{
+                                                                marginLeft: 'auto', order: { xs: 2, md: 3 }, ml: { xs: 1, md: 2 }, float: 'right'
+                                                            }}
+                                                        >
+                                                            <FullscreenExitIcon />
+                                                        </IconButton>
+                                                    </DialogTitle>
+                                                    <DialogContent >
+                                                        {selectedSection === 'Section 1' && <SectionOne />}
+                                                        {selectedSection === 'Section 2' && <SectionTwo />}
+                                                        {selectedSection === 'Section 3' && <SectionThree />}
+                                                        {selectedSection === 'Section 4' && <SectionFour />}
+                                                        {selectedSection === 'Section 5' && <SectionFive />}
+                                                        {selectedSection === 'Section 6' && <SectionSix />}
+                                                        {selectedSection === 'Section 7' && <SectionSeven />}
+                                                        {selectedSection === 'Section 8' && <SectionEight />}
+                                                        {selectedSection === 'Section 9' && <SectionNine />}
+                                                        {selectedSection === 'Section 10' && <SectionTen />}
+                                                        {selectedSection === 'Section 11' && <SectionEleven />}
+                                                        {selectedSection === 'Section 12' && <SectionTwelve />}
+                                                        {selectedSection === 'Section 13' && <SectionThirteen />}
+                                                        {selectedSection === 'Section 14' && <SectionFourteen />}
+                                                        {selectedSection === 'Section 15' && <SectionFifteen />}
+                                                        {selectedSection === 'Section 16' && <SectionSixteen />}
+                                                        {selectedSection === 'Section 17' && <SectionSeventeen />}
+                                                        {selectedSection === 'Section 18' && <SectionEighteen />}
+                                                    </DialogContent>
+                                                </Dialog>
+
+                                            </div>
+                                        </Container>
                                     </div>
                                 </TabPanel>
                             )}
