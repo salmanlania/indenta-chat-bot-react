@@ -5,8 +5,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import SendIcon from '@mui/icons-material/Send';
 
-import bot from './images/bot.png';
-import user from './images/user.png';
+// import bot from './images/bot.png';
+// import user from './images/user.png';
 
 const ChatApp = () => {
     const [isOpen, setIsOpen] = useState(false);

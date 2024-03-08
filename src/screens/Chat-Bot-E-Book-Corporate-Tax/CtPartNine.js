@@ -9,7 +9,7 @@ export default function CtPartNine() {
             firstPara: 'Entities established in a Free Zone that meet the conditions to benefit from the Free Zone CT regime (“Qualifying Free Zone Persons”) will be subject to UAE CT at the following rates: ',
         },
         second: {
-            heading: 'Is the 0% Free Zone CT regime applicable automatically? ',
+            heading: 'Is the 0% Free Zone CT regime applicable automatically?',
             firstPara: 'A Qualifying Free Zone Person that meets the relevant conditions will be able to benefit from the 0% Free Zone CT regime automatically. However, a Qualifying Free Zone Person can elect not to apply the Free Zone CT regime, but instead be subject to the regular CT regime and rates.',
         },
         third: {
@@ -32,7 +32,7 @@ export default function CtPartNine() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNineFirst">
                 {ctPartNine.first.heading}
             </Typography>
 
@@ -46,7 +46,7 @@ export default function CtPartNine() {
 
             {/* ctPartNine first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNineSecond">
                 {ctPartNine.second.heading}
             </Typography>
 
@@ -56,7 +56,7 @@ export default function CtPartNine() {
 
             {/* ctPartNine second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNineThird">
                 {ctPartNine.third.heading}
             </Typography>
 
@@ -75,7 +75,7 @@ export default function CtPartNine() {
 
             {/* ctPartNine third end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNineFourth">
                 {ctPartNine.fourth.heading}
             </Typography>
 
@@ -85,7 +85,7 @@ export default function CtPartNine() {
 
             {/* ctPartNine fourth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNineFifth">
                 {ctPartNine.fifth.heading}
             </Typography>
 
@@ -95,7 +95,7 @@ export default function CtPartNine() {
 
             {/* ctPartNine fifth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNineSixth">
                 {ctPartNine.sixth.heading}
             </Typography>
 

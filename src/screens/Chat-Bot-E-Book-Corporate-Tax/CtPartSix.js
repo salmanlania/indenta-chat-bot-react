@@ -32,7 +32,7 @@ export default function CtPartSix() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixFirst">
                 {ctPartSix.first.heading}
             </Typography>
 
@@ -46,7 +46,7 @@ export default function CtPartSix() {
 
             {/* ctPartSix First end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixSecond">
                 {ctPartSix.second.heading}
             </Typography>
 
@@ -56,7 +56,7 @@ export default function CtPartSix() {
 
             {/* ctPartSix Second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixThird">
                 {ctPartSix.third.heading}
             </Typography>
 
@@ -87,7 +87,7 @@ export default function CtPartSix() {
 
             {/* ctPartSix Third end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixFourth">
                 {ctPartSix.fourth.heading}
             </Typography>
 
@@ -97,7 +97,7 @@ export default function CtPartSix() {
 
             {/* ctPartSix Fourth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixFifth">
                 {ctPartSix.fifth.heading}
             </Typography>
 
@@ -107,7 +107,7 @@ export default function CtPartSix() {
 
             {/* ctPartSix Fifth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixSixth">
                 {ctPartSix.sixth.heading}
             </Typography>
 

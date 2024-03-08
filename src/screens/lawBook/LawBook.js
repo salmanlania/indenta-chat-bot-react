@@ -227,22 +227,22 @@ const LawBook = () => {
                                         maxHeight: '40vh',
                                         maxWidth: '150% !important',
                                         cursor: 'pointer',
-                                        overflowY: 'scroll',
+                                        overflowY: 'auto',
                                         paddingRight: '3px',
                                         overflowX: 'hidden',
                                         '&::-webkit-scrollbar': {
                                             width: '12px',
-                                            background : '#CDDCE8',
+
                                         },
                                         '&::-webkit-scrollbar-thumb': {
-                                            background: '#CDDCE8',
+
                                             borderRadius: '6px',
                                         },
                                         '&::-webkit-scrollbar-thumb:hover': {
-                                            background: '#CDDCE8',
+
                                         },
                                         '&::-webkit-scrollbar-track': {
-                                            background: '#CDDCE8',
+
                                             borderRadius: '6px',
                                         },
                                     }
@@ -462,7 +462,7 @@ const LawBook = () => {
                                                     </TableCell>
                                                 </TableRow>
 
-                                                {/* ctPartThree */}
+                                                {/* =============================ctPartThree============================= */}
 
                                                 <TableRow>
                                                     <TableCell>35</TableCell>
@@ -552,6 +552,463 @@ const LawBook = () => {
                                                     <TableCell>49</TableCell>
                                                     <TableCell style={{ textAlign: 'center' }}>
                                                         <a href='#ctPartThreeFifteenth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Are there any consequences for non-compliance under the UAE CT regime?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPartThree End============================= */}
+
+                                                {/* ============================= ctPart Four Start============================= */}
+
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>50</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFourFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will the UAE CT regime tax large multinationals at the global minimum tax rate?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>51</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFourSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What is meant by “large” multinationals?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart Four End============================= */}
+
+                                                {/* ============================= ctPart Five Start============================= */}
+
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>52</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFiveFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will the income of UAE branches of a UAE business be subject to UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>53</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFiveSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will UAE branches of foreign businesses be subject to UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>54</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFiveThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Are UAE branches separate juridical persons?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>55</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFiveFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Are UAE branches of a UAE juridical person required to separately register or file for UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>56</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFiveFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will the income of foreign branches of a UAE business be subject to UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>57</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFiveSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will a UAE branch constitute a taxable Permanent Establishment for the foreign business?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>58</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFiveSeventh' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What are preparatory or auxiliary activities?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart Five End============================= */}
+
+                                                {/* ============================= ctPart Six Start============================= */}
+
+                                                <TableRow>
+                                                    <TableCell>59</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSixFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What expenditure will be deductible for the purposes of calculating taxable income?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>60</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSixSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What expenditure will be non-deductible for the purposes of calculating taxable income?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>61</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSixThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will my interest expenditure be fully deductible?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>62</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSixFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will dividends paid by UAE companies be deductible for CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>63</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSixFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will service fees paid to local and Federal Governments be deductible for UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>64</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSixSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will Value Added Tax paid be deductible for UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart Six End============================= */}
+
+                                                {/* ============================= ctPart Seven Start============================= */}
+
+                                                <TableRow>
+                                                    <TableCell>65</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSevenFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What records should I keep for UAE CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>66</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSevenSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>How long must I keep my records for UAE CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>67</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSevenThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Can I use the consolidated financial statements of the group to prepare the UAE CT return for my UAE business?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>68</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSevenFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will all entities that are subject to UAE CT be required to have audited financial statements?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>69</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSevenFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will the consolidated financial statements of a Tax Group need to be audited for CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>70</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSevenSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will I need to submit my financial statements to the Federal Tax Authority?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>71</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSevenSeventh' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What currency do I use for UAE CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>72</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartSevenEighth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What exchange rate do I use for UAE CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart Seven End============================= */}
+
+                                                {/* ============================= ctPart Eight Start============================= */}
+
+                                                <TableRow>
+                                                    <TableCell>73</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will foreign companies and other juridical persons be subject to UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>74</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>'When will a non-resident person be subject to CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>75</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>When will a foreign company be considered a resident person?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>76</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Can a foreign individual be subject to UAE CT as a resident person?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>77</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>When will a foreign individual be subject to UAE CT as a non-resident person?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>78</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>How do I know if I have a Permanent Establishment in the UAE?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>79</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightSeventh' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will the investment in UAE real estate constitute a taxable permanent establishment in the UAE?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>80</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightEighth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What determines whether income is sourced from the UAE?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>81</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartEightNinth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will UAE investment income earned by a foreign investor be subject to UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart eight End============================= */}
+
+                                                {/* ============================= ctPart nine Start============================= */}
+
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>82</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartNineFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What UAE CT rates will apply to entities established in a Free Zone?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>83</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartNineSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Is the 0% Free Zone CT regime applicable automatically?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>84</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartNineThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What is a Qualifying Free Zone Person?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>85</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartNineFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will a Free Zone entity be required to register and file a UAE CT return?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>86</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartNineFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will a different UAE CT treatment apply to entities established in a financial Free Zone?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>87</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartNineSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will Free Zone entities be subject to the global minimum tax (OECD, BEPS Pillar 2) rules?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart nine End============================= */}
+
+                                                {/* ============================= ctPart ten Start============================= */}
+
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>88</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTenFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will there be any relief available for transfers between group companies?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>88</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTenSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What is a Qualifying Group?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>90</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTenThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will there be any relief to facilitate mergers, spin-offs and other restructuring transactions?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart ten End============================= */}
+
+                                                {/* ============================= ctPart eleven Start============================= */}
+
+                                                <TableRow>
+                                                    <TableCell>91</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartElevenFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What income is exempt from UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>92</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartElevenSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Are all dividends and other profit distributions earned from UAE juridical persons exempt from UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>93</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartElevenThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Are all dividends and other profit distributions from foreign juridical persons exempt from UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>94</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartElevenFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Are capital gains exempt from UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>95</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartElevenFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What is the participation exemption regime?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>96</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartElevenSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Can I benefit from a UAE CT exemption if I own less than a 5% shareholding in a company?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart eleven End============================= */}
+
+                                                {/* ============================= ctPart twelve Start============================= */}
+
+                                                <TableRow>
+                                                    <TableCell>97</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTwelveFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What is an investment fund?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>98</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTwelveSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will investment funds be subject to UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>99</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTwelveThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What is a recognised stock exchange?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>100</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTwelveFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will a UAE based investment fund manager be subject to UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>101</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTwelveFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>For the purpose of benefiting from the CT exemption, are both the investment fund and the fund manager required to be subject to regulatory oversight?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>102</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTwelveSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Could a UAE-based investment manager create a UAE taxable presence for its foreign customers?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>103</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTwelveSeventh' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Could the activities of a UAE-based investment manager result in a foreign investment fund / vehicle to be considered resident in the UAE for UAE CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>104</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartTwelveEighth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Can investment holding companies and Special Purpose Vehicles used by an investment fund benefit from an exemption form UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart twelve End============================= */}
+
+                                                {/* ============================= ctPart thirteen Start============================= */}
+
+                                                <TableRow>
+                                                    <TableCell>105</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThirteenFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What is a juridical person?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>106</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThirteenSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What does it mean to have a ‘separate legal personality”?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>107</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThirteenThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>How do you determine whether a juridical person has a “Business” that is within the scope of UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>108</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThirteenFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Are foreign juridical persons subject to UAE CT in the same way as a UAE resident person?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>109</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThirteenFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>When is a foreign juridical person considered “effectively managed and controlled” in the UAE?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>110</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThirteenSixth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will UAE holding companies be subject to UAE CT?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>111</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartThirteenSeventh' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will a sole proprietorship or civil company be treated as a juridical person for CT purposes?</a>
+                                                    </TableCell>
+                                                </TableRow>
+
+                                                {/* ============================= ctPart thirteen End============================= */}
+
+                                                {/* ============================= ctPart Fourteen Start============================= */}
+
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>112</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFourteenFirst' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What are “Tax Losses”?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>113</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFourteenSecond' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will the UAE CT regime allow prior year tax losses to reduce taxable income?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>114</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFourteenThird' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will a change in ownership of the taxable person restrict the ability to use its tax losses?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell>115</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFourteenFourth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>Will a group be able to utilise the tax losses of one group company against the taxable income of another group company?</a>
+                                                    </TableCell>
+                                                </TableRow>
+                                                <TableRow sx={{ background: '#CDDCE8' }}>
+                                                    <TableCell>116</TableCell>
+                                                    <TableCell style={{ textAlign: 'center' }}>
+                                                        <a href='#ctPartFourteenFifth' style={{ textDecoration: 'none', fontSize: '1rem', color: 'black' }}>What are the conditions for the transfer of tax losses within a group?</a>
                                                     </TableCell>
                                                 </TableRow>
 

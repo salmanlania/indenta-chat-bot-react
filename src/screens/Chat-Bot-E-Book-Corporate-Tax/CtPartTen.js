@@ -20,7 +20,7 @@ export default function CtPartTen() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTenFirst">
                 {ctPartTen.first.heading}
             </Typography>
 
@@ -30,7 +30,7 @@ export default function CtPartTen() {
 
             {/* ctPartTen first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTenSecond">
                 {ctPartTen.second.heading}
             </Typography>
 
@@ -40,7 +40,7 @@ export default function CtPartTen() {
 
             {/* ctPartTen second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTenThird">
                 {ctPartTen.third.heading}
             </Typography>
 

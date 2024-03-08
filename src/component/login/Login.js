@@ -128,12 +128,10 @@ export default function Login() {
                             </Button>
                             <Grid container>
                                 <Grid item xs>
-                                    <Link href="#" variant="body2">
-                                        {/* Forgot password? */}
-                                    </Link>
+                                    
                                 </Grid>
                                 <Grid item>
-                                    <Link href="#" variant="body2">
+                                    <Link sx={{cursor : 'pointer'}} variant="body2" onClick={()=>window.location = "http://localhost:3000/chatbot"}>
                                         {"Forgot password?"}
                                     </Link>
                                 </Grid>

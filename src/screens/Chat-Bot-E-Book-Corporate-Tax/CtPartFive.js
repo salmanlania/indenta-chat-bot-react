@@ -21,11 +21,11 @@ export default function CtPartFive() {
             firstPara: 'UAE branches of a UAE juridical person are not required to separately register or file for UAE CT',
         },
         fifth: {
-            heading: 'Will the income of foreign branches of a UAE business be subject to UAE CT? ',
+            heading: 'Will the income of foreign branches of a UAE business be subject to UAE CT?',
             firstPara: 'The income of foreign branches or foreign permanent establishments of a UAE business will be included in the taxable income and UAE CT return of their UAE “head office”, unless the UAE business elects to claim an exemption for its foreign branch profits. This exemption is available for foreign branch profits that have already been subject to tax in the foreign jurisdiction.',
         },
         sixth: {
-            heading: 'Will a UAE branch constitute a taxable Permanent Establishment for the foreign business? ',
+            heading: 'Will a UAE branch constitute a taxable Permanent Establishment for the foreign business?',
             firstPara: 'A UAE branch of a foreign business would generally be subject to UAE CT, unless the activities of the branch do not give rise to a permanent establishment in the UAE for CT purposes (see section ‘Foreign persons’).',
         },
         seventh: {
@@ -39,7 +39,7 @@ export default function CtPartFive() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFiveFirst">
                 {ctPartFive.first.heading}
             </Typography>
 
@@ -49,7 +49,7 @@ export default function CtPartFive() {
 
             {/* ctPartFive first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFiveSecond">
                 {ctPartFive.second.heading}
             </Typography>
 
@@ -59,7 +59,7 @@ export default function CtPartFive() {
 
             {/* ctPartFive second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFiveThird">
                 {ctPartFive.third.heading}
             </Typography>
 
@@ -69,7 +69,7 @@ export default function CtPartFive() {
 
             {/* ctPartFive third end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFiveFourth">
                 {ctPartFive.fourth.heading}
             </Typography>
 
@@ -79,7 +79,7 @@ export default function CtPartFive() {
 
             {/* ctPartFive fourth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFiveFifth">
                 {ctPartFive.fifth.heading}
             </Typography>
 
@@ -89,7 +89,7 @@ export default function CtPartFive() {
 
             {/* ctPartFive fifth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFiveSixth">
                 {ctPartFive.sixth.heading}
             </Typography>
 
@@ -99,7 +99,7 @@ export default function CtPartFive() {
 
             {/* ctPartFive sixth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFiveSeventh">
                 {ctPartFive.seventh.heading}
             </Typography>
 
