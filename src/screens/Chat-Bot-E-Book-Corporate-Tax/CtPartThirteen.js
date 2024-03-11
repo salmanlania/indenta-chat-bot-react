@@ -6,7 +6,7 @@ export default function CtPartThirteen() {
     const ctPartThirteen = {
         first: {
             heading: 'What is a juridical person?',
-            firstPara: 'A “juridical person” is an entity established or otherwise recognised under the laws and regulations of the UAE, or under the laws of a foreign jurisdiction, that has a legal personality separate from its founders, owners and directors. Examples of UAE domestic juridical persons include a limited liability company, a foundation, an ‘onshore’ trust, a public or private joint stock company, and other entities that have separate legal personality under the applicable UAE ‘mainland’ legislation or Free Zone regulations. UAE branches of a domestic or a foreign juridical person are regarded as an extension of their “parent” or “head office” and, therefore, are not considered separate juridical persons. ',
+            firstPara: 'A “juridical person” is an entity established or otherwise recognised under the laws and regulations of the UAE, or under the laws of a foreign jurisdiction, that has a legal personality separate from its founders, owners and directors. Examples of UAE domestic juridical persons include a limited liability company, a foundation, an ‘onshore’ trust, a public or private joint stock company, and other entities that have separate legal personality under the applicable UAE ‘mainland’ legislation or Free Zone regulations. UAE branches of a domestic or a foreign juridical person are regarded as an extension of their “parent” or “head office” and, therefore, are not considered separate juridical persons.',
         },
         second: {
             heading: 'What does it mean to have a ‘separate legal personality”?',

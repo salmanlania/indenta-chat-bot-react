@@ -88,7 +88,7 @@ const ChatApp = () => {
                     >
                         <CloseIcon style={{ color: 'white' }} />
                     </Button>
-                    <Typography variant='h5' style={{ color: 'red', fontWeight: '1000', fontSize: '2rem' }}>UAE TAX ChatBot</Typography>
+                    {/* <Typography variant='h5' style={{ color: 'red', fontWeight: '1000', fontSize: '2rem' }}>UAE TAX ChatBot</Typography> */}
 
                     {/* <Button variant="outlined" color="secondary" onClick={handleClearChat}>
                         Clear Chat

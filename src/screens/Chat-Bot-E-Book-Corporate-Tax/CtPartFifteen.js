@@ -48,7 +48,7 @@ export default function CtPartFifteen() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenFirst">
                 {ctPartFifteen.first.heading}
             </Typography>
 
@@ -58,7 +58,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenSecond">
                 {ctPartFifteen.second.heading}
             </Typography>
 
@@ -72,7 +72,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenThird">
                 {ctPartFifteen.third.heading}
             </Typography>
 
@@ -82,7 +82,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen third end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenFourth">
                 {ctPartFifteen.fourth.heading}
             </Typography>
 
@@ -92,7 +92,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen fourth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenFifth">
                 {ctPartFifteen.fifth.heading}
             </Typography>
 
@@ -102,7 +102,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen fifth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenSixth">
                 {ctPartFifteen.sixth.heading}
             </Typography>
 
@@ -112,7 +112,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen sixth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenSeventh">
                 {ctPartFifteen.seventh.heading}
             </Typography>
 
@@ -122,7 +122,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen seventh end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenEighth">
                 {ctPartFifteen.eight.heading}
             </Typography>
 
@@ -132,7 +132,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen eight end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenNinth">
                 {ctPartFifteen.ninth.heading}
             </Typography>
 
@@ -142,7 +142,7 @@ export default function CtPartFifteen() {
 
             {/* ctPartFifteen ninth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFifteenTenth">
                 {ctPartFifteen.tenth.heading}
             </Typography>
 

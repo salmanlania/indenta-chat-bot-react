@@ -160,7 +160,7 @@ export default function CoprateTax() {
                 {corporateTax.first.heading}
                 &nbsp;
                 &nbsp;
-                <a href='#comeToBottom' id='comeToTop'>Go To Bottom</a>
+                {/* <a href='#comeToBottom' id='comeToTop'>Go To Bottom</a> */}
             </Typography>
             {corporateTaxFirstArray.map((i) => (
                 <Typography paragraph sx={{ fontWeight: '300', color: 'black', fontSize: '14px' }} key={i}>
@@ -370,7 +370,9 @@ export default function CoprateTax() {
                                 <li>Expenditure incurred in deriving income that is exempt from Corporate Tax.</li>
                             </ul>
                         </TableCell>
-                        <TableCell sx={{ border: '2px solid #000', maxWidth: '160px', margin: '0', textAlign: 'start', position: 'relative', bottom: '12rem', fontSize: '14px' }}>No deduction</TableCell>
+                        <TableCell sx={{ border: '2px solid #000', maxWidth: '140px', fontSize: '14px' }}>
+                            <Typography variant='body1'>No Deduction</Typography>
+                        </TableCell>
                     </TableRow>
 
                     {/* Row 2 */}

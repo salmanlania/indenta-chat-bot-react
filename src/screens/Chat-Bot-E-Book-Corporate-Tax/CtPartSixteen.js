@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@mui/material';
+import { Typography, Tooltip } from '@mui/material';
 
 export default function CtPartSixteen() {
 
@@ -25,21 +25,25 @@ export default function CtPartSixteen() {
 
     const ctPartSixteenArraySecond = [ctPartSixteen.second.firstPara, ctPartSixteen.second.secondtPara]
 
+    const titlePrint = 'A “juridical person” is an entity established or otherwise recognised under the laws and regulations of the UAE, or under the laws of a foreign jurisdiction, that has a legal personality separate from its founders, owners and directors. Examples of UAE domestic juridical persons include a limited liability company, a foundation, an ‘onshore’ trust, a public or private joint stock company, and other entities that have separate legal personality under the applicable UAE ‘mainland’ legislation or Free Zone regulations. UAE branches of a domestic or a foreign juridical person are regarded as an extension of their “parent” or “head office” and, therefore, are not considered separate juridical persons.'
+
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixteenFirst">
                 {ctPartSixteen.first.heading}
             </Typography>
 
-            {ctPartSixteenArrayFirst.map((i) => (
-                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                    {i}
-                </Typography>
+            {ctPartSixteenArrayFirst.map((i, index) => (
+                <Tooltip title={titlePrint} arrow sx={{ background: 'black', color: 'white', overflow: 'auto' }}>
+                    <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
+                        {i}
+                    </Typography>
+                </Tooltip>
             ))}
 
             {/* ctPartSixteen first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixteenSecond">
                 {ctPartSixteen.second.heading}
             </Typography>
 
@@ -51,7 +55,7 @@ export default function CtPartSixteen() {
 
             {/* ctPartSixteen second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="firstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixteenThird">
                 {ctPartSixteen.third.heading}
             </Typography>
 

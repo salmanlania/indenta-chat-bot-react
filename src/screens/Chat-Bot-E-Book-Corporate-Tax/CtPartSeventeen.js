@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@mui/material';
+import { Typography, Tooltip } from '@mui/material';
 
 export default function CtPartSeventeen() {
 
@@ -106,7 +106,19 @@ export default function CtPartSeventeen() {
 
     const ctPartSeventeenArrayNinth = [ctPartSeventeen.ninth.firstPara, ctPartSeventeen.ninth.secondPara, ctPartSeventeen.ninth.thirdPara, ctPartSeventeen.ninth.fourthPara, ctPartSeventeen.ninth.fifthPara, ctPartSeventeen.ninth.sixthPara, ctPartSeventeen.ninth.seventhPara]
 
-    const ctPartSeventeenArrayTenth = [ctPartSeventeen.tenth.firstPara, ctPartSeventeen.tenth.secondPara, ctPartSeventeen.tenth.thirdPara , ctPartSeventeen.tenth.fourthPara , ctPartSeventeen.tenth.fifthPara]
+    const ctPartSeventeenArrayTenth = [ctPartSeventeen.tenth.firstPara, ctPartSeventeen.tenth.secondPara, ctPartSeventeen.tenth.thirdPara, ctPartSeventeen.tenth.fourthPara, ctPartSeventeen.tenth.fifthPara]
+
+    const titlePrint = `
+    <p>The following income is exempt from UAE CT:</p>
+    <ol>
+        <li>Dividends and other profit distributions received from UAE incorporated or resident legal persons;</li>
+        <li>Dividends and other profit distributions received from a Participating Interest in a foreign juridical person (see further information below);</li>
+        <li>Certain other income (e.g., capital gains, foreign exchange gains / losses and impairment gains or losses) from a Participating Interest (see further information below);</li>
+        <li>Income from a foreign branch or permanent establishment where an election is made to claim the “Foreign Permanent Establishment” exemption; and</li>
+        <li>Income earned by non-residents from the operation or leasing of aircrafts or ships in international transportation where certain conditions are met (see further information below).</li>
+    </ol>
+`;
+
 
     return (
         <div>
@@ -172,10 +184,17 @@ export default function CtPartSeventeen() {
                 {ctPartSeventeen.sixth.heading}
             </Typography>
 
-            {ctPartSeventeenArraySixth.map((i) => (
-                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
-                    {i}
-                </Typography>
+            {ctPartSeventeenArraySixth.map((i, index) => (
+                <Tooltip
+                    key={index}
+                    title={<div dangerouslySetInnerHTML={{ __html: titlePrint }} />}
+                    arrow
+                    sx={{ background: 'black', color: 'white', overflow: 'auto' }}
+                >
+                    <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
+                        {i}
+                    </Typography>
+                </Tooltip>
             ))}
 
             {/* ctPartSeventeen sixth end  */}
