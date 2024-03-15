@@ -82,6 +82,8 @@ export default function CtPartThree() {
 
     const tooltipCoporateTaxFifteennArray = [tootlipObj.fifteen.firstPara, tootlipObj.fifteen.secondPara, tootlipObj.fifteen.thirdPara, tootlipObj.fifteen.fourthPara, tootlipObj.fifteen.fifthPara, tootlipObj.fifteen.sixthPara, tootlipObj.fifteen.seventhPara]
 
+    const part = ctPartThree.tenth.firstPara.split('(see section ‘Tax Groups’)');
+
     return (
         <div>
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartThreeFirst">
@@ -178,21 +180,22 @@ export default function CtPartThree() {
                 {ctPartThree.tenth.heading}
             </Typography>
 
-            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
-                <Tooltip title={
-                    <>
-                        {tooltipCoporateTaxFifteennArray.map((item, index) => (
-                            <Typography key={index} paragraph sx={{ fontWeight: '300', color: 'white', padding: '0', fontSize: '14px' }}>
-                                {item}
-                            </Typography>
-                        ))}
-                    </>
-                } arrow sx={{ background: 'black', color: 'white', overflow: 'auto' }}>
-                    <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
-                        {ctPartThree.tenth.firstPara}
-                    </Typography>
-                </Tooltip>
-
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }}>
+                <>
+                    {part[0]}
+                    <Tooltip title={
+                        <>
+                            {tooltipCoporateTaxFifteennArray.map((item, index) => (
+                                <Typography key={index} paragraph sx={{ fontWeight: '300', color: 'white', padding: '0', fontSize: '14px' }}>
+                                    {item}
+                                </Typography>
+                            ))}
+                        </>
+                    }>
+                        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>(see section ‘Tax Groups’)</span>
+                    </Tooltip>
+                    {part[1]}
+                </>
             </Typography>
 
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >

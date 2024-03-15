@@ -21,25 +21,45 @@ export default function CtPartSixteen() {
         },
     }
 
-    const ctPartSixteenArrayFirst = [ctPartSixteen.first.firstPara, ctPartSixteen.first.secondtPara, ctPartSixteen.first.thirdPara]
+    const ctPartSixteenArrayFirst = [ctPartSixteen.first.firstPara, ctPartSixteen.first.secondPara, ctPartSixteen.first.thirdPara]
 
     const ctPartSixteenArraySecond = [ctPartSixteen.second.firstPara, ctPartSixteen.second.secondtPara]
 
     const titlePrint = 'A “juridical person” is an entity established or otherwise recognised under the laws and regulations of the UAE, or under the laws of a foreign jurisdiction, that has a legal personality separate from its founders, owners and directors. Examples of UAE domestic juridical persons include a limited liability company, a foundation, an ‘onshore’ trust, a public or private joint stock company, and other entities that have separate legal personality under the applicable UAE ‘mainland’ legislation or Free Zone regulations. UAE branches of a domestic or a foreign juridical person are regarded as an extension of their “parent” or “head office” and, therefore, are not considered separate juridical persons.'
+
+    const parts = ctPartSixteen.first.thirdPara.split('(see section ‘Juridical persons’)');
 
     return (
         <div>
             <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixteenFirst">
                 {ctPartSixteen.first.heading}
             </Typography>
+            
+            <Typography paragraph sx={{  fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }} id="ctPartSixteenFirst">
+                {ctPartSixteen.first.firstPara}
+            </Typography>
+            
+            <Typography paragraph sx={{  fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }} id="ctPartSixteenFirst">
+                {ctPartSixteen.first.secondPara}
+            </Typography>
+            
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }}>
+                <>
+                    {parts[0]}
+                    <Tooltip title={titlePrint}>
+                        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>(see section ‘Juridical persons’)</span>
+                    </Tooltip>
+                    {parts[1]}
+                </>
+            </Typography>
 
-            {ctPartSixteenArrayFirst.map((i, index) => (
+            {/* {ctPartSixteenArrayFirst.map((i, index) => (
                 <Tooltip title={titlePrint} arrow sx={{ background: 'black', color: 'white', overflow: 'auto' }}>
                     <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
                         {i}
                     </Typography>
                 </Tooltip>
-            ))}
+            ))} */}
 
             {/* ctPartSixteen first end  */}
 

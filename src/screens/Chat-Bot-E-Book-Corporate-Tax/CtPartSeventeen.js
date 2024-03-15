@@ -100,7 +100,7 @@ export default function CtPartSeventeen() {
 
     const ctPartSeventeenArrayFifth = [ctPartSeventeen.fifth.firstPara, ctPartSeventeen.fifth.secondPara, ctPartSeventeen.fifth.thirdPara]
 
-    const ctPartSeventeenArraySixth = [ctPartSeventeen.sixth.firstPara, ctPartSeventeen.sixth.secondPara, ctPartSeventeen.sixth.thirdPara]
+    const ctPartSeventeenArraySixth = [ctPartSeventeen.sixth.firstPara, ctPartSeventeen.sixth.secondPara]
 
     const ctPartSeventeenArraySeventh = [ctPartSeventeen.seventh.firstPara, ctPartSeventeen.seventh.secondPara, ctPartSeventeen.seventh.thirdPara, ctPartSeventeen.seventh.fourthPara, ctPartSeventeen.seventh.fifthPara, ctPartSeventeen.seventh.sixthPara, ctPartSeventeen.seventh.seventhPara, ctPartSeventeen.seventh.eightPara, ctPartSeventeen.seventh.seventhPara, ctPartSeventeen.seventh.eightPara]
 
@@ -118,7 +118,10 @@ export default function CtPartSeventeen() {
         <li>Income earned by non-residents from the operation or leasing of aircrafts or ships in international transportation where certain conditions are met (see further information below).</li>
     </ol>
 `;
-
+    function renderHTMLString(htmlString) {
+        return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
+    }
+    const parts = ctPartSeventeen.sixth.firstPara.split('under section Income exempt from CT.');
 
     return (
         <div>
@@ -184,18 +187,19 @@ export default function CtPartSeventeen() {
                 {ctPartSeventeen.sixth.heading}
             </Typography>
 
-            {ctPartSeventeenArraySixth.map((i, index) => (
-                <Tooltip
-                    key={index}
-                    title={<div dangerouslySetInnerHTML={{ __html: titlePrint }} />}
-                    arrow
-                    sx={{ background: 'black', color: 'white', overflow: 'auto' }}
-                >
-                    <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
-                        {i}
-                    </Typography>
-                </Tooltip>
-            ))}
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }}>
+                <>
+                    {parts[0]}
+                    <Tooltip title={renderHTMLString(titlePrint)}>
+                        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>under section Income exempt from CT.</span>
+                    </Tooltip>
+                    {parts[1]}
+                </>
+            </Typography>
+
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }} id="ctPartSixteenFirst">
+                {ctPartSeventeen.sixth.secondPara}
+            </Typography>
 
             {/* ctPartSeventeen sixth end  */}
 

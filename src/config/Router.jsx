@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 
 import Login from "../component/login/Login";
 import Chatbot from "../component/chatBot/Chatbot";
+import Faqs from "../screens/FullScreens/Faqs";
+import Ebook from "../screens/FullScreens/Ebook";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
             {
                 path: '/chatbot',
                 element: <Chatbot />,
+            },
+            {
+                path: '/corporate-tax',
+                element: <Ebook />,
+            },
+            {
+                path: '/faqs',
+                element: <Faqs />,
             },
         ]
     }

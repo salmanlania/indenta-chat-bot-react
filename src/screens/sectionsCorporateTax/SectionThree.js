@@ -1,9 +1,10 @@
 import React from 'react'
-import { Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 
 export default function SectionThree() {
     const corporateTax = {
         third: {
+            heading: '3.Who is subject to Corporate Tax?',
             firstPara: 'Corporate Tax is a form of direct tax levied on the net income of corporations and other businesses. ',
             secondParaListOne: '● UAE companies and other juridical persons that are incorporated or effectively managed and controlled in the UAE;',
             secondParaListTwo: '● Natural persons (individuals) who conduct a Business or Business Activity in the UAE as specified in a Cabinet Decision to be issued in due course; and',
@@ -18,6 +19,9 @@ export default function SectionThree() {
 
     return (
         <div>
+            <Typography variant="h6" sx={{ marginBottom: '1rem', fontWeight: 'bold' }} id="thirdHeading">
+                {corporateTax.third.heading}
+            </Typography>
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
                 {corporateTax.third.firstPara}
             </Typography>

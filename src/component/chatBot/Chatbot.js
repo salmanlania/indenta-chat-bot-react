@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../screens/navbar/Navbar'
 import Header from '../../screens/header/Header'
 import LawBook from '../../screens/lawBook/LawBook'
-import ChatApp from '../../screens/ChatApp/ChatApp'
+// import ChatApp from '../../screens/ChatApp/ChatApp'
 
 export default function Chatbot() {
   return (
@@ -10,7 +10,7 @@ export default function Chatbot() {
       <Navbar />
       <Header />
       <LawBook />
-      <ChatApp />
+      {/* <ChatApp /> */}
     </div>
   )
 }

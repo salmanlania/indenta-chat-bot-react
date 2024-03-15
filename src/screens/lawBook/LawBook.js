@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Paper, Typography, Box, Popover, Table, TableContainer, TableHead, TableBody, TableRow, MenuItem, TableCell, Grid, Container, Button, Dialog, DialogContent, DialogTitle, IconButton, } from '@mui/material';
+import { Tabs, Tab, Paper, Typography, Box, Popover, Table, TableContainer, TableHead, TableBody, TableRow, MenuItem, TableCell, Grid, Container, Button, Dialog, DialogContent, DialogTitle, IconButton, TextField } from '@mui/material';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
 import CssBaseline from '@mui/material/CssBaseline';
+import SectionDetail from './SectionDetail.js';
+import { ImNewTab } from "react-icons/im";
+import ReactDOMServer from 'react-dom/server';
+import CloseIcon from './CloseIcon.js'
 import './LawBook.css'
+import ChatApp from '../ChatApp/ChatApp.js'
+import { useNavigate } from 'react-router-dom';
 
 import CoprateTax from '../Chat-Bot-E-Book-Corporate-Tax/CoprateTax';
 import Ct from '../Chat-Bot-E-Book-Corporate-Tax/Ct';
@@ -50,13 +56,42 @@ import SectionSixteen from '../sectionsCorporateTax/SectionSixteen'
 import SectionSeventeen from '../sectionsCorporateTax/SectionSeventeen'
 import SectionEighteen from '../sectionsCorporateTax/SectionEighteen'
 import LawBookIndexPage from './LawBookIndexPage';
+import LawBookFaqsIndexPage from './LawBookFaqsIndexPage';
+// import CtFaqs from './CtFaqs';
 
 const LawBook = () => {
+    const navigate = useNavigate()
     const [mainTabValue, setMainTabValue] = useState(0);
     const [nestedTabValue, setNestedTabValue] = useState(0);
     const [anchorEl, setAnchorEl] = useState(null);
     const [selectedSection, setSelectedSection] = useState(null);
     const [openPopup, setOpenPopup] = useState(false);
+    const [showFAQs, setShowFAQs] = useState(false);
+    const [searchValue, setSearchValue] = useState('');
+    const [sections, setSections] = useState([
+        'Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5',
+        'Section 6', 'Section 7', 'Section 8', 'Section 9', 'Section 10',
+        'Section 11', 'Section 12', 'Section 13', 'Section 14', 'Section 15',
+        'Section 16', 'Section 17', 'Section 18',
+    ]);
+    const [filteredSections, setFilteredSections] = useState(sections);
+
+    const handleSearchInputChange = (event) => {
+        const value = event.target.value;
+        setSearchValue(value);
+        const filtered = sections.filter(section =>
+            section.toLowerCase().includes(value.toLowerCase())
+        );
+        setFilteredSections(filtered);
+    };
+
+
+    const toggleFAQs = () => {
+        setShowFAQs(!showFAQs);
+
+        // Set the tab value to 3 when showing FAQs
+        setMainTabValue(showFAQs ? 0 : 3);
+    };
 
     const handleOpenPopup = (section) => {
         setOpenPopup(true);
@@ -66,6 +101,7 @@ const LawBook = () => {
     const handleClosePopup = () => {
         setOpenPopup(false);
     };
+
 
     const handleMainTabChange = (event, newValue) => {
         setMainTabValue(newValue);
@@ -77,17 +113,298 @@ const LawBook = () => {
 
     const handlePopoverOpen = (event) => {
         setAnchorEl(event.currentTarget);
+        setSearchValue('');
+        setFilteredSections(sections);
     };
 
     const handlePopoverClose = (section) => {
-        setSelectedSection(section);
         setAnchorEl(null);
+        if (section) {
+            setSelectedSection(section);
+        }
     };
 
     const open = Boolean(anchorEl);
 
+    const openFullscreen = () => {
+        const content = getContent();
+        if (content) {
+            const htmlContent = ReactDOMServer.renderToStaticMarkup(content); // Render component to HTML string
+
+            const newWindow = window.open('', '_blank', 'fullscreen=yes');
+            if (newWindow) {
+                newWindow.document.write('<html><head><title>Fullscreen Content</title>');
+                newWindow.document.write('<style>');
+                newWindow.document.write(`
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        font-family: Arial, sans-serif;
+                    }
+                    h1,h2,h3,h4,h5,h6 {
+                        font-size: 30px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                    .fullscreen-container {
+                        max-width: 100%;
+                        height: 100%;
+                        overflow: auto;
+                        background-color: #f0f0f0;
+                    }
+                    .content {
+                        background-color: #ffffff;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        padding: 5px;
+                    }
+                    .close-btn {
+                        position: fixed;
+                        top: 10px;
+                        left: 10px;
+                        border: 1px solid #cccccc;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+                `);
+                newWindow.document.write('</style></head><body>');
+                newWindow.document.write('<div class="fullscreen-container">');
+                newWindow.document.write('<div class="content">');
+                newWindow.document.write(htmlContent); // Insert the HTML content
+                newWindow.document.write('</div>');
+                newWindow.document.write(`
+                    <svg
+                        class="close-btn"
+                        style="cursor: pointer;"
+                        onclick="closeFullscreen()"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="30"
+                        height="30"
+                        fill="none"
+                        stroke="black" // Changed stroke color to black
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                `);
+                newWindow.document.write('</div></body></html>');
+                newWindow.document.close();
+
+                // Define the closeFullscreen function in the new window
+                newWindow.closeFullscreen = () => {
+                    newWindow.close();
+                };
+            }
+        }
+    };
+
+    const openFullscreens = () => {
+        window.open('/corporate-tax', '_blank');
+    }
+    const openFullscreening = () => {
+        window.open('/faqs', '_blank');
+    }
+    // const openFullscreens = () => {
+    //     const newWindow = window.open('', '_blank', 'fullscreen=yes');
+    //     if (newWindow) {
+    //         newWindow.document.write(`
+    //             <html>
+    //                 <head>
+    //                     <title>Fullscreen Content</title>
+    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    //                     <style>
+    //                     /* Your custom CSS styles */
+    //                     body {
+    //                         margin: 0;
+    //                         padding: 0;
+    //                         font-family: Roboto, sans-serif; /* Ensure Material-UI font is used */
+    //                         background : #CDDCE8;
+    //                     }
+    //                     .fullscreen-container{
+    //                         margin : auto;
+    //                         max-width : 60vw;
+    //                     }
+    //                     h6{
+    //                         font-size : 20px;
+    //                     }
+    //                     table{
+    //                         box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    //                         background-color: #fff;
+    //                         color: #333333;
+    //                     }
+    //                     td{
+    //                         font-weight: 600;
+    //                         border: 2px solid #000; 
+    //                         font-size: 14px;
+    //                     }
+    //                     .ge{
+    //                         margin-right : 5rem;
+    //                     }
+    //                     /* Add your other styles here */
+    //                 </style>
+    //                 </head>
+    //                 <body>
+    //                     <div class="fullscreen-container">
+    //                         <button style="background: #006927; padding: 6px 16px; color: #fff; background-color: #009739; border: 0; outline: 0; cursor: pointer;" onclick="closeFullscreen()">Close Fullscreen</button>
+    //                         <div id="coporateTaxContent"></div>
+    //                     </div>
+    //                     <script>
+    //                         function closeFullscreen() {
+    //                             window.close();
+    //                         }
+    //                         function renderCoporateTax() {
+    //                             const coporateTaxContent = document.getElementById('coporateTaxContent');
+    //                             coporateTaxContent.innerHTML = '${ReactDOMServer.renderToString(<div sx={{ /* Add your sx styles here */ }}><CoprateTax /></div>)}';
+    //                         }
+    //                         renderCoporateTax();
+    //                     </script>
+    //                 </body>
+    //             </html>
+    //         `);
+    //         newWindow.document.close();
+    //         newWindow.onload = () => {
+    //             newWindow.renderCoporateTax();
+    //         };
+    //     }
+    // };
+
+    // const openFullscreening = () => {
+    //     const newWindow = window.open('', '_blank', 'fullscreen=yes');
+    //     if (newWindow) {
+    //         newWindow.document.write(`
+    //             <html>
+    //                 <head>
+    //                     <title>Fullscreen Content</title>
+    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    //                     <style>
+    //                     /* Your custom CSS styles */
+    //                     body {
+    //                         margin: 0;
+    //                         padding: 0;
+    //                         font-family: Roboto, sans-serif; /* Ensure Material-UI font is used */
+    //                         background : #CDDCE8;
+    //                     }
+    //                     .fullscreen-container{
+    //                         margin : auto;
+    //                         max-width : 60vw;
+    //                     }
+    //                     h6{
+    //                         font-size : 20px;
+    //                     }
+    //                     table{
+    //                         box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    //                         background-color: #fff;
+    //                         color: #333333;
+    //                     }
+    //                     td{
+    //                         font-weight: 600;
+    //                         border: 2px solid #000; 
+    //                         font-size: 14px;
+    //                     }
+    //                     /* Add your other styles here */
+    //                 </style>
+    //                 </head>
+    //                 <body>
+    //                     <div class="fullscreen-container">
+    //                         <button style="background: #006927; padding: 6px 16px; color: #fff; background-color: #009739; border: 0; outline: 0; cursor: pointer;" onclick="closeFullscreen()">Close Fullscreen</button>
+    //                         <div id="coporateTaxContent"></div>
+    //                     </div>
+    //                     <script>
+    //                         function closeFullscreen() {
+    //                             window.close();
+    //                         }
+    //                         function renderCoporateTax() {
+    //                             const coporateTaxContent = document.getElementById('coporateTaxContent');
+    //                             coporateTaxContent.innerHTML = '${ReactDOMServer.renderToString(<div sx={{ /* Add your sx styles here */ }}>
+    //                                 <h1>WELCOME TO FAQS</h1>
+    //             <Ct /> <hr />
+    //             <CtPartThree /> <hr />
+    //             <CtPartFour /> <hr />
+    //             <CtPartFive /> <hr />
+    //             <CtPartSix /> <hr />
+    //             <CtPartSeven /> <hr />
+    //             <CtPartEight /> <hr />
+    //             <CtPartNine /> <hr />
+    //             <CtPartTen /> <hr />
+    //             <CtPartEleven /> <hr />
+    //             <CtPartTwelve /> <hr />
+    //             <CtPartThirteen /> <hr />
+    //             <CtPartFourteen /> <hr />
+    //             <CtPartFifteen /> <hr />
+    //             <CtPartSixteen /> <hr />
+    //             <CtPartSeventeen /> <hr />
+    //             <CtPartEighteen /> <hr />
+    //             <CtPartNinteen /> <hr />
+    //             <CtPartTwentieth /> <hr />
+    //             <CtPartTwentyfirst /> <hr />
+    //             <CtPartTwentyTwo /> <hr />
+    //             <CtPartTwentyThree /> <hr />
+    //                                 </div>)}';
+    //                         }
+    //                         renderCoporateTax();
+    //                     </script>
+    //                 </body>
+    //             </html>
+    //         `);
+    //         newWindow.document.close();
+    //         newWindow.onload = () => {
+    //             newWindow.renderCoporateTax();
+    //         };
+    //     }
+    // };
+
+
+    const getContent = () => {
+        switch (selectedSection) {
+            case 'Section 1':
+                return <SectionOne />;
+            case 'Section 2':
+                return <SectionTwo />;
+            case 'Section 3':
+                return <SectionThree />;
+            case 'Section 4':
+                return <SectionFour />;
+            case 'Section 5':
+                return <SectionFive />;
+            case 'Section 6':
+                return <SectionSix />;
+            case 'Section 7':
+                return <SectionSeven />;
+            case 'Section 8':
+                return <SectionEight />;
+            case 'Section 9':
+                return <SectionNine />;
+            case 'Section 10':
+                return <SectionTen />;
+            case 'Section 11':
+                return <SectionEleven />;
+            case 'Section 12':
+                return <SectionTwelve />;
+            case 'Section 13':
+                return <SectionThirteen />;
+            case 'Section 14':
+                return <SectionFourteen />;
+            case 'Section 15':
+                return <SectionFifteen />;
+            case 'Section 16':
+                return <SectionSixteen />;
+            case 'Section 17':
+                return <SectionSeventeen />;
+            case 'Section 18':
+                return <SectionEighteen />;
+            default:
+                return null;
+        }
+    };
+
     return (
-        <div>
+        <div style={{ overflowX: 'hidden' }}>
             <Grid>
                 <Tabs
                     value={mainTabValue}
@@ -95,10 +412,11 @@ const LawBook = () => {
                     indicatorColor="primary"
                     textColor="primary"
                     centered
-                    sx={{ height: '3rem' }}
+                    sx={{ height: '3rem', marginLeft: '3rem' }}
                 >
                     <Tab label="Corporate tax" />
-                    <Tab label="Value-added tax" />
+                    {/* <Tab label="Value-added tax" /> */}
+                    {/* <Tab label="" /> */}
                 </Tabs>
                 <TabPanel value={mainTabValue} index={0}>
                     <Grid container spacing={2} >
@@ -136,34 +454,31 @@ const LawBook = () => {
                                             },
                                         }}
                                     >
+                                        <Box
+                                            display="flex"
+                                            justifyContent="flex-end"
+                                        >
+                                            <ImNewTab onClick={openFullscreens} style={{ cursor: 'pointer' }} />
+                                        </Box>
                                         <CoprateTax /> <hr />
-                                        <Ct /> <hr />
-                                        <CtPartThree /> <hr />
-                                        <CtPartFour /> <hr />
-                                        <CtPartFive /> <hr />
-                                        <CtPartSix /> <hr />
-                                        <CtPartSeven /> <hr />
-                                        <CtPartEight /> <hr />
-                                        <CtPartNine /> <hr />
-                                        <CtPartTen /> <hr />
-                                        <CtPartEleven /> <hr />
-                                        <CtPartTwelve /> <hr />
-                                        <CtPartThirteen /> <hr />
-                                        <CtPartFourteen /> <hr />
-                                        <CtPartFifteen /> <hr />
-                                        <CtPartSixteen /> <hr />
-                                        <CtPartSeventeen /> <hr />
-                                        <CtPartEighteen /> <hr />
-                                        <CtPartNinteen /> <hr />
-                                        <CtPartTwentieth /> <hr />
-                                        <CtPartTwentyfirst /> <hr />
-                                        <CtPartTwentyTwo /> <hr />
-                                        <CtPartTwentyThree /> <hr />
 
                                         {/* <a id='comeToBottom' href='#comeToTop'>Go To Top</a> */}
                                     </Box>
+                                    {/* <Button sx={{bgcolor : '#2B4265' , color : 'white'}}>FAQS</Button> */}
                                 </React.Fragment>
                             </Typography>
+                            <Button
+                                onClick={toggleFAQs}
+                                sx={{
+                                    backgroundColor: '#CDDCE8',
+                                    paddingLeft: '2rem',
+                                    paddingRight: '2rem',
+                                    color: 'white',
+                                    '&:hover': { backgroundColor: '#2980b9' },
+                                }}
+                            >
+                                {showFAQs ? 'E-Book' : 'FAQS'}
+                            </Button>
                         </Grid>
                         <Grid className='customGrid' item xs={12} md={4} sx={{ border: '3px black solid', height: '56vh', marginTop: '1rem', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', background: '#CDDCE8', }}>
                             <Tabs
@@ -189,7 +504,7 @@ const LawBook = () => {
                             <Popover
                                 open={open}
                                 anchorEl={anchorEl}
-                                onClose={handlePopoverClose}
+                                onClose={() => handlePopoverClose()}
                                 anchorOrigin={{
                                     vertical: 'bottom',
                                     horizontal: 'center',
@@ -200,24 +515,18 @@ const LawBook = () => {
                                 }}
                             >
                                 <Box p={2} sx={{ maxHeight: '200px', overflowY: 'auto' }}>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 1')}>Section 1</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 2')}>Section 2</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 3')}>Section 3</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 4')}>Section 4</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 5')}>Section 5</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 6')}>Section 6</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 7')}>Section 7</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 8')}>Section 8</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 9')}>Section 9</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 10')}>Section 10</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 11')}>Section 11</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 12')}>Section 12</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 13')}>Section 13</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 14')}>Section 14</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 15')}>Section 15</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 16')}>Section 16</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 17')}>Section 17</MenuItem>
-                                    <MenuItem onClick={() => handlePopoverClose('Section 18')}>Section 18</MenuItem>
+                                    <TextField
+                                        label="Search"
+                                        variant="outlined"
+                                        value={searchValue}
+                                        onChange={handleSearchInputChange}
+                                        sx={{ padding: '0' }}
+                                    />
+                                    {filteredSections.map((section) => (
+                                        <MenuItem key={section} onClick={() => handlePopoverClose(section)}>
+                                            {section}
+                                        </MenuItem>
+                                    ))}
                                 </Box>
                             </Popover>
 
@@ -261,7 +570,8 @@ const LawBook = () => {
                                         <Container maxWidth="md" sx={{ bgcolor: '#fff', height: 'auto', overflow: 'auto', border: '1px black solid', padding: '0.5rem', '@media (max-width: 600px)': { maxWidth: '100%', padding: '0.5rem', }, }}>
                                             <div style={{ maxWidth: '100%', overflow: 'hidden', height: '36vh', overflowY: 'auto', overflowX: 'hidden' }}>
                                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                                    <Typography variant='h6' sx={{ textDecoration: 'underline' }}>{selectedSection}</Typography>
+                                                    {/* <Typography variant='h6' sx={{ textDecoration: 'underline' }}>{selectedSection}</Typography> */}
+                                                    <Typography variant='h6' sx={{ textDecoration: 'underline' }}></Typography>
                                                     <Button onClick={() => handleOpenPopup(selectedSection)} sx={{ float: 'right', display: 'block' }}><FullscreenIcon sx={{ fontSize: '1.7rem' }} /></Button>
                                                 </div>
                                                 <div>
@@ -284,48 +594,34 @@ const LawBook = () => {
                                                     {selectedSection === 'Section 17' && <SectionSeventeen />}
                                                     {selectedSection === 'Section 18' && <SectionEighteen />}
                                                 </div>
-
-                                                {/* Popup dialog */}
-                                                <Dialog open={openPopup} onClose={handleClosePopup} maxWidth="md" fullWidth >
-                                                    <DialogTitle>
-                                                        {selectedSection}
-                                                        <IconButton
-                                                            edge="end"
-                                                            color="inherit"
-                                                            onClick={handleClosePopup}
-                                                            aria-label="close"
-                                                            sx={{
-                                                                marginLeft: 'auto', order: { xs: 2, md: 3 }, ml: { xs: 1, md: 2 }, float: 'right'
-                                                            }}
-                                                        >
-                                                            <FullscreenExitIcon />
-                                                        </IconButton>
-                                                    </DialogTitle>
-                                                    <DialogContent >
-                                                        {selectedSection === 'Section 1' && <SectionOne />}
-                                                        {selectedSection === 'Section 2' && <SectionTwo />}
-                                                        {selectedSection === 'Section 3' && <SectionThree />}
-                                                        {selectedSection === 'Section 4' && <SectionFour />}
-                                                        {selectedSection === 'Section 5' && <SectionFive />}
-                                                        {selectedSection === 'Section 6' && <SectionSix />}
-                                                        {selectedSection === 'Section 7' && <SectionSeven />}
-                                                        {selectedSection === 'Section 8' && <SectionEight />}
-                                                        {selectedSection === 'Section 9' && <SectionNine />}
-                                                        {selectedSection === 'Section 10' && <SectionTen />}
-                                                        {selectedSection === 'Section 11' && <SectionEleven />}
-                                                        {selectedSection === 'Section 12' && <SectionTwelve />}
-                                                        {selectedSection === 'Section 13' && <SectionThirteen />}
-                                                        {selectedSection === 'Section 14' && <SectionFourteen />}
-                                                        {selectedSection === 'Section 15' && <SectionFifteen />}
-                                                        {selectedSection === 'Section 16' && <SectionSixteen />}
-                                                        {selectedSection === 'Section 17' && <SectionSeventeen />}
-                                                        {selectedSection === 'Section 18' && <SectionEighteen />}
-                                                    </DialogContent>
-                                                </Dialog>
-
                                             </div>
                                         </Container>
                                     </div>
+                                    <Dialog open={openPopup} onClose={handleClosePopup} maxWidth="md" fullWidth>
+                                        <DialogTitle sx={{
+                                            display: 'flex',
+                                            justifyContent: 'space-between'
+                                        }}>
+                                            {/* {selectedSection} */}
+                                            <IconButton
+                                                edge="end"
+                                                color="inherit"
+                                                onClick={handleClosePopup}
+                                                aria-label="close"
+                                                sx={{
+                                                    marginLeft: 'auto',
+                                                    order: { xs: 2, md: 3 },
+                                                    ml: { xs: 1, md: 2 },
+                                                }}
+                                            >
+                                                <FullscreenExitIcon />
+                                            </IconButton>
+                                            <ImNewTab onClick={openFullscreen} style={{ cursor: 'pointer', fontSize: '1.5rem', display: 'flex', justifyContent: 'flex-end' }} />
+                                        </DialogTitle>
+                                        <DialogContent sx={{ display: 'flex', alignItems: 'center' }}>
+                                            <div>{getContent()}</div>
+                                        </DialogContent>
+                                    </Dialog>
                                 </TabPanel>
                             )}
                             {!selectedSection && (
@@ -335,6 +631,182 @@ const LawBook = () => {
                                     </Container>
                                 </TabPanel>
                             )}
+                            <div style={{ marginTop: '1rem', marginLeft: '4rem', width: '100%', maxWidth: '800px' }}>
+                                <ChatApp style={{ width: '100%' }} />
+                            </div>
+                        </Grid>
+                    </Grid>
+                </TabPanel>
+
+                <TabPanel value={mainTabValue} index={3}>
+                    <Grid container spacing={2} >
+                        <Grid item xs={15} md={7} sx={{ padding: '0', marginRight: '5rem' }}>
+                            <Typography paragraph>
+                                <React.Fragment>
+                                    <CssBaseline />
+                                    <Box
+                                        maxWidth="lg"
+                                        className='customGrid'
+                                        sx={{
+                                            maxHeight: '56vh',
+                                            overflowY: 'scroll',
+                                            overflowX: 'hidden',
+                                            bgcolor: '#CDDCE8',
+                                            padding: '1rem',
+                                            border: '1px black solid',
+                                            maxWidth: '400% !important',
+                                            '@media (max-width:600px)': {
+                                                width: '100%',
+                                            },
+                                            '&::-webkit-scrollbar': {
+                                                width: '12px',
+                                            },
+                                            '&::-webkit-scrollbar-thumb': {
+                                                background: '#888',
+                                                borderRadius: '6px',
+                                            },
+                                            '&::-webkit-scrollbar-thumb:hover': {
+                                                background: '#555',
+                                            },
+                                            '&::-webkit-scrollbar-track': {
+                                                background: 'transparent',
+                                                borderRadius: '6px',
+                                            },
+                                        }}
+                                    >
+                                        <Box
+                                            display="flex"
+                                            justifyContent="flex-end"
+                                        >
+                                            <ImNewTab onClick={openFullscreening} style={{ cursor: 'pointer' }} />
+                                        </Box>
+                                        <h1>WELCOME TO FAQS</h1>
+                                        <Ct /> <hr />
+                                        <CtPartThree /> <hr />
+                                        <CtPartFour /> <hr />
+                                        <CtPartFive /> <hr />
+                                        <CtPartSix /> <hr />
+                                        <CtPartSeven /> <hr />
+                                        <CtPartEight /> <hr />
+                                        <CtPartNine /> <hr />
+                                        <CtPartTen /> <hr />
+                                        <CtPartEleven /> <hr />
+                                        <CtPartTwelve /> <hr />
+                                        <CtPartThirteen /> <hr />
+                                        <CtPartFourteen /> <hr />
+                                        <CtPartFifteen /> <hr />
+                                        <CtPartSixteen /> <hr />
+                                        <CtPartSeventeen /> <hr />
+                                        <CtPartEighteen /> <hr />
+                                        <CtPartNinteen /> <hr />
+                                        <CtPartTwentieth /> <hr />
+                                        <CtPartTwentyfirst /> <hr />
+                                        <CtPartTwentyTwo /> <hr />
+                                        <CtPartTwentyThree /> <hr />
+
+                                        {/* <a id='comeToBottom' href='#comeToTop'>Go To Top</a> */}
+                                    </Box>
+                                    {/* <Button sx={{bgcolor : '#2B4265' , color : 'white'}}>FAQS</Button> */}
+                                </React.Fragment>
+                            </Typography>
+                            <Button
+                                onClick={toggleFAQs}
+                                sx={{
+                                    backgroundColor: '#CDDCE8',
+                                    paddingLeft: '2rem',
+                                    paddingRight: '2rem',
+                                    color: 'white',
+                                    '&:hover': { backgroundColor: '#2980b9' },
+                                }}
+                            >
+                                {showFAQs ? 'E-Book' : 'FAQS'}
+                            </Button>
+                        </Grid>
+
+                        <Grid className='customGrid' item xs={12} md={4} sx={{ border: '3px black solid', height: '56vh', marginTop: '1rem', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', background: '#CDDCE8', }}>
+                            <Tabs
+                                value={nestedTabValue}
+                                onChange={handleNestedTabChange}
+                                indicatorColor="primary"
+                                textColor="primary"
+                                centered
+                                sx={{
+                                    '@media (max-width: 600px)': {
+                                        maxWidth: '100%',
+                                    },
+                                }}
+                            >
+                                <Tab label="Index" sx={{ fontWeight: 'bold', color: 'black' }} />
+                            </Tabs>
+
+
+                            <TabPanel value={nestedTabValue} index={0}>
+                                <div style={
+                                    {
+                                        maxHeight: '40vh',
+                                        maxWidth: '150% !important',
+                                        cursor: 'pointer',
+                                        overflowY: 'auto',
+                                        paddingRight: '3px',
+                                        overflowX: 'hidden',
+                                        '&::-webkit-scrollbar': {
+                                            width: '12px',
+
+                                        },
+                                        '&::-webkit-scrollbar-thumb': {
+
+                                            borderRadius: '6px',
+                                        },
+                                        '&::-webkit-scrollbar-thumb:hover': {
+
+                                        },
+                                        '&::-webkit-scrollbar-track': {
+
+                                            borderRadius: '6px',
+                                        },
+                                    }
+                                }
+                                >
+                                    <TableContainer component={Paper}>
+                                        <LawBookFaqsIndexPage />
+                                    </TableContainer>
+                                </div>
+                                <div style={{ marginTop: '2.2rem', marginLeft: '5rem', width: '100%', maxWidth: '800px' }}>
+                                    <ChatApp style={{ width: '100%' }} />
+                                </div>
+                            </TabPanel>
+                            <TabPanel value={nestedTabValue} index={1}>
+                                <div style={
+                                    {
+                                        maxHeight: '40vh',
+                                        maxWidth: '150% !important',
+                                        cursor: 'pointer',
+                                        overflowY: 'auto',
+                                        paddingRight: '3px',
+                                        overflowX: 'hidden',
+                                        '&::-webkit-scrollbar': {
+                                            width: '12px',
+
+                                        },
+                                        '&::-webkit-scrollbar-thumb': {
+
+                                            borderRadius: '6px',
+                                        },
+                                        '&::-webkit-scrollbar-thumb:hover': {
+
+                                        },
+                                        '&::-webkit-scrollbar-track': {
+
+                                            borderRadius: '6px',
+                                        },
+                                    }
+                                }
+                                >
+                                    <TableContainer component={Paper}>
+                                        <LawBookFaqsIndexPage />
+                                    </TableContainer>
+                                </div>
+                            </TabPanel>
 
                         </Grid>
                     </Grid>
@@ -344,7 +816,9 @@ const LawBook = () => {
                 <TabPanel value={mainTabValue} index={1}>
                     <Typography paragraph>Nothing to show...</Typography>
                 </TabPanel>
-            </Grid >
+
+
+            </Grid>
         </div >
     );
 };

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -32,31 +33,46 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function Login() {
-    const navigate = useNavigate()
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        const email = data.get('email');
-        const password = data.get('password');
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-        if (!email || !password) {
-            Swal.fire({
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            if (!email || !password) {
+                throw new Error('Please enter both email and password!');
+            }
+
+            else if (email === "admin" && password === "admin123") {
+                await Swal.fire({
+                    icon: 'success',
+                    title: 'Login Successful!',
+                    text: 'Welcome back!',
+                    confirmButtonText: 'OK',
+                });
+
+                navigate('/chatbot');
+            }
+
+            else if (email !== "admin" && password !== "admin123") {
+                await Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: "Please Enter Correct Email Address or Password",
+                });
+                setEmail('')
+                setPassword('')
+            }
+        } catch (error) {
+            await Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Please enter both email and password!',
+                text: error.message,
             });
         }
-        else {
-            Swal.fire({
-                icon: 'success',
-                title: 'Login Successful!',
-                text: 'Welcome back!',
-                confirmButtonText: 'OK',
-            }).then(() => {
-                navigate('/chatbot');
-            });
-        }
-    }
+    };
 
     return (
         <ThemeProvider theme={defaultTheme}>
@@ -86,10 +102,7 @@ export default function Login() {
                             alignItems: 'center',
                         }}
                     >
-                        {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                            <LockOutlinedIcon />
-                        </Avatar> */}
-                        <Typography component="h1" variant="h4" sx={{fontWeight : 'bold' , marginRight : '70%'}}>
+                        <Typography component="h1" variant="h4" sx={{ fontWeight: 'bold', marginRight: '70%' }}>
                             Sign in
                         </Typography>
                         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
@@ -102,6 +115,8 @@ export default function Login() {
                                 name="email"
                                 autoComplete="email"
                                 autoFocus
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                             <TextField
                                 margin="normal"
@@ -112,6 +127,8 @@ export default function Login() {
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
                             <FormControlLabel
                                 control={<Checkbox value="remember" color="primary" />}
@@ -127,15 +144,14 @@ export default function Login() {
                             </Button>
                             <Grid container>
                                 <Grid item xs>
-                                    
+
                                 </Grid>
                                 <Grid item>
-                                    <Link sx={{cursor : 'pointer'}} variant="body2" onClick={()=>window.location = "http://localhost:3000/chatbot"}>
+                                    <Link sx={{ cursor: 'pointer' }} variant="body2" onClick={() => window.location = "http://localhost:3000/chatbot"}>
                                         {"Forgot password?"}
                                     </Link>
                                 </Grid>
                             </Grid>
-                            <Copyright sx={{ mt: 5 }} />
                         </Box>
                     </Box>
                 </Grid>

@@ -4,6 +4,7 @@ import { Typography } from '@mui/material';
 export default function SectionFourteen() {
     const corporateTax = {
         fourteen: {
+            heading: '14.When can a Free Zone Person be a Qualifying Free Zone Person?',
             firstPara: 'A Free Zone Person that is a Qualifying Free Zone Person can benefit from a preferential Corporate Tax rate of 0% on their “Qualifying Income” only. ',
             secondPara: 'In order to be considered a Qualifying Free Zone Person, the Free Zone Person must:',
             thirdPara: '●maintain adequate substance in the UAE;',
@@ -18,6 +19,9 @@ export default function SectionFourteen() {
 
     return (
         <div>
+            <Typography variant="h6" sx={{ marginBottom: '1rem', fontWeight: 'bold' }} id="fourteenthHeading">
+                {corporateTax.fourteen.heading}
+            </Typography>
             {corporateTaxFourteennArray.map((i) => (
                 <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
                     {i}

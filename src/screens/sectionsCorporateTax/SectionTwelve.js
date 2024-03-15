@@ -1,15 +1,19 @@
 import React from 'react'
-import {  Typography, Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
+import { Typography, Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
 
 export default function SectionTwelve() {
     const corporateTax = {
         twelve: {
+            heading: '12.What is the Corporate Tax rate?',
             firstPara: 'Corporate Tax will be levied at a headline rate of 9% on Taxable Income exceeding AED 375,000. Taxable Income below this threshold will be subject to a 0% rate of Corporate Tax. '
         },
     }
 
     return (
         <div>
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '3rem', fontWeight: 'bold' }} id="twelvethHeading">
+                {corporateTax.twelve.heading}
+            </Typography>
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
                 {corporateTax.twelve.firstPara} <br />
                 Corporate Tax will be charged on Taxable Income as follows:

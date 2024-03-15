@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography , Tooltip} from '@mui/material';
+import { Typography, Tooltip } from '@mui/material';
 
 export default function CtPartTwentyfirst() {
 
@@ -61,6 +61,12 @@ export default function CtPartTwentyfirst() {
         <li>Income earned by non-residents from the operation or leasing of aircrafts or ships in international transportation where certain conditions are met (see further information below).</li>
     </ol>
 `;
+
+    function renderHTMLString(htmlString) {
+        return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
+    }
+
+    const parts = ctPartTwentyfirst.seventh.firstPara.split('under section Income exempt from CT');
 
     return (
         <div>
@@ -137,16 +143,15 @@ export default function CtPartTwentyfirst() {
             {/* <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
                 {ctPartTwentyfirst.seventh.firstPara}
             </Typography> */}
-
-            <Tooltip
-                title={<div dangerouslySetInnerHTML={{ __html: titlePrint }} />}
-                arrow
-                sx={{ background: 'black', color: 'white', overflow: 'auto' }}
-            >
-                <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
-                    {ctPartTwentyfirst.seventh.firstPara}
-                </Typography>
-            </Tooltip>
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }}>
+                <>
+                    {parts[0]}
+                    <Tooltip title={renderHTMLString(titlePrint)}>
+                        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>under section Income exempt from CT</span>
+                    </Tooltip>
+                    {parts[1]}
+                </>
+            </Typography>
 
             {/* ctPartTwentyfirst seventh end  */}
         </div>

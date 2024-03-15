@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Paper, Typography, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Tooltip } from '@mui/material';
 
 export default function CoprateTax() {
+    const [showTooltip, setShowTooltip] = useState(false);
     const corporateTax = {
         first: {
             heading: '1.Introduction',
@@ -55,7 +56,7 @@ export default function CoprateTax() {
             secondPara: 'The definition of Permanent Establishment in the Corporate Tax Law has been designed on the basis of the definition provided in Article 5 of the OECD Model Tax Convention on Income and Capital and the position adopted by the UAE under the Multilateral Instrument to Implement Tax Treaty Related Measures to Prevent Base Erosion and Profit Shifting. This allows foreign persons to use the relevant Commentary of Article 5 of the OECD Model Tax Convention when assessing whether they have a Permanent Establishment or not in the UAE. This assessment should consider the provisions of any bilateral tax agreement between the country of residence of the Non-Resident Person and the UAE.',
         },
         ninth: {
-            heading: '9.What is Corporate Tax imposed on? ',
+            heading: '9.What is Corporate Tax imposed on?',
             firstPara: 'Corporate Tax is imposed on Taxable Income earned by a Taxable Person in a Tax Period. Corporate Tax would generally be imposed annually, with the Corporate Tax liability calculated by the Taxable Person on a self-assessment basis. This means that the calculation and payment of Corporate Tax is done through the filing of a Corporate Tax Return with the Federal Tax Authority by the Taxable Person.',
             secondPara: 'The definition of Permanent Establishment in the Corporate Tax Law has been designed on the basis of the definition provided in Article 5 of the OECD Model Tax Convention on IThe starting point for calculating Taxable Income is the Taxable Person’s accounting income (i.e. net profit or loss before tax) as per their financial statements. The Taxable Person will then need to make certain adjustments to determine their Taxable Income for the relevant Tax Period. For example, adjustments to accounting income may need to be made for income that is exempt from Corporate Tax and for expenditure that is wholly or partially non-deductible for Corporate Tax purposes.',
         },
@@ -65,7 +66,7 @@ export default function CoprateTax() {
             secondPara: 'The main purpose of certain income being exempt from Corporate Tax is to prevent double taxation on certain types of income. Specifically, dividends and capital gains earned from domestic and foreign shareholdings will generally be exempt from Corporate Tax. Furthermore, a Resident Person can elect, subject to certain conditions, to not take into account income from a foreign Permanent Establishment for UAE Corporate Tax purposes. ',
         },
         eleventh: {
-            heading: '11.What expenses are deductible? ',
+            heading: '11.What expenses are deductible?',
             firstPara: 'In principle, all legitimate business expenses incurred wholly and exclusively for the purposes of deriving Taxable Income will be deductible, although the timing of the deduction may vary for different types of expenses and the accounting method applied. For capital assets, expenditure would generally be recognized by way of depreciation or amortization deductions over the economic life of the asset or benefit.',
             secondPara: 'Expenditure that has a dual purpose, such as expenses incurred for both personal and business purposes, will need to be apportioned with the relevant portion of the expenditure treated as deductible if incurred wholly and exclusively for the purpose of the taxable person’s business.',
             thirdPara: 'Certain expenses which are deductible under general accounting rules may not be fully deductible for Corporate Tax purposes. These will need to be added back to the Accounting Income for the purposes of determining the Taxable Income. Examples of expenditure that is or may not be deductible (partially or in full) include:'
@@ -154,13 +155,14 @@ export default function CoprateTax() {
 
     const corporateTaxEighteenArray = [corporateTax.eighteen.firstPara, corporateTax.eighteen.secondPara, corporateTax.eighteen.thirdPara, corporateTax.eighteen.fourthPara, corporateTax.eighteen.fifthPara, corporateTax.sixth.sixthPara, corporateTax.eighteen.seventhPara, corporateTax.eighteen.eighthPara]
 
+    const parts = corporateTax.third.secondParaListThree.split('(which is explained under Section 8)');
+    
+    const part = corporateTax.third.thirdPara.split('(the conditions are included in Section 14).');
+
     return (
         <div>
             <Typography variant="h6" sx={{ marginBottom: '1rem', fontWeight: 'bold' }} id="firstHeading">
                 {corporateTax.first.heading}
-                &nbsp;
-                &nbsp;
-                {/* <a href='#comeToBottom' id='comeToTop'>Go To Bottom</a> */}
             </Typography>
             {corporateTaxFirstArray.map((i) => (
                 <Typography paragraph sx={{ fontWeight: '300', color: 'black', fontSize: '14px' }} key={i}>
@@ -187,29 +189,36 @@ export default function CoprateTax() {
             <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
                 {corporateTax.third.firstPara}
             </Typography>
-            {corporateTaxThirdArrayList.map((i, index) => (
-                <Tooltip title={index === 2 ?
-                    <>
-                        {corporateTaxEighthArray}
-                    </>
-                    : ""} arrow sx={{ background: 'black', color: 'white', overflow: 'auto' }}>
-                    <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
-                        {i}
-                    </Typography>
-                </Tooltip>
-            ))}
-            {corporateTaxThirdArray.map((i, index) => (
-                <Tooltip title={index === 0 ? (
-                    <>
-                        {corporateTaxFourteennArray}
-                    </>
-                ) : ""} arrow sx={{ background: 'black', color: 'white', overflow: 'auto' }}>
-                    <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }}>
-                        {i}
-                    </Typography>
-                </Tooltip>
-            ))}
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                {corporateTax.third.secondParaListOne}
+            </Typography>
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                {corporateTax.third.secondParaListTwo}
+            </Typography>
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }}>
+                <>
+                    {parts[0]}
+                    <Tooltip title={corporateTaxEighthArray}>
+                        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>(which is explained under Section 8)</span>
+                    </Tooltip>
+                    {parts[1]}
+                </>
+            </Typography>
 
+
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '2px', fontSize: '14px' }}>
+                <>
+                    {part[0]}
+                    <Tooltip title={corporateTaxFourteennArray}>
+                        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>(the conditions are included in Section 14).</span>
+                    </Tooltip>
+                    {part[1]}
+                </>
+            </Typography>
+
+            <Typography paragraph sx={{ fontWeight: '300', color: 'black', padding: '0', fontSize: '14px' }} >
+                {corporateTax.third.fourthPara}
+            </Typography>
             {/* third para end */}
 
             <Typography variant="h6" sx={{ marginBottom: '1rem', fontWeight: 'bold' }} id="fourthHeading">
@@ -224,8 +233,8 @@ export default function CoprateTax() {
                         <TableRow>
                             <TableCell sx={{ fontWeight: '600', border: '2px solid #000', fontSize: '14px' }}>Automatically exempt</TableCell>
                             <TableCell sx={{ border: '2px solid #000', maxWidth: '150px', fontSize: '14px' }}>
-                                <li>Government Entities </li>
-                                <li>Government Controlled Entities that are specified in a Cabinet Decision </li>
+                                <li className='ge' style={{marginRight : '1rem'}}>Government Entities </li>
+                                <li className='gen' style={{marginRight : '1rem'}}>Government Controlled Entities that are specified in a Cabinet Decision </li>
                             </TableCell>
                         </TableRow>
                     </TableHead>
@@ -235,8 +244,8 @@ export default function CoprateTax() {
                             <TableCell sx={{ border: '2px solid #000', maxWidth: '140px', fontSize: '14px' }}>Exempt if notified to the Ministry of Finance (and subject to meeting certain conditions)  </TableCell>
                             <TableCell sx={{ border: '2px solid #000', maxWidth: '160px', fontSize: '14px' }}>
                                 <ul>
-                                    <li>Extractive Businesses</li>
-                                    <li>Non-Extractive Natural Resource Businesses</li>
+                                    <li style={{marginLeft : '1rem'}}>Extractive Businesses</li>
+                                    <li style={{marginLeft : '1rem'}}>Non-Extractive Natural Resource Businesses</li>
                                 </ul>
                             </TableCell>
                         </TableRow>
@@ -390,6 +399,7 @@ export default function CoprateTax() {
                         <TableCell sx={{ border: '2px solid #000', maxWidth: '70px', fontSize: '14px' }}>
                             <ol>
                                 <li style={{ opacity: '0' }}></li>
+                                <br />
                                 <li style={{ position: 'relative', bottom: '50px', marginLeft: '10px' }}>Interest expenditure</li>
                             </ol>
                         </TableCell>

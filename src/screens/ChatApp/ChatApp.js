@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Drawer, List, ListItem, TextField, Button, Avatar, Typography } from '@mui/material';
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
-import CloseIcon from '@mui/icons-material/Close';
+// import CloseIcon from '@mui/icons-material/Close';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import SendIcon from '@mui/icons-material/Send';
 
@@ -70,13 +70,13 @@ const ChatApp = () => {
 
     return (
         <div style={{ borderRadius: '50%', padding: '5px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginRight: '6em', '@media (min-width: 600px)': { flexDirection: 'row' } }}>
-            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '50px', }}>
-                <SmartToyOutlinedIcon sx={{ fontSize: '2rem', borderRadius: '50%', cursor: 'pointer' }} />
+            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '50px', background : '#CDDCE8'}}>
+                <SmartToyOutlinedIcon sx={{ fontSize: '2rem', borderRadius: '50%', cursor: 'pointer'  }} />
             </Button>
             <Drawer anchor="right" open={isOpen} onClose={handleDrawerClose} style={{ width: '350px !important' }}>
                 {/* Close button at the top */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row-reverse', alignItems: 'center', padding: '8px', borderBottom: '2px black solid' }}>
-                    <Button
+                    {/*<Button
                         color="secondary"
                         sx={{
                             background: 'red',
@@ -87,7 +87,7 @@ const ChatApp = () => {
                         onClick={handleCloseChat}
                     >
                         <CloseIcon style={{ color: 'white' }} />
-                    </Button>
+                    </Button>*/}
                     {/* <Typography variant='h5' style={{ color: 'red', fontWeight: '1000', fontSize: '2rem' }}>UAE TAX ChatBot</Typography> */}
 
                     {/* <Button variant="outlined" color="secondary" onClick={handleClearChat}>
