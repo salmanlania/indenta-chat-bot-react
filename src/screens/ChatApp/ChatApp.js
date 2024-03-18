@@ -5,8 +5,11 @@ import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import SendIcon from '@mui/icons-material/Send';
 
-// import bot from './images/bot.png';
-// import user from './images/user.png';
+import bot from './images/bot.png';
+import user from './images/user.png';
+
+const BotIcon = () => <img src={bot} alt="Bot" style={{ width: '30px', height: '27px', marginRight: '5px' }} />;
+const UserIcon = () => <img src={user} alt="User" style={{ width: '30px', height: '27px', marginLeft : '5px' }} />;
 
 const ChatApp = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -70,8 +73,9 @@ const ChatApp = () => {
 
     return (
         <div style={{ borderRadius: '50%', padding: '5px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginRight: '6em', '@media (min-width: 600px)': { flexDirection: 'row' } }}>
-            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '50px', background : '#CDDCE8'}}>
-                <SmartToyOutlinedIcon sx={{ fontSize: '2rem', borderRadius: '50%', cursor: 'pointer'  }} />
+            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '60%', background: '#CDDCE8', gap : '0.4rem' }}>
+                <SmartToyOutlinedIcon sx={{ fontSize: '2rem', borderRadius: '50%', cursor: 'pointer' }} />
+                <Typography variant='h6'>Chat With Us</Typography>
             </Button>
             <Drawer anchor="right" open={isOpen} onClose={handleDrawerClose} style={{ width: '350px !important' }}>
                 {/* Close button at the top */}
@@ -97,10 +101,10 @@ const ChatApp = () => {
                 <div style={{ overflow: 'auto', height: '80%', maxWidth: '400px' }}>
                     <List>
                         {messages.map((message, index) => (
-                            <ListItem key={index} style={{ justifyContent: message.sender === 'ChatBot' ? 'flex-start' : 'flex-end', gap: '10px' }} >
+                            <ListItem key={index} style={{ justifyContent: message.sender === 'ChatBot' ? 'flex-start' : 'flex-end', gap: '15px' }}>
                                 <div
                                     style={{
-                                        background: message.sender === 'You' ? '#2196F3' : '#f1f0f0',
+                                        background: message.sender === 'You' ? '#9cb1c1' : '#f5f5f5',
                                         color: message.sender === 'You' ? '#fff' : '#000',
                                         borderRadius: '8px',
                                         padding: '8px',
@@ -109,9 +113,12 @@ const ChatApp = () => {
                                         alignSelf: message.sender === 'ChatBot' ? 'flex-start' : 'flex-end',
                                         display: 'flex',
                                         alignItems: 'center',
+                                        fontSize : '20px'
                                     }}
                                 >
+                                    {message.sender === 'ChatBot' && <BotIcon />} 
                                     {message.message}
+                                    {message.sender === 'You' && <UserIcon />} 
                                 </div>
                             </ListItem>
                         ))}

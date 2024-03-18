@@ -415,7 +415,7 @@ const LawBook = () => {
                     sx={{ height: '3rem', marginLeft: '3rem' }}
                 >
                     <Tab label="Corporate tax" />
-                    {/* <Tab label="Value-added tax" /> */}
+                    <Tab label="Value-added tax" />
                     {/* <Tab label="" /> */}
                 </Tabs>
                 <TabPanel value={mainTabValue} index={0}>
