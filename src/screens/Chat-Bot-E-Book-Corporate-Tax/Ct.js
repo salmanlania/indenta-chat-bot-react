@@ -77,7 +77,7 @@ export default function Ct() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '2rem', fontWeight: 'bold', color: 'purple' }} id="ctFirstHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctFirstHeading">
                 {ct.first.heading}
             </Typography>
 
@@ -88,7 +88,7 @@ export default function Ct() {
 
             {/* first sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctSecondHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctSecondHeading">
                 {ct.second.heading}
             </Typography>
 
@@ -98,7 +98,7 @@ export default function Ct() {
 
             {/* second sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctThirdHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctThirdHeading">
                 {ct.third.heading}
             </Typography>
 
@@ -108,7 +108,7 @@ export default function Ct() {
 
             {/* third sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctFourthHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctFourthHeading">
                 {ct.fourth.heading}
             </Typography>
 
@@ -120,7 +120,7 @@ export default function Ct() {
 
             {/* fourth sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctFifthHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctFifthHeading">
                 {ct.fifth.heading}
             </Typography>
 
@@ -130,7 +130,7 @@ export default function Ct() {
 
             {/* fifth sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctSixthHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctSixthHeading">
                 {ct.sixth.heading}
             </Typography>
 
@@ -140,7 +140,7 @@ export default function Ct() {
 
             {/* sixth sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctSeventhHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctSeventhHeading">
                 {ct.seventh.heading}
             </Typography>
 
@@ -150,7 +150,7 @@ export default function Ct() {
 
             {/* seven sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctEighthHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctEighthHeading">
                 {ct.eighth.heading}
             </Typography>
 
@@ -160,7 +160,7 @@ export default function Ct() {
 
             {/* eighth sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctNinthHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctNinthHeading">
                 {ct.ninth.heading}
             </Typography>
 
@@ -170,7 +170,7 @@ export default function Ct() {
 
             {/* ninth sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctTenthHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctTenthHeading">
                 {ct.tenth.heading}
             </Typography>
 
@@ -180,7 +180,7 @@ export default function Ct() {
 
             {/* tenth sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctEleventhHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctEleventhHeading">
                 {ct.eleventh.heading}
             </Typography>
 
@@ -190,7 +190,7 @@ export default function Ct() {
 
             {/* eleven sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctTwelvethHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctTwelvethHeading">
                 {ct.twelveth.heading}
             </Typography>
 
@@ -200,7 +200,7 @@ export default function Ct() {
 
             {/* twelve sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctThirteenHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctThirteenHeading">
                 {ct.thirteen.heading}
             </Typography>
 
@@ -210,7 +210,7 @@ export default function Ct() {
 
             {/* thirteen sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctFourteenHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctFourteenHeading">
                 {ct.fourteen.heading}
             </Typography>
 
@@ -220,7 +220,7 @@ export default function Ct() {
 
             {/* fourteen sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctFifteenHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctFifteenHeading">
                 {ct.fifteen.heading}
             </Typography>
 
@@ -230,7 +230,7 @@ export default function Ct() {
 
             {/* fifteen sub end */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctSixteenHeading">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctSixteenHeading">
                 {ct.sixteen.heading}
             </Typography>
 

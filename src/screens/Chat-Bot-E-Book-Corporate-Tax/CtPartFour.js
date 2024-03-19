@@ -23,7 +23,7 @@ export default function CtPartFour() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFourFirst">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartFourFirst">
                 {ctPartFour.first.heading}
             </Typography>
 
@@ -35,7 +35,7 @@ export default function CtPartFour() {
 
             {/* ctPartFour first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartFourSecond">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartFourSecond">
                 {ctPartFour.second.heading}
             </Typography>
 

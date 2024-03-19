@@ -31,7 +31,7 @@ export default function CtPartSixteen() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixteenFirst">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartSixteenFirst">
                 {ctPartSixteen.first.heading}
             </Typography>
             
@@ -63,7 +63,7 @@ export default function CtPartSixteen() {
 
             {/* ctPartSixteen first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixteenSecond">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartSixteenSecond">
                 {ctPartSixteen.second.heading}
             </Typography>
 
@@ -75,7 +75,7 @@ export default function CtPartSixteen() {
 
             {/* ctPartSixteen second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartSixteenThird">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartSixteenThird">
                 {ctPartSixteen.third.heading}
             </Typography>
 

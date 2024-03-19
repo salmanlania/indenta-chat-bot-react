@@ -1173,3 +1173,156 @@ export default function LawBookIndexPage() {
         </div>
     )
 }
+
+
+
+// const openFullscreens = () => {
+    //     const newWindow = window.open('', '_blank', 'fullscreen=yes');
+    //     if (newWindow) {
+    //         newWindow.document.write(`
+    //             <html>
+    //                 <head>
+    //                     <title>Fullscreen Content</title>
+    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    //                     <style>
+    //                     /* Your custom CSS styles */
+    //                     body {
+    //                         margin: 0;
+    //                         padding: 0;
+    //                         font-family: Roboto, sans-serif; /* Ensure Material-UI font is used */
+    //                         background : #CDDCE8;
+    //                     }
+    //                     .fullscreen-container{
+    //                         margin : auto;
+    //                         max-width : 60vw;
+    //                     }
+    //                     h6{
+    //                         font-size : 20px;
+    //                     }
+    //                     table{
+    //                         box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    //                         background-color: #fff;
+    //                         color: #333333;
+    //                     }
+    //                     td{
+    //                         font-weight: 600;
+    //                         border: 2px solid #000; 
+    //                         font-size: 14px;
+    //                     }
+    //                     .ge{
+    //                         margin-right : 5rem;
+    //                     }
+    //                     /* Add your other styles here */
+    //                 </style>
+    //                 </head>
+    //                 <body>
+    //                     <div class="fullscreen-container">
+    //                         <button style="background: #006927; padding: 6px 16px; color: #fff; background-color: #009739; border: 0; outline: 0; cursor: pointer;" onclick="closeFullscreen()">Close Fullscreen</button>
+    //                         <div id="coporateTaxContent"></div>
+    //                     </div>
+    //                     <script>
+    //                         function closeFullscreen() {
+    //                             window.close();
+    //                         }
+    //                         function renderCoporateTax() {
+    //                             const coporateTaxContent = document.getElementById('coporateTaxContent');
+    //                             coporateTaxContent.innerHTML = '${ReactDOMServer.renderToString(<div sx={{ /* Add your sx styles here */ }}><CoprateTax /></div>)}';
+    //                         }
+    //                         renderCoporateTax();
+    //                     </script>
+    //                 </body>
+    //             </html>
+    //         `);
+    //         newWindow.document.close();
+    //         newWindow.onload = () => {
+    //             newWindow.renderCoporateTax();
+    //         };
+    //     }
+    // };
+
+    // const openFullscreening = () => {
+    //     const newWindow = window.open('', '_blank', 'fullscreen=yes');
+    //     if (newWindow) {
+    //         newWindow.document.write(`
+    //             <html>
+    //                 <head>
+    //                     <title>Fullscreen Content</title>
+    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    //                     <style>
+    //                     /* Your custom CSS styles */
+    //                     body {
+    //                         margin: 0;
+    //                         padding: 0;
+    //                         font-family: Roboto, sans-serif; /* Ensure Material-UI font is used */
+    //                         background : #CDDCE8;
+    //                     }
+    //                     .fullscreen-container{
+    //                         margin : auto;
+    //                         max-width : 60vw;
+    //                     }
+    //                     h6{
+    //                         font-size : 20px;
+    //                     }
+    //                     table{
+    //                         box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    //                         background-color: #fff;
+    //                         color: #333333;
+    //                     }
+    //                     td{
+    //                         font-weight: 600;
+    //                         border: 2px solid #000; 
+    //                         font-size: 14px;
+    //                     }
+    //                     /* Add your other styles here */
+    //                 </style>
+    //                 </head>
+    //                 <body>
+    //                     <div class="fullscreen-container">
+    //                         <button style="background: #006927; padding: 6px 16px; color: #fff; background-color: #009739; border: 0; outline: 0; cursor: pointer;" onclick="closeFullscreen()">Close Fullscreen</button>
+    //                         <div id="coporateTaxContent"></div>
+    //                     </div>
+    //                     <script>
+    //                         function closeFullscreen() {
+    //                             window.close();
+    //                         }
+    //                         function renderCoporateTax() {
+    //                             const coporateTaxContent = document.getElementById('coporateTaxContent');
+    //                             coporateTaxContent.innerHTML = '${ReactDOMServer.renderToString(<div sx={{ /* Add your sx styles here */ }}>
+    //                                 <h1>WELCOME TO FAQS</h1>
+    //             <Ct /> <hr />
+    //             <CtPartThree /> <hr />
+    //             <CtPartFour /> <hr />
+    //             <CtPartFive /> <hr />
+    //             <CtPartSix /> <hr />
+    //             <CtPartSeven /> <hr />
+    //             <CtPartEight /> <hr />
+    //             <CtPartNine /> <hr />
+    //             <CtPartTen /> <hr />
+    //             <CtPartEleven /> <hr />
+    //             <CtPartTwelve /> <hr />
+    //             <CtPartThirteen /> <hr />
+    //             <CtPartFourteen /> <hr />
+    //             <CtPartFifteen /> <hr />
+    //             <CtPartSixteen /> <hr />
+    //             <CtPartSeventeen /> <hr />
+    //             <CtPartEighteen /> <hr />
+    //             <CtPartNinteen /> <hr />
+    //             <CtPartTwentieth /> <hr />
+    //             <CtPartTwentyfirst /> <hr />
+    //             <CtPartTwentyTwo /> <hr />
+    //             <CtPartTwentyThree /> <hr />
+    //                                 </div>)}';
+    //                         }
+    //                         renderCoporateTax();
+    //                     </script>
+    //                 </body>
+    //             </html>
+    //         `);
+    //         newWindow.document.close();
+    //         newWindow.onload = () => {
+    //             newWindow.renderCoporateTax();
+    //         };
+    //     }
+    // };

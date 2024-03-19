@@ -70,7 +70,7 @@ export default function CtPartTwentyfirst() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyFirstFirst">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyFirstFirst">
                 {ctPartTwentyfirst.first.heading}
             </Typography>
 
@@ -80,7 +80,7 @@ export default function CtPartTwentyfirst() {
 
             {/* ctPartTwentyfirst first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyFirstSecond">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyFirstSecond">
                 {ctPartTwentyfirst.second.heading}
             </Typography>
 
@@ -90,7 +90,7 @@ export default function CtPartTwentyfirst() {
 
             {/* ctPartTwentyfirst second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyFirstThird">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyFirstThird">
                 {ctPartTwentyfirst.third.heading}
             </Typography>
 
@@ -100,7 +100,7 @@ export default function CtPartTwentyfirst() {
 
             {/* ctPartTwentyfirst third end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyFirstFourth">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyFirstFourth">
                 {ctPartTwentyfirst.fourth.heading}
             </Typography>
 
@@ -112,7 +112,7 @@ export default function CtPartTwentyfirst() {
 
             {/* ctPartTwentyfirst fourth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyFirstFifth">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyFirstFifth">
                 {ctPartTwentyfirst.fifth.heading}
             </Typography>
 
@@ -124,7 +124,7 @@ export default function CtPartTwentyfirst() {
 
             {/* ctPartTwentyfirst fifth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyFirstSixth">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyFirstSixth">
                 {ctPartTwentyfirst.sixth.heading}
             </Typography>
 
@@ -136,7 +136,7 @@ export default function CtPartTwentyfirst() {
 
             {/* ctPartTwentyfirst sixth end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyFirstSeventh">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyFirstSeventh">
                 {ctPartTwentyfirst.seventh.heading}
             </Typography>
 

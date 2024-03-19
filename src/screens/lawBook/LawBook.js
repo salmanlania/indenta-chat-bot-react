@@ -10,6 +10,7 @@ import CloseIcon from './CloseIcon.js'
 import './LawBook.css'
 import ChatApp from '../ChatApp/ChatApp.js'
 import { useNavigate } from 'react-router-dom';
+import faqs from './assets/faqs.png'
 
 import CoprateTax from '../Chat-Bot-E-Book-Corporate-Tax/CoprateTax';
 import Ct from '../Chat-Bot-E-Book-Corporate-Tax/Ct';
@@ -208,156 +209,6 @@ const LawBook = () => {
     const openFullscreening = () => {
         window.open('/faqs', '_blank');
     }
-    // const openFullscreens = () => {
-    //     const newWindow = window.open('', '_blank', 'fullscreen=yes');
-    //     if (newWindow) {
-    //         newWindow.document.write(`
-    //             <html>
-    //                 <head>
-    //                     <title>Fullscreen Content</title>
-    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    //                     <style>
-    //                     /* Your custom CSS styles */
-    //                     body {
-    //                         margin: 0;
-    //                         padding: 0;
-    //                         font-family: Roboto, sans-serif; /* Ensure Material-UI font is used */
-    //                         background : #CDDCE8;
-    //                     }
-    //                     .fullscreen-container{
-    //                         margin : auto;
-    //                         max-width : 60vw;
-    //                     }
-    //                     h6{
-    //                         font-size : 20px;
-    //                     }
-    //                     table{
-    //                         box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-    //                         background-color: #fff;
-    //                         color: #333333;
-    //                     }
-    //                     td{
-    //                         font-weight: 600;
-    //                         border: 2px solid #000; 
-    //                         font-size: 14px;
-    //                     }
-    //                     .ge{
-    //                         margin-right : 5rem;
-    //                     }
-    //                     /* Add your other styles here */
-    //                 </style>
-    //                 </head>
-    //                 <body>
-    //                     <div class="fullscreen-container">
-    //                         <button style="background: #006927; padding: 6px 16px; color: #fff; background-color: #009739; border: 0; outline: 0; cursor: pointer;" onclick="closeFullscreen()">Close Fullscreen</button>
-    //                         <div id="coporateTaxContent"></div>
-    //                     </div>
-    //                     <script>
-    //                         function closeFullscreen() {
-    //                             window.close();
-    //                         }
-    //                         function renderCoporateTax() {
-    //                             const coporateTaxContent = document.getElementById('coporateTaxContent');
-    //                             coporateTaxContent.innerHTML = '${ReactDOMServer.renderToString(<div sx={{ /* Add your sx styles here */ }}><CoprateTax /></div>)}';
-    //                         }
-    //                         renderCoporateTax();
-    //                     </script>
-    //                 </body>
-    //             </html>
-    //         `);
-    //         newWindow.document.close();
-    //         newWindow.onload = () => {
-    //             newWindow.renderCoporateTax();
-    //         };
-    //     }
-    // };
-
-    // const openFullscreening = () => {
-    //     const newWindow = window.open('', '_blank', 'fullscreen=yes');
-    //     if (newWindow) {
-    //         newWindow.document.write(`
-    //             <html>
-    //                 <head>
-    //                     <title>Fullscreen Content</title>
-    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    //                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    //                     <style>
-    //                     /* Your custom CSS styles */
-    //                     body {
-    //                         margin: 0;
-    //                         padding: 0;
-    //                         font-family: Roboto, sans-serif; /* Ensure Material-UI font is used */
-    //                         background : #CDDCE8;
-    //                     }
-    //                     .fullscreen-container{
-    //                         margin : auto;
-    //                         max-width : 60vw;
-    //                     }
-    //                     h6{
-    //                         font-size : 20px;
-    //                     }
-    //                     table{
-    //                         box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-    //                         background-color: #fff;
-    //                         color: #333333;
-    //                     }
-    //                     td{
-    //                         font-weight: 600;
-    //                         border: 2px solid #000; 
-    //                         font-size: 14px;
-    //                     }
-    //                     /* Add your other styles here */
-    //                 </style>
-    //                 </head>
-    //                 <body>
-    //                     <div class="fullscreen-container">
-    //                         <button style="background: #006927; padding: 6px 16px; color: #fff; background-color: #009739; border: 0; outline: 0; cursor: pointer;" onclick="closeFullscreen()">Close Fullscreen</button>
-    //                         <div id="coporateTaxContent"></div>
-    //                     </div>
-    //                     <script>
-    //                         function closeFullscreen() {
-    //                             window.close();
-    //                         }
-    //                         function renderCoporateTax() {
-    //                             const coporateTaxContent = document.getElementById('coporateTaxContent');
-    //                             coporateTaxContent.innerHTML = '${ReactDOMServer.renderToString(<div sx={{ /* Add your sx styles here */ }}>
-    //                                 <h1>WELCOME TO FAQS</h1>
-    //             <Ct /> <hr />
-    //             <CtPartThree /> <hr />
-    //             <CtPartFour /> <hr />
-    //             <CtPartFive /> <hr />
-    //             <CtPartSix /> <hr />
-    //             <CtPartSeven /> <hr />
-    //             <CtPartEight /> <hr />
-    //             <CtPartNine /> <hr />
-    //             <CtPartTen /> <hr />
-    //             <CtPartEleven /> <hr />
-    //             <CtPartTwelve /> <hr />
-    //             <CtPartThirteen /> <hr />
-    //             <CtPartFourteen /> <hr />
-    //             <CtPartFifteen /> <hr />
-    //             <CtPartSixteen /> <hr />
-    //             <CtPartSeventeen /> <hr />
-    //             <CtPartEighteen /> <hr />
-    //             <CtPartNinteen /> <hr />
-    //             <CtPartTwentieth /> <hr />
-    //             <CtPartTwentyfirst /> <hr />
-    //             <CtPartTwentyTwo /> <hr />
-    //             <CtPartTwentyThree /> <hr />
-    //                                 </div>)}';
-    //                         }
-    //                         renderCoporateTax();
-    //                     </script>
-    //                 </body>
-    //             </html>
-    //         `);
-    //         newWindow.document.close();
-    //         newWindow.onload = () => {
-    //             newWindow.renderCoporateTax();
-    //         };
-    //     }
-    // };
 
 
     const getContent = () => {
@@ -405,7 +256,7 @@ const LawBook = () => {
 
     return (
         <div style={{ overflowX: 'hidden' }}>
-            <Grid>
+            <Grid style={{ overflowY: 'hidden', overflowX: 'hidden' }}>
                 <Tabs
                     value={mainTabValue}
                     onChange={handleMainTabChange}
@@ -419,8 +270,8 @@ const LawBook = () => {
                     {/* <Tab label="" /> */}
                 </Tabs>
                 <TabPanel value={mainTabValue} index={0}>
-                    <Grid container spacing={2} >
-                        <Grid item xs={15} md={7} sx={{ padding: '0', marginRight: '5rem' }}>
+                    <Grid container spacing={2} sx={{ paddingBottom: '3rem' }}>
+                        <Grid item xs={12} md={7} sx={{ padding: '0', marginRight: '5rem', width: '100%' }}> {/* Adjust width for mobile */}
                             <Typography paragraph>
                                 <React.Fragment>
                                     <CssBaseline />
@@ -428,15 +279,15 @@ const LawBook = () => {
                                         maxWidth="lg"
                                         className='customGrid'
                                         sx={{
-                                            maxHeight: '56vh',
+                                            maxHeight: '52vh',
                                             overflowY: 'scroll',
                                             overflowX: 'hidden',
                                             bgcolor: '#CDDCE8',
                                             padding: '1rem',
                                             border: '1px black solid',
-                                            maxWidth: '400% !important',
+                                            maxWidth: '500% !important',
                                             '@media (max-width:600px)': {
-                                                width: '100%',
+                                                width: '120%', // Adjust width for mobile
                                             },
                                             '&::-webkit-scrollbar': {
                                                 width: '12px',
@@ -470,17 +321,16 @@ const LawBook = () => {
                             <Button
                                 onClick={toggleFAQs}
                                 sx={{
-                                    backgroundColor: '#CDDCE8',
+                                    background: '#2B4C65', '&:hover': { background: '#CDDCE8', },
                                     paddingLeft: '2rem',
                                     paddingRight: '2rem',
                                     color: 'white',
-                                    '&:hover': { backgroundColor: '#2980b9' },
                                 }}
                             >
                                 {showFAQs ? 'E-Book' : 'FAQS'}
                             </Button>
                         </Grid>
-                        <Grid className='customGrid' item xs={12} md={4} sx={{ border: '3px black solid', height: '56vh', marginTop: '1rem', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', background: '#CDDCE8', }}>
+                        <Grid item xs={12} md={4} sx={{ maxHeight: '52vh', marginTop: '1rem', background: '#CDDCE8', }}>
                             <Tabs
                                 value={nestedTabValue}
                                 onChange={handleNestedTabChange}
@@ -632,7 +482,7 @@ const LawBook = () => {
                                 </TabPanel>
                             )}
                             <div style={{ marginTop: '1rem', marginLeft: '4rem', width: '100%', maxWidth: '800px' }}>
-                                <ChatApp style={{ width: '100%' }} />
+                                <ChatApp style={{ maxWidth: '100%' }} />
                             </div>
                         </Grid>
                     </Grid>
@@ -648,15 +498,15 @@ const LawBook = () => {
                                         maxWidth="lg"
                                         className='customGrid'
                                         sx={{
-                                            maxHeight: '56vh',
+                                            maxHeight: '52vh',
                                             overflowY: 'scroll',
                                             overflowX: 'hidden',
                                             bgcolor: '#CDDCE8',
                                             padding: '1rem',
                                             border: '1px black solid',
-                                            maxWidth: '400% !important',
+                                            maxWidth: '500% !important',
                                             '@media (max-width:600px)': {
-                                                width: '100%',
+                                                width: '120%',
                                             },
                                             '&::-webkit-scrollbar': {
                                                 width: '12px',
@@ -675,12 +525,18 @@ const LawBook = () => {
                                         }}
                                     >
                                         <Box
-                                            display="flex"
-                                            justifyContent="flex-end"
+                                            sx={{
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                backgroundImage: `url('${faqs}')`,
+                                                backgroundSize: 'cover',
+                                                backgroundPosition: 'center',
+                                                padding: '1rem',
+                                                width: '100%'
+                                            }}
                                         >
-                                            <ImNewTab onClick={openFullscreening} style={{ cursor: 'pointer' }} />
+                                            <Typography variant='h4' sx={{ color: '#2B4C65' , borderBottom : '3px solid black'}}>Frequently Asked Questions</Typography>
                                         </Box>
-                                        <h1>WELCOME TO FAQS</h1>
                                         <Ct /> <hr />
                                         <CtPartThree /> <hr />
                                         <CtPartFour /> <hr />
@@ -712,18 +568,17 @@ const LawBook = () => {
                             <Button
                                 onClick={toggleFAQs}
                                 sx={{
-                                    backgroundColor: '#CDDCE8',
+                                    background: '#2B4C65', '&:hover': { background: '#CDDCE8', },
                                     paddingLeft: '2rem',
                                     paddingRight: '2rem',
                                     color: 'white',
-                                    '&:hover': { backgroundColor: '#2980b9' },
                                 }}
                             >
                                 {showFAQs ? 'E-Book' : 'FAQS'}
                             </Button>
                         </Grid>
 
-                        <Grid className='customGrid' item xs={12} md={4} sx={{ border: '3px black solid', height: '56vh', marginTop: '1rem', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', background: '#CDDCE8', }}>
+                        <Grid className='customGrid' item xs={12} md={4} sx={{ border: '3px black solid', height: '52vh', marginTop: '1rem', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', background: '#CDDCE8', }}>
                             <Tabs
                                 value={nestedTabValue}
                                 onChange={handleNestedTabChange}
@@ -743,11 +598,12 @@ const LawBook = () => {
                             <TabPanel value={nestedTabValue} index={0}>
                                 <div style={
                                     {
-                                        maxHeight: '40vh',
+                                        maxHeight: '38vh',
                                         maxWidth: '150% !important',
                                         cursor: 'pointer',
                                         overflowY: 'auto',
                                         paddingRight: '3px',
+                                        marginBottom : '1rem',
                                         overflowX: 'hidden',
                                         '&::-webkit-scrollbar': {
                                             width: '12px',
@@ -771,7 +627,7 @@ const LawBook = () => {
                                         <LawBookFaqsIndexPage />
                                     </TableContainer>
                                 </div>
-                                <div style={{ marginTop: '2.2rem', marginLeft: '5rem', width: '100%', maxWidth: '800px' }}>
+                                <div style={{ marginTop: '3.2rem', marginLeft: '5.5rem', width: '100%', maxWidth: '800px' }}>
                                     <ChatApp style={{ width: '100%' }} />
                                 </div>
                             </TabPanel>
@@ -783,20 +639,19 @@ const LawBook = () => {
                                         cursor: 'pointer',
                                         overflowY: 'auto',
                                         paddingRight: '3px',
+                                        paddingBottom : '1rem',
                                         overflowX: 'hidden',
+                                        border : 'none',
                                         '&::-webkit-scrollbar': {
                                             width: '12px',
-
                                         },
                                         '&::-webkit-scrollbar-thumb': {
-
                                             borderRadius: '6px',
                                         },
                                         '&::-webkit-scrollbar-thumb:hover': {
 
                                         },
                                         '&::-webkit-scrollbar-track': {
-
                                             borderRadius: '6px',
                                         },
                                     }
@@ -807,8 +662,12 @@ const LawBook = () => {
                                     </TableContainer>
                                 </div>
                             </TabPanel>
+                            
 
                         </Grid>
+                        {/* <div style={{ marginTop: '1rem', marginLeft: '4rem', width: '100%', maxWidth: '800px' }}>
+                            <ChatApp style={{ maxWidth: '100%' }} />
+                        </div> */}
                     </Grid>
                 </TabPanel>
 
@@ -816,10 +675,11 @@ const LawBook = () => {
                 <TabPanel value={mainTabValue} index={1}>
                     <Typography paragraph>Nothing to show...</Typography>
                 </TabPanel>
+                
 
 
             </Grid>
-        </div >
+        </div>
     );
 };
 

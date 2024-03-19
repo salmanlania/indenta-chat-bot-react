@@ -3,12 +3,12 @@ import { Table, TableHead, TableBody, TableRow, TableCell, Grid, Container, Butt
 
 export default function LawBookIndexPage() {
     return (
-        <div>
+        <div style={{ overflowX: 'auto' }}>
             <Table>
                 <TableHead>
                     <TableRow sx={{ background: '#CDDCE8' }}>
-                        <TableCell style={{ width: '5%', textAlign: 'center', fontWeight: 'bold', fontSize: '18px' }}>Section</TableCell>
-                        <TableCell style={{ width: '40%', fontWeight: 'bold', fontSize: '18px', textAlign: 'center' }}>TITLE</TableCell>
+                        <TableCell style={{ padding : '0' ,textAlign: 'center', fontWeight: 'bold', fontSize: '18px' }}>Section</TableCell>
+                        <TableCell style={{ padding : '0' , fontWeight: 'bold', fontSize: '18px', textAlign: 'center' }}>TITLE</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>

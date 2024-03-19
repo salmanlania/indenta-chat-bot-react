@@ -14,6 +14,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import bgLogin from './assests/bgLogin.png'
+import book from './assests/book.png'
 
 function Copyright(props) {
     return (
@@ -28,50 +29,55 @@ function Copyright(props) {
     );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-
 const defaultTheme = createTheme();
 
 export default function Login() {
     const navigate = useNavigate();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('admin');
+    const [password, setPassword] = useState('admin123');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        Swal.fire({
+            icon: 'success',
+            title: 'Login Successful!',
+            text: 'Welcome back!',
+            confirmButtonText: 'OK',
+        });
+        navigate('/book');
 
-        try {
-            if (!email || !password) {
-                throw new Error('Please enter both email and password!');
-            }
+        // try {
+        //     if (!email || !password) {
+        //         throw new Error('Please enter both email and password!');
+        //     }
 
-            else if (email === "admin" && password === "admin123") {
-                await Swal.fire({
-                    icon: 'success',
-                    title: 'Login Successful!',
-                    text: 'Welcome back!',
-                    confirmButtonText: 'OK',
-                });
+        //     else if (email === "admin" && password === "admin") {
+        //         await Swal.fire({
+        //             icon: 'success',
+        //             title: 'Login Successful!',
+        //             text: 'Welcome back!',
+        //             confirmButtonText: 'OK',
+        //         });
 
-                navigate('/chatbot');
-            }
+        //         navigate('/book');
+        //     }
 
-            else if (email !== "admin" && password !== "admin123") {
-                await Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: "Please Enter Correct Email Address or Password",
-                });
-                setEmail('')
-                setPassword('')
-            }
-        } catch (error) {
-            await Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: error.message,
-            });
-        }
+        //     else if (email !== "admin" && password !== "admin") {
+        //         await Swal.fire({
+        //             icon: 'error',
+        //             title: 'Oops...',
+        //             text: "Please Enter Correct Email Address or Password",
+        //         });
+        //         setEmail('')
+        //         setPassword('')
+        //     }
+        // } catch (error) {
+        //     await Swal.fire({
+        //         icon: 'error',
+        //         title: 'Oops...',
+        //         text: error.message,
+        //     });
+        // }
     };
 
     return (
@@ -93,19 +99,24 @@ export default function Login() {
                     }}
                 />
                 <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                    <div>
+                        <img src={book} style={{ float: 'right', width: '70px', marginTop: '20px', marginRight: '1rem' }} />
+                    </div>
                     <Box
                         sx={{
                             my: 8,
-                            mx: 4,
+                            mx: 'auto', // Center the box horizontally
+                            maxWidth: '400px', // Limiting width for the content
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
+                            marginTop: '160px',
                         }}
                     >
-                        <Typography component="h1" variant="h4" sx={{ fontWeight: 'bold', marginRight: '70%' }}>
+                        <Typography component="h1" variant="h4" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
                             Sign in
                         </Typography>
-                        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+                        <Box component="form" validate sx={{ width: '100%' }}>
                             <TextField
                                 margin="normal"
                                 required
@@ -117,6 +128,7 @@ export default function Login() {
                                 autoFocus
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                sx={{ width: '100%' }} // Set width to 100%
                             />
                             <TextField
                                 margin="normal"
@@ -129,25 +141,28 @@ export default function Login() {
                                 autoComplete="current-password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
+                                sx={{ width: '100%' }} // Set width to 100%
                             />
                             <FormControlLabel
                                 control={<Checkbox value="remember" color="primary" />}
                                 label="Remember me"
+                                sx={{ mb: 1 }} // Add margin bottom
                             />
                             <Button
                                 type="submit"
                                 fullWidth
                                 variant="contained"
-                                sx={{ mt: 3, mb: 2 }}
+                                sx={{ mb: 2 }}
+                                onClick={handleSubmit}
                             >
                                 Sign In
                             </Button>
                             <Grid container>
                                 <Grid item xs>
-
+                                    {/* Add any content you want */}
                                 </Grid>
                                 <Grid item>
-                                    <Link sx={{ cursor: 'pointer' }} variant="body2" onClick={() => window.location = "http://localhost:3000/chatbot"}>
+                                    <Link sx={{ cursor: 'pointer' }} variant="body2" onClick={() => navigate('/book')}>
                                         {"Forgot password?"}
                                     </Link>
                                 </Grid>

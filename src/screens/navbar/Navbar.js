@@ -1,5 +1,5 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton, useMediaQuery, Drawer, List, ListItem } from '@mui/material';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, Typography, Button, IconButton, Box, useMediaQuery, Drawer, List, ListItem, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate, Outlet } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -7,11 +7,42 @@ import Swal from 'sweetalert2';
 export default function Navbar() {
     const navigate = useNavigate()
     const isMobile = useMediaQuery('(max-width:600px)');
-    const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleToggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
+
+    const handleMenuClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+    };
+
+    const handleMenuItemClick = (action) => {
+        switch (action) {
+            case 'Home':
+                navigate('/');
+                break;
+            case 'Book':
+                navigate('/book');
+                break;
+            case 'About':
+                navigate('/about');
+                console.log('About clicked');
+                break;
+            case 'Logout':
+                navigate('/login');
+                break;
+            default:
+                console.log(`Unknown action: ${action}`);
+        }
+        handleMenuClose();
+    };
+
 
     const handleLogout = () => {
         Swal.fire({
@@ -20,41 +51,55 @@ export default function Navbar() {
             icon: 'success',
             confirmButtonText: 'OK'
         }).then(() => {
-            navigate('/login') || navigate('/')
+            navigate('/login') 
         })
     };
 
     return (
-        <AppBar position="static" color="primary" sx={{background : '#9CB1C1', fontFamily: '"Anta", sans-serif !important'}}>
+        <AppBar position="static" style={{ backgroundColor: '#9CB1C1' }}>
             <Toolbar>
-                {isMobile ? (
-                    <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleToggleMobileMenu}>
+                <Typography variant="h6" style={{ flexGrow: 0, textAlign: 'center', color: 'white', cursor: 'pointer' }} onClick={() => navigate('/')}>
+                    Your Logo
+                </Typography>
+                <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}>
+                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/')}>
+                        Home
+                    </Button>
+                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/about')}>
+                        About
+                    </Button>
+                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/book')}>
+                        Book
+                    </Button>
+                </Box>
+                <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <IconButton
+                        edge="end"
+                        color="inherit"
+                        aria-label="menu"
+                        onClick={handleMenuClick}
+                        sx={{ float: 'right' }}
+                    >
                         <MenuIcon />
                     </IconButton>
-                ) : null}
-
-                <Typography variant="h4" style={{ flexGrow: 1, textAlign: 'center', letterSpacing: '3px', textTransform: 'uppercase', fontWeight: 'bold' , color : 'black'}}>
-                    UAE Tax Consultant
-                </Typography>
-
-                {isMobile ? null : (
-                    <Button color="inherit" sx={{ background: '#009739' }} onClick={handleLogout}>
+                    <Menu
+                        anchorEl={anchorEl}
+                        open={Boolean(anchorEl)}
+                        onClose={handleMenuClose}
+                    >
+                        <MenuItem onClick={() => handleMenuItemClick('Home')}>Home</MenuItem>
+                        <MenuItem onClick={() => handleMenuItemClick('About')}>About</MenuItem>
+                        <MenuItem onClick={() => handleMenuItemClick('Book')}>Book</MenuItem>
+                        <MenuItem onClick={() => handleMenuItemClick('Logout')}>Logout</MenuItem>
+                    </Menu>
+                </Box>
+                <Box sx={{ display: { xs: 'none', md: 'flex' } }} onClick={handleLogout}>
+                    <Button color="inherit" style={{ marginLeft: '20px', border: '1px solid #2B4C65', color: '#2B4C65', borderRadius: '50px', paddingLeft: '20px', paddingRight: '20px' }}>
                         Logout
                     </Button>
-                )}
+                </Box>
             </Toolbar>
-
-            <Drawer anchor="left" open={mobileMenuOpen} onClose={handleToggleMobileMenu}>
-                <List>
-                    <ListItem button onClick={handleLogout}>
-                        <Button color="inherit" sx={{ background: 'red' }} onClick={handleLogout}>
-                            Logout
-                        </Button>
-                    </ListItem>
-                    {/* Add other mobile menu items as needed */}
-                </List>
-            </Drawer>
-            <Outlet />
         </AppBar>
+
     );
 };

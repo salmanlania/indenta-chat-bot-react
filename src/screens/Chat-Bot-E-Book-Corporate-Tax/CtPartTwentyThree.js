@@ -22,7 +22,7 @@ export default function CtPartTwentyThree() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyThirdFirst">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyThirdFirst">
                 {ctPartTwentyThree.first.heading}
             </Typography>
 
@@ -34,7 +34,7 @@ export default function CtPartTwentyThree() {
 
             {/* ctPartTwentyThree first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartTwentyThirdSecond">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartTwentyThirdSecond">
                 {ctPartTwentyThree.second.heading}
             </Typography>
 

@@ -27,7 +27,7 @@ export default function CtPartNinteen() {
 
     return (
         <div>
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNinteenFirst">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartNinteenFirst">
                 {ctPartNinteen.first.heading}
             </Typography>
 
@@ -37,7 +37,7 @@ export default function CtPartNinteen() {
 
             {/* ctPartNinteen first end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNinteenSecond">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartNinteenSecond">
                 {ctPartNinteen.second.heading}
             </Typography>
 
@@ -49,7 +49,7 @@ export default function CtPartNinteen() {
 
             {/* ctPartNinteen second end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNinteenThird">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartNinteenThird">
                 {ctPartNinteen.third.heading}
             </Typography>
 
@@ -59,7 +59,7 @@ export default function CtPartNinteen() {
 
             {/* ctPartNinteen third end  */}
 
-            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: 'purple' }} id="ctPartNinteenFourth">
+            <Typography variant="h6" sx={{ marginBottom: '1rem', marginTop: '1rem', fontWeight: 'bold', color: '#2B4C65' }} id="ctPartNinteenFourth">
                 {ctPartNinteen.fourth.heading}
             </Typography>
 

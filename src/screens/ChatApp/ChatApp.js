@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Drawer, List, ListItem, TextField, Button, Avatar, Typography } from '@mui/material';
+import { Drawer, List, ListItem, TextField, Button, Typography } from '@mui/material';
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
-// import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from '@mui/icons-material/Close';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import SendIcon from '@mui/icons-material/Send';
 
@@ -9,7 +9,7 @@ import bot from './images/bot.png';
 import user from './images/user.png';
 
 const BotIcon = () => <img src={bot} alt="Bot" style={{ width: '30px', height: '27px', marginRight: '5px' }} />;
-const UserIcon = () => <img src={user} alt="User" style={{ width: '30px', height: '27px', marginLeft : '5px' }} />;
+const UserIcon = () => <img src={user} alt="User" style={{ width: '30px', height: '27px', marginLeft: '5px' }} />;
 
 const ChatApp = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -72,33 +72,69 @@ const ChatApp = () => {
     };
 
     return (
-        <div style={{ borderRadius: '50%', padding: '5px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginRight: '6em', '@media (min-width: 600px)': { flexDirection: 'row' } }}>
-            <Button variant="contained" color="primary" onClick={handleDrawerOpen} sx={{ borderRadius: '1rem', width: '60%', background: '#CDDCE8', gap : '0.4rem' }}>
-                <SmartToyOutlinedIcon sx={{ fontSize: '2rem', borderRadius: '50%', cursor: 'pointer' }} />
-                <Typography variant='h6'>Chat With Us</Typography>
+        <div>
+            <Button
+                variant="contained"
+                color="primary"
+                onClick={handleDrawerOpen}
+                sx={{
+                    borderRadius: '1rem',
+                    background: '#2B4C65',
+                    '&:hover': { background: '#CDDCE8', },
+                    gap: '0.4rem',
+                    minWidth: '140px',
+                    height: '3rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    position: 'relative',
+                    bottom: '1.5rem',
+                    marginLeft: 'auto',
+                    marginRight: '3.5rem',
+                    justifyContent: 'flex-end',
+                    flexDirection: 'row-reverse', // Positioning to the left side in mobile mode
+                    '@media (min-width:600px)': {
+                        flexDirection: 'row', // Default positioning to the right in desktop mode
+                    },
+                }}
+            >
+                <Typography variant='body1' sx={{ fontSize: '0.9rem' }}>Chat With Us</Typography>
+                <SmartToyOutlinedIcon
+                    sx={{
+                        fontSize: '1.5rem',
+                        borderRadius: '50%',
+                        cursor: 'pointer',
+                        margin: 'auto',
+                    }}
+                />
             </Button>
-            <Drawer anchor="right" open={isOpen} onClose={handleDrawerClose} style={{ width: '350px !important' }}>
-                {/* Close button at the top */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row-reverse', alignItems: 'center', padding: '8px', borderBottom: '2px black solid' }}>
-                    {/*<Button
+            <Drawer
+                anchor="right"
+                open={isOpen}
+                onClose={handleDrawerClose}
+                sx={{
+                    '& .MuiDrawer-paper': {
+                        top: 'auto',
+                        left: 'auto',
+                        right: 0,
+                        bottom: 0,
+                        maxHeight: '130%',
+                        borderTopLeftRadius: '20px',
+                        borderTopRightRadius: '20px',
+                        transition: 'transform 0.3s ease-in-out',
+                        transform: isOpen ? 'translateY(0)' : 'translateY(100%)',
+                    },
+                }}
+            >
+                <div style={{ padding: '8px', borderBottom: '2px black solid' }}>
+                    <Button
                         color="secondary"
-                        sx={{
-                            background: 'red',
-                            '&:hover': {
-                                background: 'darkred',
-                            },
-                        }}
+                        style={{ background: 'red' }}
                         onClick={handleCloseChat}
                     >
                         <CloseIcon style={{ color: 'white' }} />
-                    </Button>*/}
-                    {/* <Typography variant='h5' style={{ color: 'red', fontWeight: '1000', fontSize: '2rem' }}>UAE TAX ChatBot</Typography> */}
-
-                    {/* <Button variant="outlined" color="secondary" onClick={handleClearChat}>
-                        Clear Chat
-                    </Button> */}
+                    </Button>
                 </div>
-                <div style={{ overflow: 'auto', height: '80%', maxWidth: '400px' }}>
+                <div style={{ overflowY: 'auto', maxHeight: '70vh' }}>
                     <List>
                         {messages.map((message, index) => (
                             <ListItem key={index} style={{ justifyContent: message.sender === 'ChatBot' ? 'flex-start' : 'flex-end', gap: '15px' }}>
@@ -108,24 +144,24 @@ const ChatApp = () => {
                                         color: message.sender === 'You' ? '#fff' : '#000',
                                         borderRadius: '8px',
                                         padding: '8px',
-                                        maxWidth: '100%',
+                                        maxWidth: 'calc(100% - 30px)',
                                         wordWrap: 'break-word',
                                         alignSelf: message.sender === 'ChatBot' ? 'flex-start' : 'flex-end',
                                         display: 'flex',
                                         alignItems: 'center',
-                                        fontSize : '20px'
+                                        fontSize: '14px'
                                     }}
                                 >
-                                    {message.sender === 'ChatBot' && <BotIcon />} 
+                                    {message.sender === 'ChatBot' && <BotIcon />}
                                     {message.message}
-                                    {message.sender === 'You' && <UserIcon />} 
+                                    {message.sender === 'You' && <UserIcon />}
                                 </div>
                             </ListItem>
                         ))}
                     </List>
                 </div>
-                <div style={{ marginTop: 'auto', padding: '16px', display: 'flex', flexDirection: 'column-reverse' }}>
-                    <form onSubmit={handleSendMessage} style={{ display: 'flex' }}>
+                <div style={{ padding: '16px', marginTop: 'auto', display: 'flex', flexDirection: 'column-reverse' }}>
+                    <form onSubmit={handleSendMessage} style={{ display: 'flex', gap: '8px' }}>
                         <TextField
                             label="Type a message"
                             variant="outlined"
@@ -139,7 +175,6 @@ const ChatApp = () => {
                             type="submit"
                             variant="contained"
                             color="primary"
-                            style={{ marginLeft: '4px' }}
                             disabled={!inputMessage.trim()}
                         >
                             <SendIcon />
@@ -148,7 +183,6 @@ const ChatApp = () => {
                             variant="outlined"
                             color="secondary"
                             onClick={handleClearChat}
-                            style={{ marginLeft: '4px' }}
                         >
                             <DeleteForeverIcon />
                         </Button>
