@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Box, useMediaQuery, Dr
 import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate, Outlet } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import MyButton from '../MyButton';
 
 export default function Navbar() {
     const navigate = useNavigate()
@@ -55,6 +56,16 @@ export default function Navbar() {
         })
     };
 
+    const sxStyles = {
+        myButton: {
+          color: 'white',
+          marginRight: '20px',
+          '&:hover': {
+            textDecoration: 'underline',
+          },
+        },
+      };      
+
     return (
         <AppBar position="static" style={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
             <Toolbar>
@@ -62,19 +73,19 @@ export default function Navbar() {
                     Your Logo
                 </Typography>
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}>
-                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/')}>
+                    <Button color="inherit" sx={{color: 'white',marginRight: '20px','&:hover': {textDecoration: 'underline',transform: 'scale(1.1)',},transition: 'transform 0.3s',}} onClick={() => navigate('/')}>
                         Home
                     </Button>
-                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/about')}>
+                    <Button color="inherit" sx={{color: 'white',marginRight: '20px','&:hover': {textDecoration: 'underline',transform: 'scale(1.1)',},transition: 'transform 0.3s',}} onClick={() => navigate('/about')}>
                         About Us
                     </Button>
-                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/book')}>
+                    <Button color="inherit" sx={{color: 'white',marginRight: '20px','&:hover': {textDecoration: 'underline',transform: 'scale(1.1)',},transition: 'transform 0.3s',}} onClick={() => navigate('/book')}>
                         Book
                     </Button>
-                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/book')}>
+                    <Button color="inherit" sx={{color: 'white',marginRight: '20px','&:hover': {textDecoration: 'underline',transform: 'scale(1.1)',},transition: 'transform 0.3s',}} onClick={() => navigate('/book')}>
                         Features
                     </Button>
-                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/book')}>
+                    <Button color="inherit" sx={{color: 'white',marginRight: '20px','&:hover': {textDecoration: 'underline',transform: 'scale(1.1)',},transition: 'transform 0.3s',}} onClick={() => navigate('/book')}>
                         Contact
                     </Button>
                 </Box>
@@ -101,9 +112,10 @@ export default function Navbar() {
                     </Menu>
                 </Box>
                 <Box sx={{ display: { xs: 'none', md: 'flex' } }} onClick={handleLogout}>
-                    <Button color="inherit" style={{ marginLeft: '20px', border: '1px solid #2B4C65', color: 'white', background: '#FFB400', paddingLeft: '20px', paddingRight: '20px' }}>
+                    {/* <Button color="inherit" style={{ marginLeft: '20px', border: '1px solid #2B4C65', color: 'black', background: '#FFB400', paddingLeft: '20px', paddingRight: '20px' }}>
                         Logout
-                    </Button>
+                    </Button> */}
+                    <MyButton>Logout</MyButton>
                 </Box>
             </Toolbar>
         </AppBar>
