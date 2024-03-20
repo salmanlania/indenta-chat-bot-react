@@ -22,7 +22,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Anta, sans-serif',
+    fontFamily: 'Roboto Flex, sans-serif',
   },
   // Add more configuration options as needed
 });

@@ -51,12 +51,12 @@ export default function Navbar() {
             icon: 'success',
             confirmButtonText: 'OK'
         }).then(() => {
-            navigate('/login') 
+            navigate('/login')
         })
     };
 
     return (
-        <AppBar position="static" style={{ backgroundColor: '#9CB1C1' }}>
+        <AppBar position="static" style={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
             <Toolbar>
                 <Typography variant="h6" style={{ flexGrow: 0, textAlign: 'center', color: 'white', cursor: 'pointer' }} onClick={() => navigate('/')}>
                     Your Logo
@@ -66,10 +66,16 @@ export default function Navbar() {
                         Home
                     </Button>
                     <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/about')}>
-                        About
+                        About Us
                     </Button>
                     <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/book')}>
                         Book
+                    </Button>
+                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/book')}>
+                        Features
+                    </Button>
+                    <Button color="inherit" style={{ color: 'white', marginRight: '20px' }} onClick={() => navigate('/book')}>
+                        Contact
                     </Button>
                 </Box>
                 <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -88,13 +94,14 @@ export default function Navbar() {
                         onClose={handleMenuClose}
                     >
                         <MenuItem onClick={() => handleMenuItemClick('Home')}>Home</MenuItem>
-                        <MenuItem onClick={() => handleMenuItemClick('About')}>About</MenuItem>
-                        <MenuItem onClick={() => handleMenuItemClick('Book')}>Book</MenuItem>
+                        <MenuItem onClick={() => handleMenuItemClick('About')}>About Us</MenuItem>
+                        <MenuItem onClick={() => handleMenuItemClick('Features')}>Features</MenuItem>
+                        <MenuItem onClick={() => handleMenuItemClick('Contact')}>Contact</MenuItem>
                         <MenuItem onClick={() => handleMenuItemClick('Logout')}>Logout</MenuItem>
                     </Menu>
                 </Box>
                 <Box sx={{ display: { xs: 'none', md: 'flex' } }} onClick={handleLogout}>
-                    <Button color="inherit" style={{ marginLeft: '20px', border: '1px solid #2B4C65', color: '#2B4C65', borderRadius: '50px', paddingLeft: '20px', paddingRight: '20px' }}>
+                    <Button color="inherit" style={{ marginLeft: '20px', border: '1px solid #2B4C65', color: 'white', background: '#FFB400', paddingLeft: '20px', paddingRight: '20px' }}>
                         Logout
                     </Button>
                 </Box>

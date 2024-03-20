@@ -662,8 +662,6 @@ const LawBook = () => {
                                     </TableContainer>
                                 </div>
                             </TabPanel>
-                            
-
                         </Grid>
                         {/* <div style={{ marginTop: '1rem', marginLeft: '4rem', width: '100%', maxWidth: '800px' }}>
                             <ChatApp style={{ maxWidth: '100%' }} />

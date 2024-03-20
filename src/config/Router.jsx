@@ -4,7 +4,7 @@ import Login from "../component/login/Login";
 import Chatbot from "../component/chatBot/Chatbot";
 import Faqs from "../screens/FullScreens/Faqs";
 import Ebook from "../screens/FullScreens/Ebook";
-import Home from '../Home/Home'
+import HomePage from '../component/Home/HomePage'
 import About from '../About/About'
 import Navbar from '../screens/navbar/Navbar'
 
@@ -15,11 +15,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home />,
+                element: <HomePage />,
             },
             {
                 path: '/home',
-                element: <Home />,
+                element: <HomePage />,
             },
             {
                 path: '/about',
@@ -51,9 +51,7 @@ function Router() {
 
 function Main() {
     return (
-
         <div>
-            <Navbar />
             <Outlet />
         </div>
 
