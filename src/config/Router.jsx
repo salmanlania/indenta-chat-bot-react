@@ -5,8 +5,8 @@ import Chatbot from "../component/chatBot/Chatbot";
 import Faqs from "../screens/FullScreens/Faqs";
 import Ebook from "../screens/FullScreens/Ebook";
 import HomePage from '../component/Home/HomePage'
-import About from '../About/About'
-import Navbar from '../screens/navbar/Navbar'
+// import About from '../About/About'
+import Navbar from '../component/navbar/Navbar'
 
 const router = createBrowserRouter([
     {
@@ -21,10 +21,10 @@ const router = createBrowserRouter([
                 path: '/home',
                 element: <HomePage />,
             },
-            {
-                path: '/about',
-                element: <About />,
-            },
+            // {
+            //     path: '/about',
+            //     element: <About />,
+            // },
             {
                 path: '/login',
                 element: <Login />,
