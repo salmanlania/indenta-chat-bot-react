@@ -21,6 +21,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = 'AI Taxpert | Home';
     const timer = setTimeout(() => {
       setLoading(false);
     }, 400);

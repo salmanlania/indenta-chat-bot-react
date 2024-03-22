@@ -30,7 +30,7 @@ const router = createBrowserRouter([
                 element: <Login />,
             },
             {
-                path: '/book',
+                path: '/chatbot',
                 element: <Chatbot />,
             },
             {

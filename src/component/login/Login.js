@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -17,6 +18,9 @@ import book from './assests/book.png'
 import MyButton from '../../screens/MyButton';
 
 function Copyright(props) {
+    useEffect(() => {
+        document.title = 'AI Taxpert | Login';
+      }, []);
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
@@ -54,7 +58,7 @@ export default function Login() {
                     },
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        navigate('/');
+                        navigate('/chatbot');
                     }
                 });
 
