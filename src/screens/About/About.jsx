@@ -1,34 +1,20 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
+import { useInView } from 'react-intersection-observer';
 import AboutImage from './assets/AboutImage.png';
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
-  const imageRef = useRef(null);
-  const textRef = useRef(null);
+  const [textRef, textInView] = useInView(); // Use useInView for textRef
+  const [imageRef, imageInView] = useInView(); // Use useInView for imageRef
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (imageRef.current && textRef.current) {
-        const textRect = textRef.current.getBoundingClientRect();
-        const imageRect = imageRef.current.getBoundingClientRect();
-
-        if (textRect.top < window.innerHeight && textRect.bottom > 0) {
-          setIsVisible(true);
-        } else if (imageRect.top < window.innerHeight && imageRect.bottom > 0) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    if (textInView || imageInView) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, [textInView, imageInView]);
 
   return (
     <Box
@@ -62,7 +48,7 @@ export default function About() {
               sx={{
                 padding: { xs: '2rem', md: '5rem' },
                 textAlign: { xs: 'center', md: 'left' },
-                transition: 'opacity 0.5s 0.5s, transform 0.5s 0.5s', // Delay animation by 3 seconds
+                transition: 'opacity 0.5s 0.5s, transform 0.5s 0.5s', // Delay animation by 0.5 seconds
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
               }}
@@ -87,7 +73,7 @@ export default function About() {
                 justifyContent: 'flex-end',
                 alignItems: 'center',
                 paddingRight: { xs: '2rem', md: 0 },
-                transition: 'opacity 0.5s 0.5s, transform 0.5s 0.5s', // Delay animation by 3 seconds
+                transition: 'opacity 0.5s 0.5s, transform 0.5s 0.5s', // Delay animation by 0.5 seconds
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
               }}

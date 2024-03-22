@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useState } from 'react';
-import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -15,6 +14,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import bgLogin from './assests/bgLogin.png'
 import book from './assests/book.png'
+import MyButton from '../../screens/MyButton';
 
 function Copyright(props) {
     return (
@@ -38,14 +38,43 @@ export default function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        Swal.fire({
-            icon: 'success',
-            title: 'Login Successful!',
-            text: 'Welcome back!',
-            confirmButtonText: 'OK',
-        });
-        navigate('/book');
 
+        try {
+            if (email === 'admin' && password === "admin123") {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Login Successfully',
+                    text: 'Welcome Back',
+                    confirmButtonText: 'OK',
+                    customClass: {
+                        title: 'swal-title',
+                        content: 'swal-text',
+                        icon: 'swal-icon success',
+                        confirmButton: 'swal-button',
+                    },
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        navigate('/');
+                    }
+                });
+
+            }
+            else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text:  'You`ve entered wrong email or password',
+                });
+                navigate('/login')
+            }
+        } catch (error) {
+            console.error('Error during login:', error.message);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: error.message || 'An error occurred during login.',
+            });
+        }
         // try {
         //     if (!email || !password) {
         //         throw new Error('Please enter both email and password!');
@@ -98,7 +127,7 @@ export default function Login() {
                         backgroundPosition: 'center',
                     }}
                 />
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{paddingLeft : '2rem' , paddingRight : '2rem'}}>
                     <div>
                         <img src={book} style={{ float: 'right', width: '70px', marginTop: '20px', marginRight: '1rem' }} />
                     </div>
@@ -148,7 +177,7 @@ export default function Login() {
                                 label="Remember me"
                                 sx={{ mb: 1 }} // Add margin bottom
                             />
-                            <Button
+                            {/* <Button
                                 type="submit"
                                 fullWidth
                                 variant="contained"
@@ -156,7 +185,8 @@ export default function Login() {
                                 onClick={handleSubmit}
                             >
                                 Sign In
-                            </Button>
+                            </Button> */}
+                            <MyButton onClick={handleSubmit} button={'Sign In'} style={{ width: '100%', marginBottom: '5px' }} />
                             <Grid container>
                                 <Grid item xs>
                                     {/* Add any content you want */}

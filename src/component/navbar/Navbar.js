@@ -56,6 +56,18 @@ export default function Navbar() {
         })
     };
 
+    const handleClickHome = () => {
+        navigate('/');
+        scrollToHome();
+    };
+
+    const scrollToHome = () => {
+        const element = document.getElementById('home');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     const handleClickFeatures = () => {
         navigate('/');
         scrollToFeatures();
@@ -67,7 +79,7 @@ export default function Navbar() {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     };
-    
+
     const handleClickAbout = () => {
         navigate('/');
         scrollToAbout();
@@ -80,14 +92,26 @@ export default function Navbar() {
         }
     };
 
+    const handleClickContact = () => {
+        navigate('/');
+        scrollToContact();
+    };
+
+    const scrollToContact = () => {
+        const element = document.getElementById('contact');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <AppBar position="static" style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)', boxShadow: 'none' }}>
             <Toolbar>
-                <Typography variant="h6" style={{ flexGrow: 0, textAlign: 'center', color: 'white', cursor: 'pointer' }} onClick={() => navigate('/')}>
+                <Typography variant="h6" style={{ flexGrow: 0, textAlign: 'center', color: 'white', cursor: 'pointer' }} onClick={handleClickHome}>
                     Your Logo
                 </Typography>
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}>
-                    <Button color="inherit" sx={{ color: 'white', marginRight: '20px', '&:hover': { textDecoration: 'underline', transform: 'scale(1.1)', }, transition: 'transform 0.3s', }} onClick={() => navigate('/')}>
+                    <Button color="inherit" sx={{ color: 'white', marginRight: '20px', '&:hover': { textDecoration: 'underline', transform: 'scale(1.1)', }, transition: 'transform 0.3s', }} onClick={handleClickHome}>
                         Home
                     </Button>
                     <Button color="inherit" sx={{ color: 'white', marginRight: '20px', '&:hover': { textDecoration: 'underline', transform: 'scale(1.1)', }, transition: 'transform 0.3s', }} onClick={handleClickFeatures}>
@@ -96,7 +120,7 @@ export default function Navbar() {
                     <Button color="inherit" sx={{ color: 'white', marginRight: '20px', '&:hover': { textDecoration: 'underline', transform: 'scale(1.1)', }, transition: 'transform 0.3s', }} onClick={handleClickAbout}>
                         About Us
                     </Button>
-                    <Button color="inherit" sx={{ color: 'white', marginRight: '20px', '&:hover': { textDecoration: 'underline', transform: 'scale(1.1)', }, transition: 'transform 0.3s', }} onClick={() => navigate('/book')}>
+                    <Button color="inherit" sx={{ color: 'white', marginRight: '20px', '&:hover': { textDecoration: 'underline', transform: 'scale(1.1)', }, transition: 'transform 0.3s', }} onClick={handleClickContact}>
                         Contact
                     </Button>
                 </Box>

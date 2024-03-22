@@ -81,7 +81,7 @@ export default function Features() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            transform: scrollTriggered && selectedItem === 'Learn from chatbot assistant' ? 'scaleX(100%)' : 'scaleX(0)',
+            transform: scrollTriggered && selectedItem === 'Learn from chatbot assistant' ? 'scaleX(100%)' : 'scaleX(120%)',
             transition: 'transform 1s',
             maxWidth: '1200px', // Added max-width for larger screens
             margin: '0 auto', // Centering the content horizontally
