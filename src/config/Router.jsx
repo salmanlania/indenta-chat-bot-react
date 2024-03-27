@@ -7,6 +7,7 @@ import Ebook from "../screens/FullScreens/Ebook";
 import HomePage from '../component/Home/HomePage'
 // import About from '../About/About'
 import Navbar from '../component/navbar/Navbar'
+import Signup from "../component/login/Signup";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />,
+            },
+            {
+                path: '/signup',
+                element: <Signup />,
             },
             {
                 path: '/chatbot',

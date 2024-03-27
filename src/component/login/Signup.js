@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate , Outlet} from 'react-router-dom';
+import { useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -10,72 +10,82 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import bgLogin from './assests/bgLogin.png';
 import book from './assests/book.png';
 import MyButton from '../../screens/MyButton';
 import Navbar from '../navbar/Navbar';
 
-const defaultTheme = createTheme();
-
-export default function Login() {
+function Signup() {
     const navigate = useNavigate();
-    const [email, setEmail] = useState('admin@gmail.com');
-    const [password, setPassword] = useState('admin123');
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    useEffect(() => {
+        document.title = 'AI Taxpert | Sign Up';
+    }, []);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        console.log('Submitting form...');
+
+        // You will need to replace this with actual API calls to your backend
+        // For example, you could use fetch or axios to make POST requests to your FastAPI backend for authentication
 
         try {
-            // Make HTTP POST request to your FastAPI backend for authentication
-            const response = await fetch('http://192.168.100.70:8000/login/', {
+            console.log('Sending request to backend...');
+            const response = await fetch('http://192.168.100.70:8000/signup/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({
+                    username,
+                    email,
+                    password,
+                }),
             });
 
-            const data = await response.json();
+            console.log('Response received:', response);
 
+            const data = await response.json();
+            console.log('Response data:', data);
             if (response.ok) {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Login Successfully',
-                    text: 'Welcome Back',
+                    title: 'Sign Up Successful',
+                    text: 'You have successfully signed up!',
                     confirmButtonText: 'OK',
-                    customClass: {
-                        title: 'swal-title',
-                        content: 'swal-text',
-                        icon: 'swal-icon success',
-                        confirmButton: 'swal-button',
-                    },
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        navigate('/chatbot');
+                        // Redirect the user to the login page after successful signup
+                        navigate('/login');
                     }
                 });
             } else {
+                // Handle error response from your backend
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: data.detail || 'You`ve entered wrong email or password',
+                    text: data.message || 'An error occurred during signup.',
                 });
             }
         } catch (error) {
-            console.error('Error during login:', error.message);
+            console.error('Error during signup:', error.message);
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: error.message || 'An error occurred during login.',
+                text: error.message || 'An error occurred during signup.',
             });
         }
     };
 
     return (
-<div>
+        <div>
             <Navbar />
-            <ThemeProvider theme={defaultTheme}>
+            <ThemeProvider theme={createTheme()}>
                 <Grid container component="main" sx={{ height: '100vh' }}>
                     <CssBaseline />
                     <Grid
@@ -108,9 +118,21 @@ export default function Login() {
                             }}
                         >
                             <Typography component="h1" variant="h4" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
-                                Sign in
+                                Sign Up
                             </Typography>
-                            <Box component="form" validate sx={{ width: '100%' }}>
+                            <Box component="form" validate sx={{ width: '100%' }} onSubmit={handleSubmit}>
+                                <TextField
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    id="username"
+                                    label="Username"
+                                    name="username"
+                                    autoComplete="username"
+                                    autoFocus
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
+                                />
                                 <TextField
                                     margin="normal"
                                     required
@@ -122,7 +144,6 @@ export default function Login() {
                                     autoFocus
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    sx={{ width: '100%' }} 
                                 />
                                 <TextField
                                     margin="normal"
@@ -132,26 +153,23 @@ export default function Login() {
                                     label="Password"
                                     type="password"
                                     id="password"
-                                    autoComplete="current-password"
+                                    autoComplete="new-password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    sx={{ width: '100%' }} 
                                 />
                                 <FormControlLabel
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"
-                                    sx={{ mb: 1 }} 
+                                    sx={{ mb: 1 }}
                                 />
-                                <MyButton onClick={handleSubmit} button={'Sign In'} style={{ width: '100%', marginBottom: '5px' }} />
+                                <MyButton type="submit" button={'Sign Up'} style={{ width: '100%', marginBottom: '5px' }} />
                                 <Grid container>
                                     <Grid item xs>
-                                        <Link sx={{ cursor: 'pointer' }} variant="body1" onClick={() => navigate('/signup')}>
-                                            {"Create an Account"}
-                                        </Link>
+                                        {/* Add any content you want */}
                                     </Grid>
                                     <Grid item>
-                                        <Link sx={{ cursor: 'pointer' }} variant="body2" onClick={() => navigate('/book')}>
-                                            {"Forgot password?"}
+                                        <Link sx={{ cursor: 'pointer' }} variant="body2" onClick={() => navigate('/login')}>
+                                            {"Already have an Account"}
                                         </Link>
                                     </Grid>
                                 </Grid>
@@ -159,9 +177,9 @@ export default function Login() {
                         </Box>
                     </Grid>
                 </Grid>
-                <Outlet />
             </ThemeProvider>
         </div>
-
     );
 }
+
+export default Signup;
